@@ -1,0 +1,59 @@
+@import "material-kit";
+
+.logo-container {
+	padding-left: 35px !important;
+	padding-top: 20px;
+	padding-bottom: 80px;
+    z-index: -1;
+    position: fixed;
+}
+
+.card {
+    margin-top: 85px;
+}
+
+.wizard-nav-header {
+    text-align: center;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.numComanda {
+    width: 50px;
+    border: 0px;
+}
+
+.bg-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    //display: block;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+    width: 100%;
+    color: #FFFFFF;
+    z-index: 4;
+    text-align: right;
+    margin-top: 60px;
+    text-shadow: 0 0px 1px black;
+
+    a{
+        color: #FFFFFF;
+   		font-size: 16px;
+        font-weight: 600;
+    }
+
+    .heart{
+        color: #FF3B30;
+    }
+}
