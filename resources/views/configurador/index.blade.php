@@ -1,6 +1,3 @@
-<?php
-	require_once 'src/configurador.php';
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +6,10 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>WIT | Configurador de Eventos</title>
+	<title>{{ config('app.name', 'WIT') }} | Configurador de Eventos</title>
+
+	<!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -19,10 +19,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/material-kit.css" rel="stylesheet"/>
-    <link href="assets/css/wizard.css" rel="stylesheet" />
-    <link href="assets/css/demo.css" rel="stylesheet" />
+    <link href="{{ URL::asset('assets_configurador/assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('assets_configurador/assets/css/material-kit.css')}}" rel="stylesheet"/>
+    <link href="{{ URL::asset('assets_configurador/assets/css/wizard.css') }}" rel="stylesheet" />
+    <link href="{{ URL::asset('assets_configurador/assets/css/demo.css') }}" rel="stylesheet" />
 
 </head>
 
@@ -456,24 +456,24 @@
 </body>
 
 	<!--   Core JS Files   -->
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/material.min.js"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/jquery.min.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/material.min.js') }}"></script>
 
 	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/nouislider.min.js')}}" type="text/javascript"></script>
 
 	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/bootstrap-datepicker.js')}}" type="text/javascript"></script>
 
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-	<script src="assets/js/material-kit.js" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/material-kit.js')}}" type="text/javascript"></script>
 
 	<!-- Wizard Functionality -->
-	<script src="bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
-	<script src="assets/js/wizard-wit.js"></script>
+	<script src="{{ URL::asset('assets_configurador/bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js') }}"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/wizard-wit.js')}} "></script>
 
-	<script src="assets/js/skycons.js" type="text/javascript"></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/skycons.js')}}" type="text/javascript"></script>
 
 
 </html>

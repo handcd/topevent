@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/configurador', function() {
+    return view('configurador.index');
+});
+
 // Login Routes
 Auth::routes();
 
