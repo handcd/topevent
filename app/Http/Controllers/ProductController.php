@@ -3,6 +3,8 @@
 namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use WIT\Product;
+use WIT\Field;
 
 class ProductController extends Controller
 {
@@ -24,7 +26,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.home');
+        $campos = Field::all();
+        return view('product.home',compact('productos','campos'));
     }
 
     /**
@@ -34,7 +37,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $campos = Field::all();
+        return view('product.create', compact('campos'));
     }
 
     /**
@@ -45,7 +49,19 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Product;
+        $this->validate($request, [
+                'nombre' => 'required',
+                'descripcion' => 'required',
+                'precio' => 'required',
+                'campo' => 'required',
+            ]);
+        $producto->nombre = $request->nombre;
+        $prodcuto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->save();
+        $producto->fields->attach($request->campo);
+        return redirect('productos');
     }
 
     /**
@@ -90,6 +106,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Product::find($id);
+        Product::find($id)->fields()->detach();
+        $item->delete();
+        session()->flash('message','¡Correctamente borrado!');
+        return redirect('/productos');
     }
 }
