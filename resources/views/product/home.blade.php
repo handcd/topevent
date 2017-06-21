@@ -2,6 +2,16 @@
 
 @section('content')
 <div class="row">
+	<div class="col-md-6">
+        <input id="filter" class="form-control" type="text" placeholder="Buscar...">
+    </div>
+    <div class="col-md-6">
+        <a href="/productos/create" class="btn btn-success">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir Producto
+        </a>
+    </div>
+</div>
+<div class="row">
 	@foreach ($campos as $campo)
 	<div class="col-lg-6 col-md-12">
         <div class="card">
@@ -43,6 +53,6 @@
             </div>
         </div>
     </div>
-	@endforeach
+    @endforeach
 </div>
 @endsection

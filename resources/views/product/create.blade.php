@@ -38,7 +38,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label  class="control-label">Selecciona el campo:</label>
-                                <select class="form-control" id="campo">
+                                <select class="form-control" name="campo">
                                     @foreach ($campos as $campo)
                                         <option value="{{ $campo->id }}">{{ $campo->title }}</option>
                                     @endforeach

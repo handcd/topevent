@@ -56,11 +56,12 @@ class ProductController extends Controller
                 'precio' => 'required',
                 'campo' => 'required',
             ]);
+
         $producto->nombre = $request->nombre;
-        $prodcuto->descripcion = $request->descripcion;
+        $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
         $producto->save();
-        $producto->fields->attach($request->campo);
+        $producto->fields()->attach($request->campo);
         return redirect('productos');
     }
 

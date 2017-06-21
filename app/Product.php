@@ -8,6 +8,6 @@ class Product extends Model
 {
 	public function fields()
 	{
-		$this->belongsToMany(Field::class);
+		return $this->belongsToMany(Field::class);
 	}
 }
