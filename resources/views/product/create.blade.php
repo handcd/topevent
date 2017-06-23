@@ -36,14 +36,15 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label  class="control-label">Selecciona el campo:</label>
-                                <select class="form-control" name="campo">
+                            <div class="form-group label-floating is-empty">
+                                <label class="control-label">Selecciona el campo:</label>
+                                <select name="campo" class="form-control">
+                                    <option disabled="" selected=""></option>
                                     @foreach ($campos as $campo)
                                         <option value="{{ $campo->id }}">{{ $campo->title }}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            <span class="material-input"></span></div>
                         </div>
                     </div>
 
