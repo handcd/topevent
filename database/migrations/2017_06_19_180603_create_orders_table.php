@@ -18,6 +18,10 @@ class CreateOrdersTable extends Migration
             $table->integer('user_id');
             $table->date('fecha');
             $table->float('cotizacion', 8, 2)->nullable();
+            $table->integer('no_invitados');
+            $table->integer('duracion');
+            $table->string('introduccion');
+            $table->integer('id_limpieza');
             $table->boolean('aprobado')->nullable();
             $table->string('notas')->nullable();
             $table->timestamps();

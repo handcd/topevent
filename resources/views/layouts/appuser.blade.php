@@ -88,10 +88,10 @@
 	                        <p>Ordenes</p>
 	                    </a>
 	                </li>
-	                <li {{ Request::path() == 'productos' ? ' class=active' : '' }}>
-	                    <a href="{{ url('/productos') }}">
+	                <li {{ Request::path() == 'comandas' ? ' class=active' : '' }}>
+	                    <a href="{{ url('/comandas') }}">
 	                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-	                        <p>Productos</p>
+	                        <p>Comandas</p>
 	                    </a>
 	                </li>
 	                <li {{ Request::path() == 'social' ? ' class=active' : '' }}>

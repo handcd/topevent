@@ -34,4 +34,4 @@ Route::get('/social', function() {
 // Resource Controllers
 Route::resource('clientes','ClientController');
 Route::resource('ordenes','OrderController');
-Route::resource('productos','ProductController');
+Route::resource('comandas','ComandaController');

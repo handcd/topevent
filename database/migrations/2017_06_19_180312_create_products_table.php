@@ -17,7 +17,9 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->float('precio', 9, 2);
+            $table->float('precio', 9, 2)->nullable();
+            $table->integer('id_comanda');
+            $table->boolean('seccion_comanda');
             $table->timestamps();
         });
     }
