@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ClientsTableSeeder extends Seeder
+class DatosOrdenTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class ClientsTableSeeder extends Seeder
      */
     public function run()
     {
-    	factory(WIT\Cliente::class, 88)->create();
+        //
     }
 }

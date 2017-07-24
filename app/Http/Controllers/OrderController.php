@@ -3,6 +3,7 @@
 namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use WIT\Order;
 
 class OrderController extends Controller
 {
@@ -24,7 +25,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('order.index');
+        $ordenes = Order::all();
+        return view('order.index', compact('ordenes'));
     }
 
     /**

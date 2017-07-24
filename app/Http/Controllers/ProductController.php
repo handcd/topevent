@@ -27,7 +27,7 @@ class ProductController extends Controller
     public function index()
     {
         $campos = Field::all();
-        return view('product.home',compact('productos','campos'));
+        return view('comanda.home',compact('productos','campos'));
     }
 
     /**
@@ -38,7 +38,7 @@ class ProductController extends Controller
     public function create()
     {
         $campos = Field::all();
-        return view('product.create', compact('campos'));
+        return view('comanda.create', compact('campos'));
     }
 
     /**
@@ -62,7 +62,7 @@ class ProductController extends Controller
         $producto->precio = $request->precio;
         $producto->save();
         $producto->fields()->attach($request->campo);
-        return redirect('productos');
+        return redirect('comandas');
     }
 
     /**
@@ -111,6 +111,6 @@ class ProductController extends Controller
         Product::find($id)->fields()->detach();
         $item->delete();
         session()->flash('message','¡Correctamente borrado!');
-        return redirect('/productos');
+        return redirect('/comandas');
     }
 }

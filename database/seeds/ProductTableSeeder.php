@@ -12,6 +12,8 @@ class ProductTableSeeder extends Seeder
      */
     public function run()
     {
-    	 //$producto = Product::create(['nombre'=>'Tinga','descripcion'=>'Tacos de Tinga','Precio'=>30]);
+    	Product::create(['nombre'=>'Tinga','descripcion'=>'Tacos de Tinga','Precio'=>30,'comanda_id'=>1,'seccion_comanda'=>0]);
+    	Product::create(['nombre'=>'Papa','descripcion'=>'Tacos de Papa','Precio'=>30,'comanda_id'=>1,'seccion_comanda'=>0]);
+    	Product::create(['nombre'=>'Niño','descripcion'=>'Tacos de Niño','Precio'=>30,'comanda_id'=>1,'seccion_comanda'=>0]);
     }
 }

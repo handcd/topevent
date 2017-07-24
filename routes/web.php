@@ -29,7 +29,7 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 // Social 
 Route::get('/social', function() {
     return view('social');
-});
+})->middleware('auth');
 
 // Resource Controllers
 Route::resource('clientes','ClientController');

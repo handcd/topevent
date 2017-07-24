@@ -9,7 +9,7 @@
                 <p class="category">Registrar un nuevo producto en el sistema.</p>
             </div>
             <div class="card-content">
-                <form action="/productos/@yield('editId')" method="post">
+                <form action="/comandas/@yield('editId')" method="post">
                     {{ csrf_field() }}
                     @section('editMethod')
                         @show
@@ -40,8 +40,8 @@
                                 <label class="control-label">Selecciona el campo:</label>
                                 <select name="campo" class="form-control">
                                     <option disabled="" selected=""></option>
-                                    @foreach ($campos as $campo)
-                                        <option value="{{ $campo->id }}">{{ $campo->title }}</option>
+                                    @foreach (WIT\Comanda::all() as $comanda)
+                                        <option value="{{ $comanda->id }}">{{ $comanda->nombre }}</option>
                                     @endforeach
                                 </select>
                             <span class="material-input"></span></div>
@@ -49,7 +49,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary pull-right">Subir</button>
-                    <a href="{{ url('/productos') }}" class="btn btn-default">Cancelar</a>
+                    <a href="{{ url('/comandas') }}" class="btn btn-default">Cancelar</a>
                     <div class="clearfix"></div>
                 </form>
             </div>
