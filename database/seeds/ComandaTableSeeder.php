@@ -13,6 +13,7 @@ class ComandaTableSeeder extends Seeder
     public function run()
     {
         // Comida y Bebida
+        // Estos son los datos reales para la creación de comandas de WIT
     	Comanda::create(['nombre'=>'Botanas','descripcion'=>'Selecciona entre nuestras opciones de botanas']);
     	Comanda::create(['nombre'=>'Alimentos','descripcion'=>'Estas son las opciones de alimentos para tu evento']);
     	Comanda::create(['nombre'=>'Postres','descripcion'=>'Opciones de postres para tu evento']);
