@@ -34,9 +34,6 @@
                             <td>{{$product->nombre}}</td>
                             <td>{{$product->precio}}</td>
                             <td class="td-actions text-right">
-                                <a href="{{ 'comandas/'.$product->id }}" type="button" rel="tooltip" title="Ver Producto" class="btn btn-success btn-simple btn-xs">
-                                    <i class="material-icons">remove_red_eye</i>
-                                </a>
                                 <a href="{{ 'comandas/'.$product->id.'/edit' }}" type="button" rel="tooltip" title="Editar Producto" class="btn btn-primary btn-simple btn-xs">
                                     <i class="material-icons">edit</i>
                                 </a>

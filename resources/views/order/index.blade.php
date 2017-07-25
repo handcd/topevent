@@ -155,7 +155,6 @@
                                 </td>
                             </tr>
                         @endfor
-                        
                     </tbody>
                 </table>
             </div>
