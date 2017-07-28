@@ -26,7 +26,10 @@ class OrderController extends Controller
     public function index()
     {
         $ordenes = Order::all();
-        return view('order.index', compact('ordenes'));
+        $revenue = $ordenes
+                        ->where('aprobado',1)
+                        ->sum('cotizacion');
+        return view('order.index', compact('ordenes','revenue'));
     }
 
     /**
@@ -36,7 +39,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('order.create');
     }
 
     /**
@@ -58,7 +61,8 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $orden = Order::find($id);
+        return view('order.show',compact('orden'));
     }
 
     /**
