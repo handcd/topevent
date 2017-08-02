@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('descripcion');
             $table->float('precio', 9, 2)->nullable();
             $table->integer('comanda_id');
-            $table->boolean('seccion_comanda');
+            //$table->boolean('seccion_comanda');
             $table->timestamps();
         });
     }
