@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="icon" type="image/png" href="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>{{ config('app.name', 'WIT') }} | Configurador de Eventos</title>
@@ -31,9 +31,9 @@
 	<div class="bg-image"></div>
 
 	<div class="logo-container">
-		<a href="http://wit.handcreativedesign.com">
+		<a href="http://witplanner.com.mx">
             <div class="logo">
-                <img src="assets/img/favicon.png">
+                <img src="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
             </div>
             <div class="brand">
                 Whatever It Takes
@@ -84,6 +84,7 @@
 									</div>
 									<hr>
 									<div class="step-intro">
+										@include('configurador.partials.comanda', ['nombre_comanda' => 'Botanas'])
 										<h4>¡Bienvenido al Configurador de Eventos de WIT!</h4>
 										<p>
 											Lorem ipsum adipisicing aliquip ea laboris ut exercitation dolore ut nisi minim enim culpa eu qui aliquip est labore magna exercitation nostrud sed velit veniam ullamco ad enim magna fugiat laborum sint do incididunt voluptate sunt proident ad aliqua occaecat.
