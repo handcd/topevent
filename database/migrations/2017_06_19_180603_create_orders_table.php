@@ -16,14 +16,20 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            // Campos Orden -> Configurador
             $table->date('fecha');
-            $table->float('cotizacion', 8, 2)->nullable();
-            $table->integer('no_invitados');
             $table->integer('duracion');
+            $table->integer('tipo_evento');
+            $table->string('nombre_lugar')->nullable();
+            $table->string('direccion_lugar')->nullable();
+            $table->integer('no_invitados');
             $table->string('introduccion');
             $table->integer('id_limpieza');
+
+            // Campos Orden -> Administrador
             $table->boolean('aprobado')->nullable();
             $table->string('notas')->nullable();
+            $table->float('cotizacion', 8, 2)->nullable();
             $table->timestamps();
         });
     }

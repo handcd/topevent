@@ -84,22 +84,18 @@
 									</div>
 									<hr>
 									<div class="step-intro">
-										@include('configurador.partials.comanda', ['nombre_comanda' => 'Botanas'])
 										<h4>¡Bienvenido al Configurador de Eventos de WIT!</h4>
 										<p>
-											Lorem ipsum adipisicing aliquip ea laboris ut exercitation dolore ut nisi minim enim culpa eu qui aliquip est labore magna exercitation nostrud sed velit veniam ullamco ad enim magna fugiat laborum sint do incididunt voluptate sunt proident ad aliqua occaecat.
+											Nuestra razón de existir como agencia y como creadores de eventos…
 										</p>
 										<p>
-											Ut dolor in officia cupidatat dolor duis nostrud ullamco nulla fugiat sunt quis veniam laboris adipisicing laborum ad aute dolor nostrud proident in sunt irure dolore deserunt duis sit mollit.
+											Gracias por abrirnos la puerta, permitirnos platicar y crear juntos esa celebración especial, y más que eso, darle ese toque diferente que hará que sea toda una experiencia.
 										</p>
 										<p>
-											Magna nulla cillum ea culpa proident commodo occaecat velit adipisicing veniam qui et dolore elit veniam incididunt tempor ut voluptate duis deserunt magna veniam in velit ut eiusmod sint qui nostrud cupidatat.
+											Lo que hacemos: Creación, diseño, desarrollo y operación de eventos en donde disfrutamos todos, tú porque es tu fiesta, y nosotros ¡porque nos encanta lo que hacemos!, desde la visualización, hasta el cierre.
 										</p>
 										<p>
-											Aliqua elit in aute aliquip mollit veniam sint et incididunt occaecat reprehenderit fugiat nulla proident proident nisi occaecat qui in ex ad eiusmod aute anim irure nostrud voluptate id officia nisi elit elit consectetur ad et irure.
-										</p>
-										<p>
-											Sed excepteur nisi excepteur enim ea culpa do sint eiusmod dolor ex voluptate adipisicing consequat irure do sint dolor incididunt.
+											Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada cliente, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
 										</p>
 										<p>
 											<b>Gracias por elegirnos</b> y comencemos.
@@ -115,7 +111,7 @@
 									<hr>
 									<div class="step-intro">
 										<p>
-											Queremos saber para qué Rockstar vamos a trabajar esta ocasión		
+											Pásanos tus datos para saber con quién vamos a crear este increíble evento
 										</p>
 									</div>
 									<div class="input-group">
@@ -168,7 +164,7 @@
 									<hr>
 									<div class="step-intro">
 										<p>
-											Platícanos sobre la fecha del evento, te mostramos el pronóstico del clima por si quieres armar una fiesta en exteriores.		
+											Platícanos sobre la fecha del evento, te mostramos el pronóstico del clima por si quieres armar una fiesta en exteriores.
 										</p>
 									</div>
 									<div class="input-group">
@@ -369,54 +365,138 @@
 											Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 										</p>
 									</div>
-									<table class="table">
-									    <thead>
-									        <tr>
-									            <th>Platillo</th>
-									            <th>&#10004;</th>
-									            <th>#</th>
-									        </tr>
-									    </thead>
-									    <tbody>
-									        <tr>
-									            <td>Tinga</td>
-									            <td>
-									            	<input type="checkbox" name="optionsCheckboxes">
-									            </td>
-									            <td>
-												    <input type="number" value="" placeholder="#" class="numComanda" />
-									            </td>
-									        </tr>
-									        <tr>
-									            <td>aosdifaoidfjoasdifjoasidfjoaisdjfoaisdjfoiasdjfoiajsdofij</td>
-									            <td>
-									            	<input type="checkbox" name="optionsCheckboxes">
-									            </td>
-									            <td>
-												    <input type="number" value="" placeholder="#" class="numComanda" />
-									            </td>
-									        </tr>
-									        <tr>
-									            <td>Tinga</td>
-									            <td>
-									            	<input type="checkbox" name="optionsCheckboxes">
-									            </td>
-									            <td>
-												    <input type="number" value="" placeholder="#" class="numComanda" />
-									            </td>
-									        </tr>
-									        <tr>
-									            <td>Tinga</td>
-									            <td>
-									            	<input type="checkbox" name="optionsCheckboxes">
-									            </td>
-									            <td>
-												    <input type="number" value="" placeholder="#" class="numComanda" />
-									            </td>
-									        </tr>
-									    </tbody>
-									</table>
+									@include('configurador.partials.comanda', ['nombre_comanda'=>'Botanas'])
+									@include('configurador.partials.comanda', ['nombre_comanda'=>'Alimentos'])
+									@include('configurador.partials.comanda', ['nombre_comanda'=>'Postres'])
+									@include('configurador.partials.comanda', ['nombre_comanda'=>'Bebidas'])
+									@include('configurador.partials.comanda', ['nombre_comanda'=>'Extras Comida y Bebida'])
 					    		</div>
+
+					    		<div class="tab-pane" id="tab6">
+					    			<div class="step-title">
+					    				<h3>Mobiliario</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Selecciona las opciones de Mobiliario que te gustarían para tu evento
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Mobiliario'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab7">
+					    			<div class="step-title">
+					    				<h3>Música / Visual</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					¿Qué opciones de música o de materiales audiovisuales te gustarían para tu evento?
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Música'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Paquetes Visuales'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab8">
+					    			<div class="step-title">
+					    				<h3>Iluminación</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Seleciona las opciones de iluminación que te gustarían para tu evento
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Iluminación'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab9">
+					    			<div class="step-title">
+					    				<h3>Entretenimiento</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					¿Qué opciones de entretenimiento te gustarían?
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Entretenimiento'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab10">
+					    			<div class="step-title">
+					    				<h3>Ambientación</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					¿Qué tipo de ambientación te gustaría para tu evento?
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fiesta Temática'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fiesta Convencional'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Albercada'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab11">
+					    			<div class="step-title">
+					    				<h3>Foto y Video</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Selecciona entre las opciones que tenemos de Fotos y Video para tu evento
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fotografía'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Video'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab12">
+					    			<div class="step-title">
+					    				<h3>Invitaciones</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Selecciona entre las opciones de invitaciones que tenemos para ti
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Invitaciones'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Confirmación'])
+					    		</div>
+
+					    		<div class="tab-pane" id="tab13">
+					    			<div class="step-title">
+					    				<h3>Recuerdos</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Selecciona entre las opciones de recuerdos para tu evento
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Recuerdos del Evento'])
+					    		</div>
+
+	
+					    		<div class="tab-pane" id="tab15">
+					    			<div class="step-title">
+					    				<h3>Extras</h3>
+					    			</div>
+					    			<hr>
+					    			<div class="step-intro">
+					    				<p>
+					    					Tenemos opciones adicionales para darle un toque específico a tu evento
+					    				</p>
+					    			</div>
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Extras'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Personal'])
+					    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Transporte'])
+					    		</div>
+
 
 					    		<!-- Pager -->
 								<ul class="pager wizard">
@@ -434,12 +514,12 @@
 									</li>
 									<li class="finish"><a href="javascript:;">Finalizar</a></li>
 								</ul>
-							</div>
 
-							<!-- Barra de Progreso -->
-						 	<div class="progress">
-								<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-								<span class="sr-only">50% Complete</span>
+								<!-- Barra de Progreso -->
+							 	<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+									<span class="sr-only">50% Complete</span>
+									</div>
 								</div>
 							</div>
 						</div>
