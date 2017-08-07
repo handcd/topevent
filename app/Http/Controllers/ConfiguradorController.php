@@ -5,6 +5,7 @@ namespace WIT\Http\Controllers;
 use Illuminate\Http\Request;
 use WIT\Comanda;
 use WIT\Cliente;
+use WIT\Order;
 
 class ConfiguradorController extends Controller
 {
@@ -38,8 +39,42 @@ class ConfiguradorController extends Controller
      */
     public function store(Request $request)
     {
-        $orden = Order::find(1);
-        Mail::to($request->email)->send(new OrderReceived($orden));
+        $orden = new Order;
+        $cliente = new Cliente;
+
+        $this->validate($request, [
+                // Primero validarmos los datos del cliente.
+                'nombre' => 'required',
+                'apellidos' => 'required',
+                'email' => 'required'
+            ]);
+
+        $cliente->nombre = $request->nombre;
+        $cliente->apellido = $request->apellidos;
+        $cliente->email = $request->email;
+        $cliente->phone = $request->celular;
+
+        $cliente->save();
+
+        $orden->user_id = $cliente->id;
+        
+        /*
+        $producto = new Product;
+        $this->validate($request, [
+                'nombre' => 'required',
+                'descripcion' => 'required',
+                'precio' => 'required',
+                'campo' => 'required',
+            ]);
+
+        $producto->nombre = $request->nombre;
+        $producto->descripcion = $request->descripcion;
+        $producto->precio = $request->precio;
+        $producto->comanda_id = $request->campo;
+        $producto->seccion_comanda = 0;
+        $producto->save();
+        */
+        Mail::to($cliente->email)->send(new OrderReceived($orden));
     }
 
     /**
