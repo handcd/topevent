@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use WIT\Mail\OrderReceived;
 use WIT\Cliente;
+use WIT\Order;
 
 class ClientController extends Controller
 {

@@ -13,15 +13,16 @@ class OrderReceived extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $orden;
+    public $orden;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Order $orden)
+    public function __construct(Order $orden1)
     {
-        this->orden = $orden;
+        $this->orden = $orden1;
     }
 
     /**
@@ -31,11 +32,6 @@ class OrderReceived extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.orders.received')
-                    ->with([
-                        'orden_id' => $this->orden->orden_id,
-                        'fecha' => $this->orden->fecha,
-                        'descripcion' => $this->orden->descripcion
-                        ]);
+        return $this->view('mails.orders.received',compact('orden'));
     }
 }

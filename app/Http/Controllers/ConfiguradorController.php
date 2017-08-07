@@ -26,7 +26,8 @@ class ConfiguradorController extends Controller
      */
     public function create()
     {
-        
+        $comandas = Comanda::all();
+        return view('configurador.index',compact('comandas'));
     }
 
     /**
@@ -37,7 +38,8 @@ class ConfiguradorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $orden = Order::find(1);
+        Mail::to($request->email)->send(new OrderReceived($orden));
     }
 
     /**
@@ -48,7 +50,8 @@ class ConfiguradorController extends Controller
      */
     public function show($id)
     {
-        //
+        $comandas = Comanda::all();
+        return view('configurador.index',compact('comandas'));
     }
 
     /**
@@ -59,7 +62,8 @@ class ConfiguradorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comandas = Comanda::all();
+        return view('configurador.index',compact('comandas'));
     }
 
     /**

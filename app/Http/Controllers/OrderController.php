@@ -50,7 +50,8 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        
+
+        $orden = Order::find(1);
         Mail::to($request->email)->send(new OrderReceived($orden));
     }
 
