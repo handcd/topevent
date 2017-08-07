@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->date('fecha');
             $table->integer('duracion');
             $table->integer('tipo_evento');
+            $table->integer('id_lugar_evento');
             $table->string('nombre_lugar')->nullable();
             $table->string('direccion_lugar')->nullable();
             $table->integer('no_invitados');

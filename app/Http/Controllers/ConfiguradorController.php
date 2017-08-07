@@ -42,22 +42,39 @@ class ConfiguradorController extends Controller
         $orden = new Order;
         $cliente = new Cliente;
 
-        $this->validate($request, [
+        /*$this->validate($request, [
                 // Primero validarmos los datos del cliente.
                 'nombre' => 'required',
                 'apellidos' => 'required',
-                'email' => 'required'
-            ]);
+                'email' => 'required',
+
+                // Validamos los datos básicos de la orden
+                'fechaevento' => 'required',
+                'duracion' => 'required',
+                'tipoEvento' => 'required',
+                'introduccion' => 'required',
+                'noInvitados' => 'required',
+                'lugarEvento' => 'required'
+            ]);*/
 
         $cliente->nombre = $request->nombre;
         $cliente->apellido = $request->apellidos;
         $cliente->email = $request->email;
         $cliente->phone = $request->celular;
 
-        $cliente->save();
+        //$cliente->save();
 
         $orden->user_id = $cliente->id;
-        
+        $orden->fecha = $request->fechaevento;
+        $orden->duracion = $request->duracion;
+        $orden->tipo_evento = $request->tipoEvento;
+        $orden->introduccion = $request->introduccion;
+        $orden->no_invitados = $request->noInvitados;
+        $orden->id_lugar_evento = $request->lugarEvento;
+        $orden->nombre_lugar = $request->nombreLugar;
+        $orden->direccion_lugar = $request->direccionLugar;
+
+        return $orden;
         /*
         $producto = new Product;
         $this->validate($request, [

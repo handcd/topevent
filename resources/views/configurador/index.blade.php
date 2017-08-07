@@ -174,7 +174,7 @@
 												<i class="fa fa-calendar" aria-hidden="true"></i>
 											</span>
 											<div class="form-group label-floating is-empty">
-	                                            <input class="datepicker form-control" id="fechaevento" type="text" value="12/24/2017"/>
+	                                            <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" value="12/24/2017"/>
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>
@@ -184,7 +184,7 @@
 											</span>
 											<div class="form-group label-floating is-empty">
 												<label class="control-label">Duración del evento (en horas)</label>
-	                                            <input class="form-control" id="duracion" type="number" />
+	                                            <input class="form-control" id="duracion" name="duracion" type="number" />
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>
@@ -204,6 +204,67 @@
 										</div>
 						    		</div>
 						    		
+									<!-- Invitados -->
+						    		<div class="tab-pane" id="tab2">
+						    			<div class="step-title">
+											<h3>Tipo de Evento</h3>
+										</div>
+										<hr>
+										<div class="step-intro">
+											<p>
+												Danos una breve introducción a tu evento y selecciona una de las opciones que más se acoplen a tus requerimientos.
+											</p>
+										</div>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Introducción a tu evento</label>
+	                                            <input class="form-control" id="introduccion" name="introduccion" type="textarea" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+										<div class="form-group">
+											<label for="tipoEvento">Selecciona una opción:</label>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="0">Adolescentes</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="1">Familiar</label>
+											</div>
+											<i>Adultos:</i>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="2">18 y Veinteañeros</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="3">Treintañeros</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="4">Cuarentones</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="5">Cincuentones</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="6">Más de 50</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="7">Combinadito</label>
+											</div>
+											<i>Diversidad (Pink Parties):</i>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="8">Fiesta Ellas</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="9">Fiesta Ellos</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="10">Fiesta Ellas y Ellos</label>
+											</div>
+										</div>
+						    		</div>
+
 						    		<!-- Invitados -->
 						    		<div class="tab-pane" id="tab3">
 						    			<div class="step-title">
@@ -221,7 +282,7 @@
 											</span>
 											<div class="form-group label-floating is-empty">
 												<label class="control-label">Número de invitados</label>
-	                                            <input class="form-control" id="duracion" type="number" />
+	                                            <input class="form-control" id="noInvitados" name="noInvitados" min="2" type="number" />
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>
@@ -233,126 +294,77 @@
 											<h3>El lugar</h3>
 										</div>
 										<hr>
-										¿Ya tienes el lugar?
-										<div class="radio">
-											<label>
-												<input type="radio" name="optionsRadios" checked="true">
-												No tengo el lugar
-											</label>
+										<div class="step-intro">
+											<p>
+												Elige entre las opciones de lugar para que tu evento sea todo un éxito
+											</p>
 										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" name="optionsRadios">
-												Ya tengo el lugar
-											</label>
-										</div>
-										<div id="sinlugar" style="display: none;">
-											<p>¿Qué tipo de lugar te gustaría?</p>
+										<div class="form-group">
+											<label for="lugarEvento">Selecciona el lugar dónde quieres que sea tu evento</label>
+											<br>
+											<i>Interior</i>
 											<div class="radio">
-												<label>
-													<input type="radio" name="sinlugar1">
-													Interior
-												</label>
+												<label><input type="radio" name="lugarEvento" value="0">Salón</label>
 											</div>
 											<div class="radio">
-												<label>
-													<input type="radio" name="sinlugar1">
-													Exterior
-												</label>
+												<label><input type="radio" name="lugarEvento" value="1">Salón + Jardín + Terraza</label>
 											</div>
-											<div id="sinlugar12" style="display: none;">
-												<div class="form-group label-floating">
-		                                            <label class="control-label">Selecciona un lugar interior...</label>
-	                                            	<select id="opcionlugarevento" class="form-control">
-														<option disabled="" selected=""></option>
-														<option>Salón</option>
-														<option>Salón + Jardín + Terraza</option>
-														<option>Salón en Hotel</option>
-														<option>Salón en Hacienda</option>
-														<option>Restaurante</option>
-														<option>Restaurante + Bar</option>
-														<option>Antro</option>
-														<option>Casa</option>
-	                                            	</select>
-		                                        </div>
-		                                        <div class="form-group label-floating">
-		                                            <label class="control-label">Selecciona un lugar exterior...</label>
-	                                            	<select id="opcionlugarevento" class="form-control">
-														<option disabled="" selected=""></option>
-	                                                	<option>Jardín</option>
-														<option>Jardín + Alberca</option>
-														<option>Terraza</option>
-														<option>Hacienda</option>
-														<option>Casa en la Playa</option>
-	                                            	</select>
-		                                        </div>
-
-		                                        <p>
-		                                        	<strong>En un máximo de 48 horas recibirás una cotización del lugar.</strong>
-		                                        </p>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="2">Salón en Hotel</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="3">Salón en Hacienda</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="4">Restaurante</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="5">Restaurante + Bar</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="6">Antro</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="7">Casa</label>
+											</div>
+											
+											<i>Exterior</i>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="8">Jardín</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="9">Jardín + Alberca</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="10">Terraza</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="11">Hacienda</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="12">Casa en Playa</label>
 											</div>
 										</div>
-										<div id="conlugar" style="display: none;">
-											<p>¿Dónde será tu evento?</p>
-											<div class="radio">
-												<label>
-													<input type="radio" name="sinlugar1">
-													Interior
-												</label>
-											</div>
-											<div class="radio">
-												<label>
-													<input type="radio" name="sinlugar1">
-													Exterior
-												</label>
-											</div>
-											<div id="sinlugar12" style="display: none;">
-												<div class="form-group label-floating">
-		                                            <label class="control-label">Selecciona un lugar interior...</label>
-	                                            	<select id="opcionlugarevento" class="form-control">
-														<option disabled="" selected=""></option>
-														<option>Salón</option>
-														<option>Salón + Jardín + Terraza</option>
-														<option>Salón en Hotel</option>
-														<option>Salón en Hacienda</option>
-														<option>Restaurante</option>
-														<option>Restaurante + Bar</option>
-														<option>Antro</option>
-														<option>Casa</option>
-	                                            	</select>
-		                                        </div>
-		                                        <div class="form-group label-floating">
-		                                            <label class="control-label">Selecciona un lugar exterior...</label>
-	                                            	<select id="opcionlugarevento" class="form-control">
-														<option disabled="" selected=""></option>
-	                                                	<option>Jardín</option>
-														<option>Jardín + Alberca</option>
-														<option>Terraza</option>
-														<option>Hacienda</option>
-														<option>Casa en la Playa</option>
-	                                            	</select>
-		                                        </div>
-											</div>
-											<div class="input-group">
-												<span class="input-group-addon">
-													<i class="fa fa-location-arrow" aria-hidden="true"></i>
-												</span>
-												<div class="form-group label-floating is-empty">
-		                                            <label class="control-label">Nombre del lugar</label>
-		                                            <input name="nombreLugar" type="text" class="form-control valid">
-		                                        	<span class="material-input"></span>
-		                                        </div>
-											</div>
-											<div class="input-group">
-												<span class="input-group-addon">
-													<i class="fa fa-map-marker" aria-hidden="true"></i>
-												</span>
-												<div class="form-group label-floating is-empty">
-		                                            <label class="control-label">Dirección del lugar</label>
-		                                            <input name="direccion" type="text" class="form-control valid">
-		                                        	<span class="material-input"></span>
-		                                        </div>
-											</div>
+										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-location-arrow" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Nombre del Lugar</label>
+	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Dirección del Lugar</label>
+	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
 										</div>
 						    		</div>
 
@@ -481,6 +493,32 @@
 						    				</p>
 						    			</div>
 						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Recuerdos del Evento'])
+						    		</div>
+
+						    		<div class="tab-pane" id="tab14">
+						    			<div class="step-title">
+						    				<h3>Limpieza</h3>
+						    			</div>
+						    			<hr>
+						    			<div class="step-intro">
+						    				<p>
+						    					Contamos con opciones de limpieza para tu evento
+						    				</p>
+						    			</div>
+						    			<div class="form-group">
+						    				<div class="radio">
+												<label><input type="radio" name="idLimpieza" value="0">No requiero limpieza</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="idLimpieza" value="1">Requiero limpieza antes de mi evento</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="idLimpieza" value="2">Requiero limpieza después de mi evento</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="idLimpieza" value="3">Requiero limpieza antes y después de mi evento</label>
+											</div>
+						    			</div>
 						    		</div>
 
 		
