@@ -9,7 +9,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Nuevos</p>
-                <h3 class="title">12</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -25,7 +25,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Asignados</p>
-                <h3 class="title">50</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -41,7 +41,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Cerrados</p>
-                <h3 class="title">75</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
