@@ -105,7 +105,7 @@
                 <div class="links">
                     <a href="#">Documentación</a>
                     <a href="{{ url('configurador') }}">Configurador</a>
-                    <a href="#">Soporte Técnico</a>
+                    <a href="mailto:humbertowoody+2n68syidh84hrt9a2i7+2oeavxrmdnwqm9f9vqc+0rxfk3lhe7@boards.trello.com">Soporte Técnico</a>
                 </div>
             </div>
         </div>
