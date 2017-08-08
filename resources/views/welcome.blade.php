@@ -103,9 +103,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentación</a>
+                    <a href="#">Documentación</a>
                     <a href="{{ url('configurador') }}">Configurador</a>
-                    <a href="https://laravel-news.com">Soporte Técnico</a>
+                    <a href="#">Soporte Técnico</a>
                 </div>
             </div>
         </div>
