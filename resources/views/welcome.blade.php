@@ -80,7 +80,7 @@
                 }
 
                 .links > a {
-                    margin-left: 5vw;
+                    margin: 15vw;
                 }
             }
         </style>
