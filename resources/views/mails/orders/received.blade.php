@@ -605,7 +605,9 @@ img {
                         <td width='40'>
                           <div class='contentEditableContainer contentFacebookEditable'>
                             <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
+                              <a href="https://www.facebook.com/witeventosmx/">
                               <img src="{{ asset('mails/facebook.png') }}" alt="Facebook" width='40' height='40' data-max-width="40" data-customIcon="true" border="0" >
+                              </a>
                             </div>
                           </div>
                         </td>
@@ -613,7 +615,9 @@ img {
                         <td width='40'>
                           <div class='contentEditableContainer contentTwitterEditable'>
                             <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
+                              <a href="https://twitter.com/WitEventosMx">
                               <img src="{{ asset('mails/twitter.png') }}" alt="Twitter" width='40' height='40' data-max-width="40" data-customIcon="true" border="0">
+                              </a>
                             </div>
                           </div>
                         </td>
@@ -621,7 +625,9 @@ img {
                         <td width='40'>
                           <div class='contentEditableContainer contentImageEditable'>
                             <div class='contentEditable' style='text-align: center;color:#AAAAAA;'>
+                              <a href="https://www.instagram.com/witeventosmx/">
                               <img src="{{ asset('mails/instagram.png') }}" alt="Instagram" width='40' height='40' data-max-width="40" border="0">
+                              </a>
                             </div>
                           </div>
                         </td>
