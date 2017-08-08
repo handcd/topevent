@@ -9,7 +9,7 @@
                 <p class="category">Registrar un nuevo producto en el sistema.</p>
             </div>
             <div class="card-content">
-                <form action="/comandas/@yield('editId')" method="post">
+                <form action="{{ url('/comandas/') }}@yield('editId')" method="post">
                     {{ csrf_field() }}
                     @section('editMethod')
                         @show
