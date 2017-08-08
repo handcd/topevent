@@ -7,11 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
 	/**
-     * Get the products associated with the comanda
-     DATOS ORDEN
+     * Get the extra data from the order
      */
-    public function products()
+    public function datosOrden()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(DatosOrden::class);
     }
 }

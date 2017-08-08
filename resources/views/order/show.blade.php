@@ -25,8 +25,8 @@
                             <td>{{ $orden->id }}</td>
                         </tr>
                         <tr>
-                            <td>Usuario</td>
-                            <td>{{ $orden->user_id }}</td>
+                            <td>Cliente</td>
+                            <td><a href="{{ url('/clientes/'.$orden->user_id) }}">{{ $orden->user_id }} (Click para ver)</a></td>
                         </tr>
                         <tr>
                             <td>Fecha del Evento</td>
@@ -35,6 +35,52 @@
                         <tr>
                             <td>Fecha de creación de la orden</td>
                             <td>{{ $orden->created_at }}</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de evento</td>
+                            <td>
+                                @php
+                                    switch ($orden->tipo_evento)
+                                    {
+                                        case 0:
+                                            echo "Adolescentes";
+                                            break;
+                                        case 1:
+                                            echo "Familiar";
+                                            break;
+                                        case 2:
+                                            echo "18 y Veinteañeros";
+                                            break;
+                                        case 3:
+                                            echo "Treintañeros";
+                                            break;
+                                        case 4:
+                                            echo "Cuarentones";
+                                            break;
+                                        case 5:
+                                            echo "Cincuentones";
+                                            break;
+                                        case 6:
+                                            echo "Más de 50";
+                                            break;
+                                        case 7:
+                                            echo "Combinadito";
+                                            break;
+                                        case 8:
+                                            echo "Fiesta Ellas";
+                                            break;
+                                        case 9:
+                                            echo "Fiesta Ellos";
+                                            break;
+                                        case 10:
+                                            echo "Fiesta Ellas y Ellos";
+                                            break;
+                                        default:
+                                            echo "Desconocido";
+                                            break;
+                                    }
+                                @endphp
+                            </td>
                         </tr>
                         <tr>
                             <td>Fecha de la última modificación</td>
@@ -77,6 +123,8 @@
                 <p>
                     Opciones de comandas seleccionadas:
                 </p>
+                <br><br>
+                <strong>Cargando...</strong>
             </div>
         </div>
         <a href="{{ url('/ordenes') }}" class="btn btn-success">Atrás</a>

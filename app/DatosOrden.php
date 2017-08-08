@@ -9,11 +9,10 @@ class DatosOrden extends Model
 	protected $table = 'datos_orden';
 
 	 /**
-     * Get the comanda that is asigned to this product
-     ORDEN
+     * Get the order
      */
-    public function comanda()
+    public function order()
     {
-        return $this->belongsTo(Comanda::class);
+        return $this->belongsTo(Order::class);
     }
 }

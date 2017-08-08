@@ -174,7 +174,7 @@
 												<i class="fa fa-calendar" aria-hidden="true"></i>
 											</span>
 											<div class="form-group label-floating is-empty">
-	                                            <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" value="12/24/2017"/>
+	                                            <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" data-date-format="yyyy-mm-dd"/>
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>
@@ -537,6 +537,35 @@
 						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Transporte'])
 						    		</div>
 
+						    		<div class="tab-pane" id="tab16">
+						    			<div class="step-title">
+						    				<h2>¡Gracias!</h2>
+						    			</div>
+						    			<div class="step-intro">
+						    				<p>
+						    					Con esta información podemos empezar a planear tu evento de una forma más rápida y eficiente.
+						    				</p>
+						    				<p>
+						    					En un máximo de 72 horas un agente especializado se pondrá en contacto contigo para realizar la preparación de la información para la realización de tu evento.
+						    				</p>
+						    				<p>
+						    					Gracias por confiar en nosotros, recuerda que somos los mejores porque <strong>amamos lo que hacemos.</strong>
+						    				</p>
+						    				<div class="row">
+							    				<div class="col-lg-3">
+							    					<img class="img img-thumbnail" src="{{ asset('assets_configurador/assets/img/favicon.png') }}" alt="WIT Eventos con Ingenio">
+							    				</div>
+							    				<div class="col-lg-9">
+								    				<p>
+								    					<i>
+								    						Al hacer click en "Finalizar" la información proporcionada será almacenada en nuestra base de datos. Si tienes alguna duda, puedes consultar nuestra <a href="#">Política de Privacidad</a> así como nuestra <a href="#">Política de Uso de Datos</a>.
+								    					</i>
+								    				</p>
+								    			</div>
+								    		</div>
+						    			</div>
+						    		</div>
+
 
 						    		<!-- Pager -->
 									<ul class="pager wizard">
@@ -549,7 +578,7 @@
 										<li class="next">
 											<a href="javascript:;">
 												Siguiente
-												<span aria-hidden="true">&raquo;</span>											
+												<span aria-hidden="true">&raquo;</span>
 											</a>
 										</li>
 										<li class="finish"><button type="submit" class="btn btn-primary pull-right">Finalizar</button></li>

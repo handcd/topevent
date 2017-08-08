@@ -22,7 +22,7 @@ Auth::routes();
 // Dashboard
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
-// Social 
+// Social
 Route::get('/social', function() {
     return view('social');
 })->middleware('auth');

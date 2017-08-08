@@ -3,6 +3,8 @@
 namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use WIT\Mail\OrderReceived;
 use WIT\Comanda;
 use WIT\Cliente;
 use WIT\Order;
@@ -42,7 +44,7 @@ class ConfiguradorController extends Controller
         $orden = new Order;
         $cliente = new Cliente;
 
-        /*$this->validate($request, [
+        $this->validate($request, [
                 // Primero validarmos los datos del cliente.
                 'nombre' => 'required',
                 'apellidos' => 'required',
@@ -55,15 +57,16 @@ class ConfiguradorController extends Controller
                 'introduccion' => 'required',
                 'noInvitados' => 'required',
                 'lugarEvento' => 'required'
-            ]);*/
+            ]);
 
+        // Cliente
         $cliente->nombre = $request->nombre;
         $cliente->apellido = $request->apellidos;
         $cliente->email = $request->email;
         $cliente->phone = $request->celular;
+        $cliente->save();
 
-        //$cliente->save();
-
+        // Orden General
         $orden->user_id = $cliente->id;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracion;
@@ -73,25 +76,13 @@ class ConfiguradorController extends Controller
         $orden->id_lugar_evento = $request->lugarEvento;
         $orden->nombre_lugar = $request->nombreLugar;
         $orden->direccion_lugar = $request->direccionLugar;
+        $orden->id_limpieza = $request->idLimpieza;
+        $orden->save();
 
-        return $orden;
-        /*
-        $producto = new Product;
-        $this->validate($request, [
-                'nombre' => 'required',
-                'descripcion' => 'required',
-                'precio' => 'required',
-                'campo' => 'required',
-            ]);
-
-        $producto->nombre = $request->nombre;
-        $producto->descripcion = $request->descripcion;
-        $producto->precio = $request->precio;
-        $producto->comanda_id = $request->campo;
-        $producto->seccion_comanda = 0;
-        $producto->save();
-        */
+        // Enviamos Mail.
         Mail::to($cliente->email)->send(new OrderReceived($orden));
+        
+        return redirect('/');
     }
 
     /**
