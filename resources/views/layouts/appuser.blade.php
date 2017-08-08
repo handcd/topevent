@@ -154,7 +154,7 @@
 			<footer class="footer">
 	            <div class="container-fluid">
 	                <p class="copyright pull-right">
-	                    &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart" aria-hidden="true"></i> por <a href="http://handcreativedesign.com.mx">HAND Creative Design</a>
+	                    &copy; <script>document.write(new Date().getFullYear())</script> Hecho con <i class="fa fa-heart" aria-hidden="true"></i> por <a href="http://handcd.com">HAND Creative Design</a>
 	                </p>
 	            </div>
 	        </footer>
