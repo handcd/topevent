@@ -311,7 +311,7 @@ img {
                         <td>
                           <div class='contentEditableContainer contentTextEditable'>
                             <div class='contentEditable' style='text-align: center;'>
-                              <h2 style="font-size: 20px;">Tu orden ha sido recibida, Humberto.</h2>
+                              <h2 style="font-size: 20px;">Tu orden ha sido recibida, {{$cliente->nombre}}.</h2>
                               <br>
                               <p>Hemos recibido tu orden <strong>(ID: {{ $orden->id }})</strong> y hemos comenzado a trabajar en todos los detalles para la misma. En 48 horas recibirás la cotización así como las opciones de nuestros proveedores para tu evento.</p>
                             </div>

@@ -8,12 +8,14 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 use WIT\Order;
+use WIT\Cliente;
 
 class OrderReceived extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $orden;
+    public $cliente;
     
     /**
      * Create a new message instance.
@@ -32,6 +34,7 @@ class OrderReceived extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.orders.received',compact('orden'));
+        $this->cliente = Cliente::find($this->orden->user_id);
+        return $this->view('mails.orders.received',compact('orden','cliente'));
     }
 }
