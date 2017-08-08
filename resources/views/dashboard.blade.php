@@ -13,7 +13,7 @@
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons text-info">warning</i> <a href="#pablo">Revisar...</a>
+                    <i class="material-icons text-info">warning</i> <a href="{{ url('/ordenes') }}">Revisar...</a>
                 </div>
             </div>
         </div>
