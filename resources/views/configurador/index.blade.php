@@ -475,7 +475,7 @@
 						    			<hr>
 						    			<div class="step-intro">
 						    				<p>
-						    					Selecciona entre las opciones de invitaciones que tenemos para ti
+						    					Selecciona entre las opciones de invitaciones que tenemos 
 						    				</p>
 						    			</div>
 						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Invitaciones'])
