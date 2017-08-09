@@ -12,8 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'adminWIT',
-            'email' => 'adminWIT@witplanner.com.mx',
+            'name' => 'Admin Account',
+            'email' => 'wit@witplanner.com.mx',
             'password' => bcrypt('WhateverItTakes2017'),
         ]);
         $this->call(ClientsTableSeeder::class);

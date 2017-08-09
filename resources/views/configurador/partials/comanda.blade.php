@@ -12,7 +12,7 @@
 			<tr>
 				<td>{{$product->nombre}}</td>
 				<td>
-					<input type="number" id="producto{{$product->id}}" name="producto{{$product->id}}" min="0">
+					<input type="number" id="producto{{$product->id}}" name="producto[]" min="0">
 					<small><i>{{ $product->descripcion}}</i></small>
 				</td>
 			</tr>

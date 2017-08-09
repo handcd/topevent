@@ -16,8 +16,7 @@ class CreateDatosOrdenTable extends Migration
         Schema::create('datos_orden', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('order_id');
-            $table->integer('comanda_id');
-            $table->integer('producto_id');
+            $table->integer('product_id');
             $table->integer('valor')->nullable();
             $table->timestamps();
         });

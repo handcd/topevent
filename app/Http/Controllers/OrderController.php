@@ -4,6 +4,8 @@ namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
 use WIT\Order;
+use WIT\DatosOrden;
+use WIT\Product;
 
 class OrderController extends Controller
 {
@@ -64,7 +66,9 @@ class OrderController extends Controller
     public function show($id)
     {
         $orden = Order::find($id);
-        return view('order.show',compact('orden'));
+        $productos = Product::all();
+        $datosOrden = DatosOrden::all()->where('order_id',$id);
+        return view('order.show',compact('orden','datosOrden','productos'));
     }
 
     /**

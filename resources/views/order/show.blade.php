@@ -11,10 +11,8 @@
                 <p class="category">Datos sobre la orden en el sistema</p>
             </div>
             <div class="card-content">
-                <p>
-                    Datos generales de la orden.
-                </p>
-                <table class="table">
+                <strong>Datos generales de la orden:</strong>
+                <table class="table table-striped">
                     <thead>
                         <th>Campo</th>
                         <th>Valor</th>
@@ -107,10 +105,6 @@
                             @endif
                         </tr>
                         <tr>
-                            <td>Notas Extra</td>
-                            <td>{{ $orden->notas }}</td>
-                        </tr>
-                        <tr>
                             <td>¿Requiere Limpieza?</td>
                             @if ($orden->id_limpieza)
                                 <td>Sí</td>
@@ -118,13 +112,27 @@
                                 <td>No</td>
                             @endif
                         </tr>
+                        <tr>
+                            <td>Notas Extra</td>
+                            <td>{{ $orden->notas }}</td>
+                        </tr>
                     </tbody>
                 </table>
-                <p>
-                    Opciones de comandas seleccionadas:
-                </p>
-                <br><br>
-                <strong>Cargando...</strong>
+                <strong>Opciones de comandas seleccionadas:</strong>
+                <table class="table table-striped table-responsive">
+                    <thead>
+                        <th>Producto</th>
+                        <th>Cantidad/Valor</th>
+                    </thead>
+                    <tbody>
+                        @foreach ($datosOrden as $dato)
+                            <tr>
+                                <td>{{ $productos->where('id',$dato->product_id)->first()->nombre }}</td>
+                                <td>{{ $dato->valor }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
         <a href="{{ url('/ordenes') }}" class="btn btn-success">Atrás</a>

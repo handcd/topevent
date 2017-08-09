@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use WIT\Mail\OrderReceived;
 use WIT\Comanda;
+use WIT\Product;
 use WIT\Cliente;
+use WIT\DatosOrden;
 use WIT\Order;
 
 class ConfiguradorController extends Controller
@@ -43,6 +45,7 @@ class ConfiguradorController extends Controller
     {
         $orden = new Order;
         $cliente = new Cliente;
+        $datosOrden = new DatosOrden;
 
         $this->validate($request, [
                 // Primero validarmos los datos del cliente.
@@ -78,6 +81,19 @@ class ConfiguradorController extends Controller
         $orden->direccion_lugar = $request->direccionLugar;
         $orden->id_limpieza = $request->idLimpieza;
         $orden->save();
+
+        // Productos
+        $i = 0;
+        foreach (Product::all() as $producto) {
+            if (!empty($request->producto[$i])) {
+                $datos = new DatosOrden;
+                $datos->order_id = $orden->id;
+                $datos->product_id = $producto->id;
+                $datos->valor = $request->producto[$i];
+                $datos->save();
+            }
+            $i++;
+        }
 
         // Enviamos Mail.
         Mail::to($cliente->email)->send(new OrderReceived($orden));
