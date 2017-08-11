@@ -297,7 +297,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Nombre del Lugar del Evento</label>
-                                    <input class="form-control" name="nombreLugarEvento" type="text"/>
+                                    <input class="form-control" name="nombreLugarEvento" value="@yield('editNombreLugarEvento')" type="text"/>
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -309,7 +309,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Dirección del Lugar del Evento</label>
-                                    <input class="form-control" name="direccionLugarEvento" type="text"/>
+                                    <input class="form-control" name="direccionLugarEvento" value="@yield('editDireccionLugarEvento')" type="text"/>
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -323,7 +323,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Número de Invitados</label>
-                                    <input class="form-control" name="numInvitados" type="number" min="5" />
+                                    <input class="form-control" name="numInvitados" type="number" value="@yield('editNumInvitados')" min="5" />
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -335,7 +335,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Introducción del evento</label>
-                                    <input class="form-control" name="introduccion" type="textarea" />
+                                    <input class="form-control" name="introduccion" type="textarea" value="@yield('editIntroduccion')" />
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -373,7 +373,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Cotización</label>
-                                    <input class="form-control" name="cotizacion" type="number" />
+                                    <input class="form-control" name="cotizacion" type="number" value="@yield('editCotizacion')" />
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Notas de la orden</label>
-                                    <input class="form-control" name="notas" type="textarea" />
+                                    <input class="form-control" name="notas" type="textarea" value="@yield('editNotas')" />
                                     <span class="material-input"></span>
                                 </div>
                             </div>

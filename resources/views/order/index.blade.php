@@ -96,7 +96,7 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ 'ordenes/'.$orden->id.'/edit' }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
                                     <form action="{{'/ordenes/'.$orden->id}}" method="post">
@@ -136,7 +136,7 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ 'ordenes/'.$orden->id.'/edit' }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
                                     <form action="{{'/ordenes/'.$orden->id}}" method="post">
@@ -189,7 +189,7 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ 'ordenes/'.$orden->id.'/edit' }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
                                     <form action="{{'/ordenes/'.$orden->id}}" method="post">
