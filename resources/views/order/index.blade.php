@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row text-center">
-    <a href="{{ url('/ordenes/create') }}" class="btn btn-success">Añadir Orden</a>
+    <a href="{{ url('/ordenes/create') }}" class="btn btn-success"><i class="fa fa-plus-square" aria-hidden="true"></i> Añadir Orden</a>
 </div>
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">

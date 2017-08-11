@@ -127,9 +127,11 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
+        $comandas = Comanda::all();
+        $productos = Product::all();
         $item = Order::find($id);
         $itemData = DatosOrden::all()->where('order_id',$id);
-        return view('order.create',compact('item','itemData'));
+        return view('order.edit',compact('item','itemData','comandas','productos'));
     }
 
     /**

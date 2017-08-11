@@ -167,7 +167,7 @@
                 <p class="category">Registrar una orden nueva en el sistema</p>
             </div>
             <div class="card-content">
-                <form action="/ordenes/@yield('editId')" method="post">
+                <form action="{{ url('/ordenes/') }}/@yield('editId')" method="post">
                     {{ csrf_field() }}
                     @section('editMethod')
                         @show
@@ -178,7 +178,7 @@
                             </p>
                         </div>
                         <div class="col-lg-8">
-                            <div class="form-group label-floating is-empty">
+                            <div class="form-group label-floating">
                                 <label class="control-label">Selecciona el cliente:</label>
                                 <select name="cliente" class="form-control">
                                     <option disabled="" selected=""></option>
@@ -219,7 +219,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Fecha del Evento:</label>
-                                    <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" data-date-format="yyyy-mm-dd"/>
+                                    <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" data-date-format="yyyy-mm-dd" value="@yield('editFecha')"/>
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -231,7 +231,7 @@
                                 </span>
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label">Duración del evento:</label>
-                                    <input class="number form-control"  name="duracionEvento" min="0" />
+                                    <input class="number form-control"  name="duracionEvento" min="0" value="@yield('editDuracion')" />
                                     <span class="material-input"></span>
                                 </div>
                             </div>
@@ -425,7 +425,7 @@
 
 
                     <button type="submit" class="btn btn-primary pull-right">Subir</button>
-                    <a href="{{ url('/comandas') }}" class="btn btn-default">Cancelar</a>
+                    <a href="{{ url('/ordenes') }}" class="btn btn-default">Cancelar</a>
                     <div class="clearfix"></div>
                 </form>
             </div>
@@ -443,6 +443,11 @@
             weekStart: 1,
             viewMode: 2,
             format: 'dd/mm/yyyy'
+        });
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('input').trigger('change');    
         });
     </script>
 @endsection
