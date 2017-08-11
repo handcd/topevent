@@ -47,7 +47,7 @@
     		<div class="col-sm-10 col-sm-offset-1">
 				<div id="rootwizard">
 					<div class="card">
-						<div class="col-sm-2">
+						<div class="col-sm-2" style="padding-bottom: 2vh;">
 							<div class="wizard-nav-header">
 								<h4>Configurador de Eventos</h4>
 							</div>

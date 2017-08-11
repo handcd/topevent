@@ -13,7 +13,7 @@
                     <input id="filter" class="form-control" type="text" placeholder="Buscar...">
                 </div>
                 <div class="col-md-6">
-                    <a href="/clientes/create" class="btn btn-success pull-right">
+                    <a href="{{ url('/clientes/create') }}" class="btn btn-success pull-right">
                         <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
                     </a>
                 </div>

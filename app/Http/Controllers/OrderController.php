@@ -3,9 +3,13 @@
 namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use WIT\Mail\OrderReceived;
 use WIT\Order;
 use WIT\DatosOrden;
 use WIT\Product;
+use WIT\Comanda;
+use WIT\Cliente;
 
 class OrderController extends Controller
 {
@@ -41,7 +45,9 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return view('order.create');
+        $comandas = Comanda::all();
+        $productos = Product::all();
+        return view('order.create',compact('comandas','productos'));
     }
 
     /**
@@ -52,9 +58,51 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        $orden = new Order;
+        $this->validate($request, [
+                'cliente' => 'required',
+                'fechaevento' => 'required',
+                'duracionEvento' => 'required',
+                'tipoEvento' => 'required',
+                'lugarEvento' => 'required',
+                'numInvitados' => 'required',
+                'introduccion' => 'required',
+                'aprobado' => 'required',
+                'limpieza' => 'required',
+            ]);
 
-        $orden = Order::find(1);
-        Mail::to($request->email)->send(new OrderReceived($orden));
+        $orden->user_id = $request->cliente;
+        $orden->fecha = $request->fechaevento;
+        $orden->duracion = $request->duracionEvento;
+        $orden->tipo_evento = $request->tipoEvento;
+        $orden->id_lugar_evento = $request->lugarEvento;
+        $orden->nombre_lugar = $request->nombreLugarEvento;
+        $orden->direccion_lugar = $request->direccionLugarEvento;
+        $orden->no_invitados = $request->numInvitados;
+        $orden->introduccion = $request->introduccion;
+        $orden->id_limpieza = $request->limpieza;
+        $orden->aprobado = $request->aprobado;
+        $orden->notas = $request->notas;
+        $orden->cotizacion = $request->cotizacion;
+        $orden->save();
+
+        // Productos
+        $i = 0;
+        foreach (Product::all() as $producto) {
+            if (!empty($request->producto[$i])) {
+                $datos = new DatosOrden;
+                $datos->order_id = $orden->id;
+                $datos->product_id = $producto->id;
+                $datos->valor = $request->producto[$i];
+                $datos->save();
+            }
+            $i++;
+        }
+
+        $email = Cliente::find($orden->user_id)->email;
+        Mail::to($email)->send(new OrderReceived($orden));
+
+        return redirect('ordenes');
     }
 
     /**
@@ -79,7 +127,9 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Order::find($id);
+        $itemData = DatosOrden::all()->where('order_id',$id);
+        return view('order.create',compact('item','itemData'));
     }
 
     /**
@@ -102,6 +152,8 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = Order::find($id);
+        $item->delete();
+        return redirect('/ordenes');
     }
 }

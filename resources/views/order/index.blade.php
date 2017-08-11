@@ -1,6 +1,9 @@
 @extends('layouts.appuser')
 
 @section('content')
+<div class="row text-center">
+    <a href="{{ url('/ordenes/create') }}" class="btn btn-success">Añadir Orden</a>
+</div>
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
@@ -96,9 +99,11 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Eliminar Orden" class="btn btn-danger btn-simple btn-xs">
-                                        <i class="material-icons">close</i>
-                                    </a>
+                                    <form action="{{'/ordenes/'.$orden->id}}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -134,9 +139,11 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a href="{{'ordenes/'.$orden->id}}" type="button" rel="tooltip" title="Eliminar Orden" class="btn btn-danger btn-simple btn-xs">
-                                        <i class="material-icons">close</i>
-                                    </a>
+                                    <form action="{{'/ordenes/'.$orden->id}}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -185,9 +192,11 @@
                                     <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Eliminar Orden" class="btn btn-danger btn-simple btn-xs">
-                                        <i class="material-icons">close</i>
-                                    </a>
+                                    <form action="{{'/ordenes/'.$orden->id}}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
