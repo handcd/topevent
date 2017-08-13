@@ -527,7 +527,7 @@
                                 <div class="radio">
                                     <label><input type="radio" name="aprobado"  value="0" 
                                     @hasSection('editAprobado')
-                                      @if (!$__env->getSections()['editAprobado'])
+                                      @if ($__env->getSections()['editAprobado'] == "no")
                                         checked 
                                       @endif 
                                     @endif>No</label>
@@ -535,7 +535,7 @@
                                 <div class="radio">
                                     <label><input type="radio" name="aprobado" value="1" 
                                     @hasSection('editAprobado')
-                                      @if ($__env->getSections()['editAprobado'])
+                                      @if ($__env->getSections()['editAprobado'] == "si")
                                         checked 
                                       @endif
                                     @endif>Si</label>

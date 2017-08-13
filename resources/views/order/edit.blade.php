@@ -11,7 +11,7 @@
 @section('editNumInvitados',$item->no_invitados)
 @section('editIntroduccion',$item->introduccion)
 @section('editLimpieza',$item->id_limpieza)
-@section('editAprobado',$item->aprobado)
+@section('editAprobado',$item->aprobado == 1 ? "si" : "no")
 @section('editNotas',$item->notas)
 @section('editCotizacion',$item->cotizacion)
 
