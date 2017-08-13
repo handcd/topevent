@@ -15,6 +15,10 @@
 @section('editNotas',$item->notas)
 @section('editCotizacion',$item->cotizacion)
 
+@foreach ($itemData as $data)
+	@section('editProd'.$data->product_id,$data->valor)
+@endforeach
+
 @section('editMethod')
 	{{method_field('PUT')}}
 @endsection

@@ -143,7 +143,55 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $orden = Order::find($id);
+
+        $this->validate($request, [
+                'cliente' => 'required',
+                'fechaevento' => 'required',
+                'duracionEvento' => 'required',
+                'tipoEvento' => 'required',
+                'lugarEvento' => 'required',
+                'numInvitados' => 'required',
+                'introduccion' => 'required',
+                'aprobado' => 'required',
+                'limpieza' => 'required',
+            ]);
+
+        $orden->user_id = $request->cliente;
+        $orden->fecha = $request->fechaevento;
+        $orden->duracion = $request->duracionEvento;
+        $orden->tipo_evento = $request->tipoEvento;
+        $orden->id_lugar_evento = $request->lugarEvento;
+        $orden->nombre_lugar = $request->nombreLugarEvento;
+        $orden->direccion_lugar = $request->direccionLugarEvento;
+        $orden->no_invitados = $request->numInvitados;
+        $orden->introduccion = $request->introduccion;
+        $orden->id_limpieza = $request->limpieza;
+        $orden->aprobado = $request->aprobado;
+        $orden->notas = $request->notas;
+        $orden->cotizacion = $request->cotizacion;
+        $orden->save();
+
+        // Productos
+        $i = 0;
+        foreach (Product::all() as $producto) {
+            if (!empty($request->producto[$i])) {
+                $datos = DatosOrden::where([
+                    ['order_id','=',$orden->id],
+                    ['product_id','=',$producto->id],
+                ])->first();
+                if (is_null($datos)) {
+                    $datos = new DatosOrden;
+                    $datos->order_id = $orden->id;
+                    $datos->product_id = $producto->id;
+                }
+                $datos->valor = $request->producto[$i];
+                $datos->save();
+            }
+            $i++;
+        }
+
+        return redirect('ordenes');
     }
 
     /**
