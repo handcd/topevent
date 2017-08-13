@@ -190,7 +190,9 @@
 										</div>
 										<hr>
 										<div class="row">
-											<h4>Pronóstico del clima para la fecha:</h4>
+											<div class="col-xs-offset-10 col-xs-offset-1">
+												<h4>Pronóstico del clima para la fecha:</h4>
+											</div>
 											<div class="col-sm-4 col-sm-offset-1">
 												<canvas id="icon1" width="128" height="128"></canvas>
 											</div>

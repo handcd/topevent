@@ -1606,6 +1606,13 @@ select.form-control {
 .tab-space {
   padding: 20px 0 50px 0px; }
 
+@media (max-width: 500px) {
+  .nav-pills > li > a {
+    display: none; }
+  .nav-pills > li i {
+    display: none; }
+  .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    display: block; } }
 footer {
   padding: 15px 0; }
   footer ul {
