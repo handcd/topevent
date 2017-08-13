@@ -142,15 +142,17 @@
                                 <td>{{ $orden->user_id}}</td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ url('/ordenes/'.$orden->id.'/edit') }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Eliminar Orden" class="btn btn-danger btn-simple btn-xs">
-                                        <i class="material-icons">close</i>
-                                    </a>
+                                    <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -180,15 +182,17 @@
                                 <td>{{ $orden->user_id}}</td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'ordenes/'.$orden->id }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ url('/ordenes/'.$orden->id.'/edit') }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <a href="{{'ordenes/'.$orden->id}}" type="button" rel="tooltip" title="Eliminar Orden" class="btn btn-danger btn-simple btn-xs">
-                                        <i class="material-icons">close</i>
-                                    </a>
+                                    <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

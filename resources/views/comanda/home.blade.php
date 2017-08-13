@@ -6,7 +6,7 @@
         <input id="filter" class="form-control" type="text" placeholder="Buscar...">
     </div>
     <div class="col-md-6">
-        <a href="/comandas/create" class="btn btn-success">
+        <a href="{{ url('/comandas/create') }}" class="btn btn-success">
             <i class="fa fa-cart-plus" aria-hidden="true"></i> Añadir Producto
         </a>
     </div>
@@ -34,10 +34,10 @@
                             <td>{{$product->nombre}}</td>
                             <td>{{$product->precio}}</td>
                             <td class="td-actions text-right">
-                                <a href="{{ 'comandas/'.$product->id.'/edit' }}" type="button" rel="tooltip" title="Editar Producto" class="btn btn-primary btn-simple btn-xs">
+                                <a href="{{ url('/comandas/'.$product->id.'/edit') }}" type="button" rel="tooltip" title="Editar Producto" class="btn btn-primary btn-simple btn-xs">
                                     <i class="material-icons">edit</i>
                                 </a>
-                                <form action="{{'/comandas/'.$product->id}}" method="post">
+                                <form action="{{ url('/comandas/'.$product->id) }}" method="post">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>

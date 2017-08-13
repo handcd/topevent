@@ -31,7 +31,7 @@
 	<div class="bg-image"></div>
 
 	<div class="logo-container">
-		<a href="http://witplanner.com.mx">
+		<a href="{{ url('/configurador') }}">
             <div class="logo">
                 <img src="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
             </div>

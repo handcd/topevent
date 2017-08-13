@@ -265,7 +265,7 @@ img {
       <td valign="middle" style='vertical-align: middle;'>
                           <div class='contentEditableContainer contentTextEditable'>
                             <div class='contentEditable' style='text-align: left;font-weight: light; color:#555555;font-size:26;line-height: 39px;font-family: Helvetica Neue;'>
-                              <h1 class='big'><a target='_blank' href="[CLIENTS.WEBSITE]" style='color:#444444; font-family:Arial;'>Event Planner by WIT&trade;</a></h1>
+                              <h1 class='big'><a target='_blank' href="{{ url('/configurador') }}" style='color:#444444; font-family:Arial;'>Event Planner by WIT&trade;</a></h1>
                             </div>
                           </div>
                         </td>
@@ -398,7 +398,7 @@ img {
                               <p>¿Tienes más eventos? No importa si es algo pequeño como una fiesta casual, o es una gran boda. Configura todos tus eventos con Event Planner by WIT&trade; y empieza a disfrutar de nuevas experiencias creativas para tus reuniones.
                               </p>
                               <br><br>
-                              <a target='_blank' href="http://witplanner.com.mx/configurador" class='link3' style='color:#555555;'>Crea ahora</a>
+                              <a target='_blank' href="{{ url('/configurador') }}" class='link3' style='color:#555555;'>Crea ahora</a>
                               <br>
                             </div>
                           </div>
