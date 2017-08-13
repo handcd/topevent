@@ -181,9 +181,20 @@
                             <div class="form-group label-floating">
                                 <label class="control-label">Selecciona el cliente:</label>
                                 <select name="cliente" class="form-control">
-                                    <option disabled="" selected=""></option>
+                                    <option disabled="" @hasSection('editUserId')
+                                      {{-- No hacemos nada --}}
+                                    @else
+                                      selected=""
+                                    @endif></option>
                                     @foreach (WIT\Cliente::all() as $cliente)
-                                        <option value="{{ $cliente->id }}">
+                                        <option value="{{ $cliente->id }}" 
+                                        @hasSection('editUserId')
+                                          @if ($__env->getSections()['editUserId'] == $cliente->id)
+                                            selected="" 
+                                          @endif
+                                        @else
+                                          {{-- false expr --}}
+                                        @endif>
                                             {{
                                                 $cliente->id
                                                 .".- "
@@ -217,7 +228,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Fecha del Evento:</label>
                                     <input class="datepicker form-control" id="fechaevento" name="fechaevento" type="text" data-date-format="yyyy-mm-dd" value="@yield('editFecha')"/>
                                     <span class="material-input"></span>
@@ -229,7 +240,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Duración del evento:</label>
                                     <input class="number form-control"  name="duracionEvento" min="0" value="@yield('editDuracion')" />
                                     <span class="material-input"></span>
@@ -237,26 +248,86 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="form-group label-floating is-empty">
+                            <div class="form-group label-floating ">
                                 <label class="control-label">Selecciona el tipo de evento:</label>
                                 <select name="tipoEvento" class="form-control">
-                                    <option disabled="" selected=""></option>
+                                    <option disabled="" 
+                                    @hasSection('editTipoEvento')
+                                      {{-- true expr --}}
+                                    @else
+                                      selected="" 
+                                    @endif></option>
                                     <optgroup label="General">
-                                    <option value="0">Adolescentes</option>
-                                    <option value="1">Familiar</option>
+                                    <option value="0" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 0)
+                                        selected="" 
+                                      @endif
+                                    @endif>Adolescentes</option>
+                                    <option value="1" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 1)
+                                        selected="" 
+                                      @endif
+                                    @endif>Familiar</option>
                                     </optgroup>
                                     <optgroup label="Adultos">
-                                        <option value="2">18 y Veinteañeros</option>
-                                        <option value="3">Treintañeros</option>
-                                        <option value="4">Cuarentones</option>
-                                        <option value="5">Cincuentones</option>
-                                        <option value="6">Más de 50</option>
-                                        <option value="7">Combinadito</option>
+                                        <option value="2" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 2)
+                                        selected="" 
+                                      @endif
+                                    @endif>18 y Veinteañeros</option>
+                                        <option value="3" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 3)
+                                        selected="" 
+                                      @endif
+                                    @endif>Treintañeros</option>
+                                        <option value="4" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 4)
+                                        selected="" 
+                                      @endif
+                                    @endif>Cuarentones</option>
+                                        <option value="5" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 5)
+                                        selected="" 
+                                      @endif
+                                    @endif>Cincuentones</option>
+                                        <option value="6" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 6)
+                                        selected="" 
+                                      @endif
+                                    @endif>Más de 50</option>
+                                        <option value="7" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 7)
+                                        selected="" 
+                                      @endif
+                                    @endif>Combinadito</option>
                                     </optgroup>
                                     <optgroup label="Diversidad (Pink Parties)">
-                                        <option value="8">Fiesta Ellas</option>
-                                        <option value="9">Fiesta Ellos</option>
-                                        <option value="10">Fiesta Ellas y Ellos</option>
+                                        <option value="8" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 8)
+                                        selected="" 
+                                      @endif
+                                    @endif>Fiesta Ellas</option>
+                                        <option value="9" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 9)
+                                        selected="" 
+                                      @endif
+                                    @endif>Fiesta Ellos</option>
+                                        <option value="10" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 10)
+                                        selected="" 
+                                      @endif
+                                    @endif>Fiesta Ellas y Ellos</option>
                                     </optgroup>
                                 </select>
                                 <span class="material-input"></span>
@@ -265,26 +336,96 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="form-group label-floating is-empty">
+                            <div class="form-group label-floating ">
                                 <label class="control-label">Lugar del Evento:</label>
                                 <select name="lugarEvento" class="form-control">
-                                    <option disabled="" selected=""></option>
+                                    <option disabled="" 
+                                    @hasSection('editLugarEvento')
+                                      {{-- true expr --}}
+                                    @else
+                                      selected="" 
+                                    @endif></option>
                                     <optgroup label="Interior">
-                                        <option value="0">Salón</option>
-                                        <option value="1">Salón + Jardín + Terraza</option>
-                                        <option value="2">Salón en Hotel</option>
-                                        <option value="3">Salón en Hacienda</option>
-                                        <option value="4">Restaurante</option>
-                                        <option value="5">Restaurante + Bar</option>
-                                        <option value="6">Antro</option>
-                                        <option value="7">Casa</option>
+                                        <option value="0" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 0)
+                                            selected="" 
+                                          @endif
+                                        @endif>Salón</option>
+                                        <option value="1" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 1)
+                                            selected="" 
+                                          @endif
+                                        @endif>Salón + Jardín + Terraza</option>
+                                        <option value="2" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 2)
+                                            selected="" 
+                                          @endif
+                                        @endif>Salón en Hotel</option>
+                                        <option value="3" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 3)
+                                            selected="" 
+                                          @endif
+                                        @endif>Salón en Hacienda</option>
+                                        <option value="4" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 4)
+                                            selected="" 
+                                          @endif
+                                        @endif>Restaurante</option>
+                                        <option value="5" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 5)
+                                            selected="" 
+                                          @endif
+                                        @endif>Restaurante + Bar</option>
+                                        <option value="6" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 6)
+                                            selected="" 
+                                          @endif
+                                        @endif>Antro</option>
+                                        <option value="7" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 7)
+                                            selected="" 
+                                          @endif
+                                        @endif>Casa</option>
                                     </optgroup>
                                     <optgroup label="Exterior">
-                                        <option value="8">Jardín</option>
-                                        <option value="9">Jardín + Alberca</option>
-                                        <option value="10">Terraza</option>
-                                        <option value="11">Hacienda</option>
-                                        <option value="12">Casa en Playa</option>
+                                        <option value="8" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 8)
+                                            selected="" 
+                                          @endif
+                                        @endif>Jardín</option>
+                                        <option value="9" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 9)
+                                            selected="" 
+                                          @endif
+                                        @endif>Jardín + Alberca</option>
+                                        <option value="10" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 10)
+                                            selected="" 
+                                          @endif
+                                        @endif>Terraza</option>
+                                        <option value="11" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 11)
+                                            selected="" 
+                                          @endif
+                                        @endif>Hacienda</option>
+                                        <option value="12" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 12)
+                                            selected="" 
+                                          @endif
+                                        @endif>Casa en Playa</option>
                                     </optgroup>
                                 </select>
                                 <span class="material-input"></span>
@@ -295,7 +436,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-location-arrow" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Nombre del Lugar del Evento</label>
                                     <input class="form-control" name="nombreLugarEvento" value="@yield('editNombreLugarEvento')" type="text"/>
                                     <span class="material-input"></span>
@@ -307,7 +448,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Dirección del Lugar del Evento</label>
                                     <input class="form-control" name="direccionLugarEvento" value="@yield('editDireccionLugarEvento')" type="text"/>
                                     <span class="material-input"></span>
@@ -321,7 +462,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-address-book-o" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Número de Invitados</label>
                                     <input class="form-control" name="numInvitados" type="number" value="@yield('editNumInvitados')" min="5" />
                                     <span class="material-input"></span>
@@ -333,7 +474,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-book" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Introducción del evento</label>
                                     <input class="form-control" name="introduccion" type="textarea" value="@yield('editIntroduccion')" />
                                     <span class="material-input"></span>
@@ -343,14 +484,39 @@
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="form-group label-floating is-empty">
+                            <div class="form-group label-floating ">
                                 <label class="control-label">Limpieza del evento:</label>
                                 <select name="limpieza" class="form-control">
-                                    <option disabled="" selected=""></option>
-                                    <option value="0">No requiere limpieza</option>
-                                    <option value="1">Requiere limpieza antes del evento</option>
-                                    <option value="2">Requiere limpieza después del evento</option>
-                                    <option value="3">Requiere limpieza antes y después del evento</option>
+                                    <option disabled=""  
+                                    @hasSection('editLimpieza')
+                                      {{-- true expr --}}
+                                    @else
+                                      selected="" 
+                                    @endif></option>
+                                    <option value="0" 
+                                    @hasSection('editLimpieza')
+                                      @if ($__env->getSections()['editLimpieza'] == 0)
+                                        selected="" 
+                                      @endif
+                                    @endif>No requiere limpieza</option>
+                                    <option value="1" 
+                                    @hasSection('editLimpieza')
+                                      @if ($__env->getSections()['editLimpieza'] == 1)
+                                        selected="" 
+                                      @endif
+                                    @endif>Requiere limpieza antes del evento</option>
+                                    <option value="2" 
+                                    @hasSection('editLimpieza')
+                                      @if ($__env->getSections()['editLimpieza'] == 2)
+                                        selected="" 
+                                      @endif
+                                    @endif>Requiere limpieza después del evento</option>
+                                    <option value="3" 
+                                    @hasSection('editLimpieza')
+                                      @if ($__env->getSections()['editLimpieza'] == 3)
+                                        selected="" 
+                                      @endif
+                                    @endif>Requiere limpieza antes y después del evento</option>
                                 </select>
                                 <span class="material-input"></span>
                             </div>
@@ -359,10 +525,20 @@
                             <div class="form-group">
                                 <label for="tipoEvento">¿Se encuentra Aprobada la Orden?</label>
                                 <div class="radio">
-                                    <label><input type="radio" name="aprobado" value="0">No</label>
+                                    <label><input type="radio" name="aprobado"  value="0" 
+                                    @hasSection('editAprobado')
+                                      @if (!$__env->getSections()['editAprobado'])
+                                        checked 
+                                      @endif 
+                                    @endif>No</label>
                                 </div>
                                 <div class="radio">
-                                    <label><input type="radio" name="aprobado" value="1">Si</label>
+                                    <label><input type="radio" name="aprobado" value="1" 
+                                    @hasSection('editAprobado')
+                                      @if ($__env->getSections()['editAprobado'])
+                                        checked 
+                                      @endif
+                                    @endif>Si</label>
                                 </div>
                             </div>
                         </div>
@@ -371,7 +547,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-money" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Cotización</label>
                                     <input class="form-control" name="cotizacion" type="number" value="@yield('editCotizacion')" />
                                     <span class="material-input"></span>
@@ -385,7 +561,7 @@
                                 <span class="input-group-addon">
                                     <i class="fa fa-sticky-note" aria-hidden="true"></i>
                                 </span>
-                                <div class="form-group label-floating is-empty">
+                                <div class="form-group label-floating ">
                                     <label class="control-label">Notas de la orden</label>
                                     <input class="form-control" name="notas" type="textarea" value="@yield('editNotas')" />
                                     <span class="material-input"></span>
@@ -447,7 +623,9 @@
     </script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
-            $('input').trigger('change');    
+            setTimeout(function() {
+              $('input').trigger('change');
+            },1000);
         });
     </script>
 @endsection
