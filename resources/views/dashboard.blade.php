@@ -9,11 +9,11 @@
             </div>
             <div class="card-content">
                 <p class="category">Nuevos</p>
-                <h3 class="title">12</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons text-info">warning</i> <a href="#pablo">Revisar...</a>
+                    <i class="material-icons text-info">warning</i> <a href="{{ url('/ordenes') }}">Revisar...</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Asignados</p>
-                <h3 class="title">50</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -41,7 +41,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Cerrados</p>
-                <h3 class="title">75</h3>
+                <h3 class="title">0</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -121,158 +121,81 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6">
         <div class="card">
-            <div class="card-header" data-background-color="purple">
-                <h4 class="title">Ordenes sin Cotizar</h4>
-                <p class="category">Ordenes recién ingresadas al sistema.</p>
+            <div class="card-header" data-background-color="blue">
+                <h4 class="title">Ordenes sin Aprobar</h4>
+                <p class="category">Ordenes ingresadas al sistema sin cotizar</p>
             </div>
             <div class="card-content table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Fecha Evento</th>
+                        <th>Cliente</th>
+                        <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sergio</td>
-                            <td>22/07/2017</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Ariel</td>
-                            <td>22/08/2017</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Alejandro Fortuna</td>
-                            <td>22/09/2017</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Señor Kosh</td>
-                            <td>22/10/2017</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Batman</td>
-                            <td>30/02/2018</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
+                        @foreach ($ordenes->where('aprobado',0) as $orden)
+                            <tr>
+                                <td>{{ $orden->id }}</td>
+                                <td>{{ $orden->user_id}}</td>
+                                <td>{{ $orden->fecha }}</td>
+                                <td class="td-actions text-right">
+                                    <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
+                                        <i class="material-icons">remove_red_eye</i>
+                                    </a>
+                                    <a href="{{ url('/ordenes/'.$orden->id.'/edit') }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6">
         <div class="card">
-            <div class="card-header" data-background-color="orange">
-                <h4 class="title">Ordenes en Progreso</h4>
-                <p class="category">Ordenes en el proceso de validación y valoración.</p>
+            <div class="card-header" data-background-color="green">
+                <h4 class="title">Ordenes Aprobadas</h4>
+                <p class="category">Ordenes cotizadas</p>
             </div>
             <div class="card-content table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Presupuesto</th>
+                        <th>Cliente</th>
+                        <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Maura Morfín</td>
-                            <td>$36,738</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Humberto Alcocer</td>
-                            <td>$23,789</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Alejandro Fortuna</td>
-                            <td>$56,142</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Señor Kosh</td>
-                            <td>$38,735</td>
-                            <td class="td-actions text-right">
-                                <button type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
-                                    <i class="material-icons">edit</i>
-                                </button>
-                                <button type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs">
-                                    <i class="material-icons">close</i>
-                                </button>
-                            </td>
-                        </tr>
+                        @foreach ($ordenes->where('aprobado',1) as $orden)
+                            <tr>
+                                <td>{{ $orden->id }}</td>
+                                <td>{{ $orden->user_id}}</td>
+                                <td>{{ $orden->fecha }}</td>
+                                <td class="td-actions text-right">
+                                    <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
+                                        <i class="material-icons">remove_red_eye</i>
+                                    </a>
+                                    <a href="{{ url('/ordenes/'.$orden->id.'/edit') }}" type="button" rel="tooltip" title="Editar Orden" class="btn btn-primary btn-simple btn-xs">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                    <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

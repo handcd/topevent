@@ -16,17 +16,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/configurador', function() {
-    return view('configurador.index');
-});
-
 // Login Routes
 Auth::routes();
 
 // Dashboard
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
-// Social 
+// Social
 Route::get('/social', function() {
     return view('social');
 })->middleware('auth');
@@ -35,3 +31,4 @@ Route::get('/social', function() {
 Route::resource('clientes','ClientController');
 Route::resource('ordenes','OrderController');
 Route::resource('comandas','ComandaController');
+Route::resource('configurador','ConfiguradorController');

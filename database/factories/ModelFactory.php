@@ -23,17 +23,6 @@ $factory->define(WIT\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(WIT\Order::class, function (Faker\Generator $faker) {
-    static $password;
-
-    return [
-        'user_id' => 1,
-        'fecha' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
-    ];
-});
-
 $factory->define(WIT\Cliente::class, function (Faker\Generator $faker) {
 
     return [

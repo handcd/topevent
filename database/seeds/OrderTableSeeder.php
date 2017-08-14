@@ -11,6 +11,6 @@ class OrderTableSeeder extends Seeder
      */
     public function run()
     {
-    	Comanda::create(['user_id'=>1,'fecha'=>'']);
+    	//Comanda::create(['user_id'=>1,'fecha'=>'']);
     }
 }

@@ -13,7 +13,7 @@
                     <input id="filter" class="form-control" type="text" placeholder="Buscar...">
                 </div>
                 <div class="col-md-6">
-                    <a href="/clientes/create" class="btn btn-success pull-right">
+                    <a href="{{ url('/clientes/create') }}" class="btn btn-success pull-right">
                         <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
                     </a>
                 </div>
@@ -37,13 +37,13 @@
                                 <td>{{$cliente->email}}</td>
                                 <td>{{$cliente->created_at}}</td>
                                 <td class="td-actions text-right">
-                                    <a href="{{ 'clientes/'.$cliente->id }}" type="button" rel="tooltip" title="Ver Cliente" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/clientes/'.$cliente->id) }}" type="button" rel="tooltip" title="Ver Cliente" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ 'clientes/'.$cliente->id.'/edit' }}" type="button" rel="tooltip" title="Editar Cliente" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ url('/clientes/'.$cliente->id.'/edit') }}" type="button" rel="tooltip" title="Editar Cliente" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <form action="{{'/clientes/'.$cliente->id}}" method="post">
+                                    <form action="{{ url('/clientes/'.$cliente->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
                                         <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Cliente"><i class="material-icons">close</i></button>

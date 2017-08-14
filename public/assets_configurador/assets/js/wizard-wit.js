@@ -5,10 +5,11 @@ $(document).ready(function() {
 		var $percent = ($current/$total) * 100;
 		$('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
 	}});
-	$('#rootwizard .finish').click(function() {
-		alert('¡Gracias! Tu orden ha sido recibida. En breve recibirás un correo electrónico con la confirmación de tu compra');
+	/*$('#rootwizard .finish').click(function() {
+		alert('¡Gracias! Tu orden ha sido recibida. En breve recibirás un correo electrónico con la confirmación de tu orden. ');
 		//$('#rootwizard').find("a[href*='tab1']").trigger('click');
-	});
+		window.location.replace("http://witeventos.com");
+	});*/
 
 	//$(".col-nav").css({'height':($(".tab-content").height()+'px')});
 	$(".col-nav-wizard").css({'height':($(".tab-content").height()+'px')});

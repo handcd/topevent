@@ -89,3 +89,27 @@
 .tab-space{
     padding: 20px 0 50px 0px;
 }
+
+@media(max-width: 500px)
+{
+    .nav-pills{
+        > li {
+            > a{
+                display: none;
+            }
+
+            i{
+                display: none;
+            }
+
+            &.active > a{
+                &,
+                &:focus,
+                &:hover{
+                    display: block;
+                }
+            }
+
+        }
+    }   
+}

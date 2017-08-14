@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #bdc3c7;
+                /*background-color: #bdc3c7;*/
                 color: #2c3e50;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -50,8 +50,9 @@
             }
 
             .links > a {
+                border:2px solid transparent;
                 color: #2c3e50;
-                padding: 0 25px;
+                padding: 10px 35px;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .1rem;
@@ -59,10 +60,13 @@
                 text-transform: uppercase;
             }
             .links > a:hover {
-                background-color: #7f8c8d !important;
+                /*background-color: #7f8c8d !important;*/
+                border-style: solid;
+                border-width: 2px;
                 border-radius: 8px !important;
-                padding-top: 10px;
-                padding-bottom: 10px;
+                border-color: #2c3e50;
+                /*padding-top: 10px;
+                padding-bottom: 10px;*/
             }
 
             .m-b-md {
@@ -76,7 +80,7 @@
                 }
 
                 .links > a {
-                    margin: 30px;
+                    margin: 15vw;
                 }
             }
         </style>
@@ -89,7 +93,6 @@
                         <a href="{{ url('/dashboard') }}">Inicio</a>
                     @else
                         <a href="{{ url('/login') }}">Iniciar Sesión</a>
-                        <a href="{{ url('/register') }}">Registrarse</a>
                     @endif
                 </div>
             @endif
@@ -100,9 +103,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentación</a>
-                    <a href="https://laracasts.com">Configurador</a>
-                    <a href="https://laravel-news.com">Soporte Técnico</a>
+                    <a href="#">Documentación</a>
+                    <a href="{{ url('configurador') }}">Configurador</a>
+                    <a href="mailto:humbertowoody+2n68syidh84hrt9a2i7+2oeavxrmdnwqm9f9vqc+0rxfk3lhe7@boards.trello.com">Soporte Técnico</a>
                 </div>
             </div>
         </div>

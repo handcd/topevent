@@ -3,6 +3,8 @@
 namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use WIT\Order;
+use WIT\Cliente;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $ordenes = Order::all();
+        $clientes = Cliente::all();
+        return view('dashboard',compact('ordenes'));
     }
 }
