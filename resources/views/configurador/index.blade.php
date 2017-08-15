@@ -554,10 +554,10 @@
 						    					Gracias por confiar en nosotros, recuerda que somos los mejores porque <strong>amamos lo que hacemos.</strong>
 						    				</p>
 						    				<div class="row">
-							    				<div class="col-lg-3">
+							    				<div class="col-xs-3">
 							    					<img class="img img-thumbnail" src="{{ asset('assets_configurador/assets/img/favicon.png') }}" alt="WIT Eventos con Ingenio">
 							    				</div>
-							    				<div class="col-lg-9">
+							    				<div class="col-xs-9">
 								    				<p>
 								    					<i>
 								    						Al hacer click en "Finalizar" la información proporcionada será almacenada en nuestra base de datos. Si tienes alguna duda, puedes consultar nuestra <a href="#">Política de Privacidad</a> así como nuestra <a href="#">Política de Uso de Datos</a>.
