@@ -71,6 +71,7 @@ class ProductTableSeeder extends Seeder
         $this->crearProducto('Verdes','Cantidad en número de personas',1,2,false);
 
         // Postres
+        $this->crearProducto('Pastel temático','(Especificar temática)',0,3,false);
         $this->crearProducto('Pastel tradicional','',0,3,true);
         $this->crearProducto('Red Velvet','Cantidad en número de personas',1,3,false);
         $this->crearProducto('Chocolate','Cantidad en número de personas',1,3,false);
@@ -184,5 +185,84 @@ class ProductTableSeeder extends Seeder
         $this->crearProducto('Romántica (paquete de 15 velas y 6 antorchas)','Número de paquetes (Hasta que se consuman)',1,9,false);
         
         // Entretenimiento
+        $this->crearProducto('Niños','',1,10,true);
+        $this->crearProducto('Inflables','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
+        $this->crearProducto('Trampolin','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
+        $this->crearProducto('Piñatas','(Especificar temática de la piñata)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',1,10,false);
+        $this->crearProducto('Payaso','(Especificar temática del payaso)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',1,10,false);
+        $this->crearProducto('Show Infantil (Botarga, Princesas, Hombres de acción)','(Especificar temática)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
+
+        $this->crearProducto('Adolescentes','',1,10,true);
+        $this->crearProducto('Consola Play Station (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
+        $this->crearProducto('Consola X-Box (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
+        $this->crearProducto('Consola Nintendo (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
+
+        $this->crearProducto('Genéricos','',1,10,true);
+        $this->crearProducto('Juegos de mesa, (Jenga, Scrabble y X)','Cantidad de juegos de mesa',1,10,false);
+        $this->crearProducto('Casinos, incluye mesa y Animador (Juegos: X, X y X)','Cantidad de juegos',1,10,false);
+        $this->crearProducto('Animador de Fiesta','Cantidad de animadores (recomendado 1 por cada 30 personas)',1,10,false);
+        $this->crearProducto('Gios','Cantidad de Gios (Se recomienda 1 Gío por cada 30 personas)',1,10,false);
+
+        $this->crearProducto('Adultos','',1,10,true);
+        $this->crearProducto('Standup Comedy','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crearProducto('Cantante','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+
+        $this->crearProducto('Sólo Adultos','',1,10,true);
+        $this->crearProducto('Stripper Despedida Solteras','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crearProducto('Stripper Despedida Solteros','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crearProducto('Stripper ellos para ellos','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crearProducto('Stripper ellas para ellas','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+
+        // Fiesta temática
+        $this->crearProducto('Fiesta temática','(Especificar temática)',1,11,false);
+        $this->crearProducto('Adornos de acuerdo a la temática','(Simple, Cargado o Recargado)',1,11,false);
+        $this->crearProducto('Globos y demás','(Simple, Cargado o Recargado)',1,11,false);
+
+        // Fiesta convencional
+        $this->crearProducto('Fiesta convencional','',1,12,true);
+        $this->crearProducto('Globos (incluye globos de aire y globos de gas)','(Simple, Cargado o Recargado)',1,12,false);
+        $this->crearProducto('Flores (incluye arreglo floral por mesa)','(Simple, Cargado o Recargado)',1,12,false);
+        $this->crearProducto('Disfraces de fiesta (Gorros, Antifaces y artilugios chistosos)','(Simple, Cargado o Recargado)',1,12,false);
+
+        // Albercada
+        $this->crearProducto('Máquina para fiesta de espuma','Número de horas',1,13,false);
+
+        // Fotografía
+        $this->crearProducto('Cobertura del evento','Número de horas (Entrega de material en USB)',1,14,false);
+
+        // Video
+        $this->crearProducto('Cobertura del evento','Número de horas (Entrega de material en USB)',1,15,false);
+        $this->crearProducto('Cobertura del evento (Con edición)','Número de horas (Entrega de material en USB)',1,15,false);
+
+        // Recuerdos
+        $this->crearProducto('Fotografías en marcos de cartón','Número de recuerdos',1,16,false);
+        $this->crearProducto('Fotobooth (Tiras de 4 fotos divertidas)','Número de recuerdos',1,16,false);
+        $this->crearProducto('Fotografías en marcos de madera','Número de recuerdos',1,16,false);
+
+        // Invitaciones
+        $this->crearProducto('Diseño de invitación para envío a través de correo electrónico (elige 1 de 3 propuestas)','Sí/No',1,17,false);
+        $this->crearProducto('Invitaciones impresas según el tipo de evento (elige 1 de 3 propuestas)','Sí/No',1,17,false);
+
+        // Confirmación
+        $this->crearProducto('Confirmación telefónica de invitados (Incluye listado electrónico)','Sí/No',1,18,false);
+        $this->crearProducto('Confirmación electrónica de invitados (Incluye listado electrónico)','Sí/No',1,18,false);
+        
+        // Extras WIT
+        $this->crearProducto('Flash mov antes o durante tu fiesta','Sí/No',1,19,false);
+        $this->crearProducto('Prepara un video con tus amigos para sorprender a tu festejado','Sí/No',1,19,false);
+
+        // Extras - Personal
+        $this->crearProducto('Requiero Edecanes Mujeres para sorprender','Sí/No',1,20,false);
+        $this->crearProducto('Requiero Edecanes Hombres para sorprender','Sí/No',1,20,false);
+        $this->crearProducto('Requiero Edecanes Hombres y Mujeres para sorprender','Sí/No',1,20,false);
+        $this->crearProducto('Requiero un Host Mujer  para mi evento','Sí/No',1,20,false);
+        $this->crearProducto('Requiero un Host Hombre  para mi evento','Sí/No',1,20,false);
+
+        // Extras - Transporte
+        $this->crearProducto('Transporte para llegar al evento desde un punto determinado','Sí/No',1,21,false);
+        $this->crearProducto('Transporte para salir del evento a un punto determinado','Sí/No',1,21,false);
+        $this->crearProducto('Servicio de UBER (tus invitados llegan seguros a sus hogares). 
+Costo corre a cargo del cliente','Sí/No',1,21,false);
+        $this->crearProducto('Requiero transportación durante el evento','Sí/No',1,21,false);
     }
 }

@@ -17,7 +17,7 @@ class CreateDatosOrdenTable extends Migration
             $table->increments('id');
             $table->integer('order_id');
             $table->integer('product_id');
-            $table->integer('valor')->nullable();
+            $table->string('valor')->nullable();
             $table->timestamps();
         });
     }

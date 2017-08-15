@@ -587,7 +587,12 @@
                                         <tr>
                                             <td>{{$product->nombre}}</td>
                                             <td>
-                                                <input type="number" id="producto{{$product->id}}" value="@yield('editProd'.$product->id)" name="producto[]" min="0">
+                                                
+                                                @if ($product->seccion_comanda)
+                                                  <input type="text" style="display: none;" name="producto[]">
+                                                @else
+                                                  <input type="text" id="producto{{$product->id}}" value="@yield('editProd'.$product->id)" name="producto[]" placeholder="Valor...">
+                                                @endif
                                                 <small><i>{{ $product->descripcion}}</i></small>
                                             </td>
                                         </tr>

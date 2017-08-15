@@ -13,10 +13,9 @@
 				<td>{{$product->nombre}}</td>
 				<td>
 					@if ($product->seccion_comanda)
-						<input type="number" style="display: none;" name="producto[]">
-						
+						<input type="text" style="display: none;" name="producto[]">
 					@else
-						<input type="number" id="producto{{$product->id}}" name="producto[]" min="0" placeholder="#">
+						<input type="text" id="producto{{$product->id}}" name="producto[]"  placeholder="Valor...">
 					@endif
 					<small><i>{{ $product->descripcion}}</i></small>
 				</td>
