@@ -40,6 +40,15 @@ class ComandaTableSeeder extends Seeder
         ]);
     }
 
+    function crear($nombreComanda,$descripcionComanda,$matrizProductos)
+    {
+        $comanda = $this->crearComanda($nombreComanda,$descripcionComanda);
+
+        foreach ($matrizProductos as $producto) {
+            $this->crearProducto($producto[0],$producto[1],100,$comanda->id,$producto[2]);
+        }
+    }
+
     /**
      * Run the database seeds.
      *
@@ -54,24 +63,25 @@ class ComandaTableSeeder extends Seeder
         // --- Comida ---
 
         // Botanas
-        $comanda = $this->crearComanda('Botanas','Selecciona entre nuestras opciones de botanas');
-        $this->crearProducto('Surtidas de Línea (papas, frituras, cacahuates etc...)','Se recomienda 1 por cada asistente',100,$comanda->id,Campos::SiNo);
-        $this->crearProducto('Crudités (Palitos de verduras con chile y limón)','Se recomienda 1 por cada asistente',100,$comanda->id,Campo::SiNo);
+        $this->crear('Botanas','Selecciona entre nuestras opciones de botanas',[
+            ['Surtidas de Línea (papas, frituras, cacahuates etc...)','Se recomienda 1 por cada asistente',Campos::SiNo],
+            ['Crudités (Palitos de verduras con chile y limón)','Se recomienda 1 por cada asistente',Campos::SiNo],
+        ]);
 
         //Canapés
-        $this->crearProducto('Canapés','',0,2,true);
-        $this->crearProducto('6 Salados y 2 Dulces por persona','Se recomienda uno por persona',1,2,false);
-        $this->crearProducto('8 Salados y 2 Dulces por persona','Se recomienda uno por persona',1,2,false);
-
-        Comanda::create(['nombre'=>'Alimentos','descripcion'=>'Estas son las opciones de alimentos para tu evento']);
+        $this->crear('Canapés','Deliciosos canapés',[
+            ['6 Salados y 2 Dulces por persona','Se recomienda uno por persona',Campos::Numero],
+            ['8 Salados y 2 Dulces por persona','Se recomienda uno por persona',Campos::Numero],
+        ]);
 
         // Tacos de Guisado
-        $this->crearProducto('Tacos de Guisado','(Incluyen arroz, frijoles, salsas, limones y tortillas)',0,2,true);
-        $this->crearProducto('Tinga','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Chicharrón en Salsa Verde','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Pollo con Mole','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Picadillo','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Rajas Poblanas','Cantidad en número de personas',1,2,false);
+        $this->crear('Tacos de Guisado','(Incluyen arroz, frijoles, salsas, limones y tortillas)',[
+            ['Tinga','Cantidad en número de personas',Campos::Numero],
+            ['Chicharrón en Salsa Verde','Cantidad en número de personas',Campos::Numero],
+            ['Pollo con Mole','Cantidad en número de personas',Campos::Numero],
+            ['Picadillo','Cantidad en número de personas',Campos::Numero],
+            ['Rajas Poblanas','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Tacos de Guisado Tradicionales
         $this->crearProducto('Tacos de Guisado Tradicionales','(Incluyen arroz, frijoles, salsas, limones y tortillas)',0,2,true);
