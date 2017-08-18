@@ -2411,6 +2411,223 @@ h2.title {
     padding-left: 0;
     padding-right: 0; }
 
+#card-comanda .card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin: 25px 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff; }
+  #card-comanda .card .card-height-indicator {
+    margin-top: 100%; }
+  #card-comanda .card .title {
+    margin-top: 0;
+    margin-bottom: 5px; }
+  #card-comanda .card .card-image {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px; }
+    #card-comanda .card .card-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      pointer-events: none; }
+    #card-comanda .card .card-image .card-title {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: #fff;
+      font-size: 1.3em;
+      text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5); }
+  #card-comanda .card .category:not([class*="text-"]) {
+    color: #999999; }
+  #card-comanda .card .card-content {
+    padding: 15px 20px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    #card-comanda .card .card-content .category {
+      margin-bottom: 0; }
+  #card-comanda .card .card-header {
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    margin: -20px 15px 0;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: #999999; }
+    #card-comanda .card .card-header .title {
+      color: #FFFFFF; }
+    #card-comanda .card .card-header .category {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.62); }
+    #card-comanda .card .card-header.card-chart {
+      padding: 0;
+      min-height: 160px; }
+      #card-comanda .card .card-header.card-chart + .content h4 {
+        margin-top: 0; }
+    #card-comanda .card .card-header .ct-label {
+      color: rgba(255, 255, 255, 0.7); }
+    #card-comanda .card .card-header .ct-grid {
+      stroke: rgba(255, 255, 255, 0.2); }
+    #card-comanda .card .card-header .ct-series-a .ct-point,
+    #card-comanda .card .card-header .ct-series-a .ct-line,
+    #card-comanda .card .card-header .ct-series-a .ct-bar,
+    #card-comanda .card .card-header .ct-series-a .ct-slice-donut {
+      stroke: rgba(255, 255, 255, 0.8); }
+    #card-comanda .card .card-header .ct-series-a .ct-slice-pie,
+    #card-comanda .card .card-header .ct-series-a .ct-area {
+      fill: rgba(255, 255, 255, 0.4); }
+  #card-comanda .card .chart-title {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    text-align: center; }
+    #card-comanda .card .chart-title h3 {
+      margin: 0;
+      color: #FFFFFF; }
+    #card-comanda .card .chart-title h6 {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.4); }
+  #card-comanda .card .card-footer {
+    margin: 0 20px 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee; }
+    #card-comanda .card .card-footer .content {
+      display: block; }
+    #card-comanda .card .card-footer div {
+      display: inline-block; }
+    #card-comanda .card .card-footer .author {
+      color: #999999; }
+    #card-comanda .card .card-footer .stats {
+      line-height: 22px;
+      color: #999999;
+      font-size: 12px; }
+      #card-comanda .card .card-footer .stats .material-icons {
+        position: relative;
+        top: 4px;
+        font-size: 16px; }
+    #card-comanda .card .card-footer h6 {
+      color: #999999; }
+  #card-comanda .card img {
+    width: 100%;
+    height: auto; }
+  #card-comanda .card .category .material-icons {
+    position: relative;
+    top: 6px;
+    line-height: 0; }
+  #card-comanda .card .category-social .fa {
+    font-size: 24px;
+    position: relative;
+    margin-top: -4px;
+    top: 2px;
+    margin-right: 5px; }
+  #card-comanda .card .author .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px; }
+  #card-comanda .card .author a {
+    color: #3C4858;
+    text-decoration: none; }
+    #card-comanda .card .author a .ripple-container {
+      display: none; }
+  #card-comanda .card .table {
+    margin-bottom: 0; }
+    #card-comanda .card .table tr:first-child td {
+      border-top: none; }
+  #card-comanda .card [data-background-color="purple"] {
+    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+    box-shadow: 0 16px 26px -10px rgba(63, 171, 216, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(63, 171, 216, 0.2); }
+  #card-comanda .card [data-background-color="blue"] {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+    box-shadow: 0 16px 26px -10px rgba(3, 169, 244, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(3, 169, 244, 0.2); }
+  #card-comanda .card [data-background-color="green"] {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+    box-shadow: 0 16px 26px -10px rgba(76, 175, 80, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2); }
+  #card-comanda .card [data-background-color="orange"] {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+    box-shadow: 0 16px 26px -10px rgba(251, 192, 45, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(251, 192, 45, 0.2); }
+  #card-comanda .card [data-background-color="red"] {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+    box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2); }
+  #card-comanda .card [data-background-color] {
+    color: #FFFFFF; }
+    #card-comanda .card [data-background-color] a {
+      color: #FFFFFF; }
+#card-comanda .card-stats .title {
+  margin: 0; }
+#card-comanda .card-stats .card-header {
+  float: left;
+  text-align: center; }
+  #card-comanda .card-stats .card-header i {
+    font-size: 36px;
+    line-height: 56px;
+    width: 56px;
+    height: 56px; }
+#card-comanda .card-stats .card-content {
+  text-align: right;
+  padding-top: 10px; }
+#card-comanda .card-nav-tabs .header-raised {
+  margin-top: -30px; }
+#card-comanda .card-nav-tabs .nav-tabs {
+  background: transparent;
+  padding: 0; }
+#card-comanda .card-nav-tabs .nav-tabs-title {
+  float: left;
+  padding: 10px 10px 10px 0;
+  line-height: 24px; }
+#card-comanda .card-plain {
+  background: transparent;
+  box-shadow: none; }
+  #card-comanda .card-plain .card-header {
+    margin-left: 0;
+    margin-right: 0; }
+  #card-comanda .card-plain .content {
+    padding-left: 5px;
+    padding-right: 5px; }
+  #card-comanda .card-plain .card-image {
+    margin: 0;
+    border-radius: 3px; }
+    #card-comanda .card-plain .card-image img {
+      border-radius: 3px; }
+#card-comanda .iframe-container {
+  margin: 0 -20px 0; }
+  #card-comanda .iframe-container iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+#card-comanda .card-profile,
+#card-comanda .card-testimonial {
+  margin-top: 30px;
+  text-align: center; }
+  #card-comanda .card-profile .btn-just-icon.btn-raised,
+  #card-comanda .card-testimonial .btn-just-icon.btn-raised {
+    margin-left: 6px;
+    margin-right: 6px; }
+  #card-comanda .card-profile .card-avatar,
+  #card-comanda .card-testimonial .card-avatar {
+    max-width: 130px;
+    max-height: 130px;
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+    #card-comanda .card-profile .card-avatar + .content,
+    #card-comanda .card-testimonial .card-avatar + .content {
+      margin-top: 15px; }
+  #card-comanda .card-profile.card-plain .card-avatar,
+  #card-comanda .card-testimonial.card-plain .card-avatar {
+    margin-top: 0; }
+
 .modal-content {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
   border-radius: 3px;

@@ -104,7 +104,7 @@
 											</p>
 										</div>
 									</div>
-
+									
 									<!-- Datos -->
 									<div class="tab-pane" id="tab0">
 										<div class="step-title">
@@ -382,7 +382,7 @@
 											</p>
 										</div>
 										@include('configurador.partials.comanda', ['nombre_comanda'=>'Botanas'])
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Alimentos'])
+										@include('configurador.partials.comanda', ['nombre_comanda'=>'Canapés'])
 										@include('configurador.partials.comanda', ['nombre_comanda'=>'Postres'])
 										@include('configurador.partials.comanda', ['nombre_comanda'=>'Bebidas'])
 										@include('configurador.partials.comanda', ['nombre_comanda'=>'Extras Comida y Bebida'])
@@ -625,8 +625,6 @@
 	<!-- Wizard Functionality -->
 	<script src="{{ URL::asset('assets_configurador/bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js') }}"></script>
 	<script src="{{ URL::asset('assets_configurador/assets/js/wizard-wit.js')}} "></script>
-
 	<script src="{{ URL::asset('assets_configurador/assets/js/skycons.js')}}" type="text/javascript"></script>
-
 
 </html>

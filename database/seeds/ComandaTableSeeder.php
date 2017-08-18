@@ -84,120 +84,137 @@ class ComandaTableSeeder extends Seeder
         ]);
 
         // Tacos de Guisado Tradicionales
-        $this->crearProducto('Tacos de Guisado Tradicionales','(Incluyen arroz, frijoles, salsas, limones y tortillas)',0,2,true);
-        $this->crearProducto('Cochinita','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Relleno Negro','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Lechón al horno','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Poc Chuc','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Escabeche','Cantidad en número de personas',1,2,false);
+        $this->crear('Tacos de Guisado Tradicionales','(Incluyen arroz, frijoles, salsas, limones y tortillas)',[
+            ['Cochinita','Cantidad en número de personas',Campos::Numero],
+            ['Relleno Negro','Cantidad en número de personas',Campos::Numero],
+            ['Lechón al horno','Cantidad en número de personas',Campos::Numero],
+            ['Poc Chuc','Cantidad en número de personas',Campos::Numero],
+            ['Escabeche','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Hamburguesas y Hot-Dogs
-        $this->crearProducto('Hamburguesas y Hot Dogs','(Incluyen aderezos como Catsup, Mostaza y Mayonesa)',0,2,true);
-        $this->crearProducto('Hamburguesas','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Hot-Dogs','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Papas a la francesa','Cantidad en número de personas',1,2,false);
+        $this->crear('Hamburguesas y Hot-Dogs','(Incluyen aderezos como Catsup, Mostaza y Mayonesa)',[
+            ['Hamburguesas','Número de personas',Campos::Numero],
+            ['Hot-Dogs','Cantidad en número de personas',Campos::Numero],
+            ['Papas a la Francesa','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Parrillada
-        $this->crearProducto('Parrillada','(Incluyen arroz, frijoles, salsas, limones y tortillas)',0,2,true);
-        $this->crearProducto('Pollo','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Arrachera','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Cortes','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Costillitas','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Salchichas','Cantidad en número de personas',1,2,false);
+        $this->crear('Parrillada','(Incluyen arroz, frijoles, salsas, limones y tortillas)',[
+            ['Pollo','Cantidad en número de personas',Campos::Numero],
+            ['Arrachera','Cantidad en número de personas',Campos::Numero],
+            ['Cortes','Cantidad en número de personas',Campos::Numero],
+            ['Costillitas','Cantidad en número de personas',Campos::Numero],
+            ['Salchichas','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // By Wit
-        $this->crearProducto('By WIT&trade;','Platos Originales diseñados por nosotros.',0,2,true);
-        $this->crearProducto('Plato de fiestas tradicional','Cantidad en número de personas (Incluye Vaporcito, Ensalada de fiesta, Sandwichón, Pavo deshebrado, Pastel)',1,2,false);
+        $this->crear('By WIT&trade;','Platos Originales diseñados por nosotros.',[
+            ['Plato de fiestas tradicional','Cantidad en número de personas (Incluye Vaporcito, Ensalada de fiesta, Sandwichón, Pavo deshebrado, Pastel)',Campos::Numero],
+        ]);
 
         // Chilaquiles
-        $this->crearProducto('Chilaquiles','Tornafiesta',0,2,true);
-        $this->crearProducto('Rojos','Cantidad en número de personas',1,2,false);
-        $this->crearProducto('Verdes','Cantidad en número de personas',1,2,false);
-
-        // Postres
-        Comanda::create(['nombre'=>'Postres','descripcion'=>'Opciones de postres para tu evento']);
+        $this->crear('Chilaquiles','Tornafiesta',[
+            ['Rojos','Cantidad en número de personas',Campos::Numero],
+            ['Verdes','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Pastel
-        $this->crearProducto('Pastel temático','(Especificar temática)',0,3,false);
-        $this->crearProducto('Pastel tradicional','',0,3,true);
-        $this->crearProducto('Red Velvet','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Chocolate','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Tres Leches/Vainilla','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Almendras','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Queso Bola','Cantidad en número de personas',1,3,false);
+        $this->crear('Pastel','Opciones de pasteles',[
+            ['Pastel temático','(Especificar temática)'Campos::Texto],
+            ['Pastel tradicional','Número de personas',Campos::Numero],
+            ['Red Velvet','Cantidad en número de personas',Campos::Numero],
+            ['Chocolate','Cantidad en número de personas',Campos::Numero],
+            ['Tres Leches/Vainilla','Cantidad en número de personas',Campos::Numero],
+            ['Almendras','Cantidad en número de personas',Campos::Numero],
+            ['Queso Bola','Cantidad en número de personas',Campos::Numero],
+        ]);
+        
 
         // Cajita Infantil
-        $this->crearProducto('Cajita Infantil','Dulces para los más pequeños',0,3,true);
-        $this->crearProducto('Cajita con: dulces para niños bien cool 1','Cantidad en número de niños',1,3,false);
-        $this->crearProducto('Cajita con: otros dulces aún más cool pero más caros','Cantidad en número de niños',1,3,false);
+        $this->crear('Cajita Infantil','Dulces para los más pequeños',[
+            ['Cajita con: dulces para niños bien cool 1','Cantidad en número de niños',Campos::Numero],
+            ['Cajita con: otros dulces aún más cool pero más caros','Cantidad en número de niños',Campos::Numero],
+        ]);
 
         // Helados Artesanales
-        $this->crearProducto('Helados Artesanales','',0,3,true);
-        $this->crearProducto('Mango','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Chaya','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Kiwi','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Napolitano Frutal','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Sandía','Cantidad en número de personas',1,3,false);
+        $this->crear('Helados Artesanales','',[
+            ['Mango','Cantidad en número de personas',Campos::Numero],
+            ['Chaya','Cantidad en número de personas',Campos::Numero],
+            ['Kiwi','Cantidad en número de personas',Campos::Numero],
+            ['Napolitano Frutal','Cantidad en número de personas',Campos::Numero],
+            ['Sandía','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Nieves con espíritu
-        $this->crearProducto('Nieves con espíritu','(Alcohol)',0,3,true);
-        $this->crearProducto('Mezcal','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Tequila','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Whisky','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Bacardí','Cantidad en número de personas',1,3,false);
-        $this->crearProducto('Baileys','Cantidad en número de personas',1,3,false);
+        $this->crear('Nieves con espíritu','(Alcohol)',[
+            ['Mezcal','Cantidad en número de personas',Campos::Numero],
+            ['Tequila','Cantidad en número de personas',Campos::Numero],
+            ['Whisky','Cantidad en número de personas',Campos::Numero],
+            ['Bacardí','Cantidad en número de personas',Campos::Numero],
+            ['Baileys','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // -- Bebidas --
 
         // Refrescos
-        $this->crearProducto('Refrescos y Aguas','',0,4,true);
-        $this->crearProducto('Refrescos Surtidos','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Agua de Horchata','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Agua de Jamaica','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Agua de Pepino con Limón','Cantidad en número de personas',1,4,false);
+        $this->crear('Refrescos y Aguas','',[
+            ['Refrescos Surtidos','Cantidad en número de personas',Campos::Numero],
+            ['Agua de Horchata','Cantidad en número de personas',Campos::Numero],
+            ['Agua de Jamaica','Cantidad en número de personas',Campos::Numero],
+            ['Agua de Pepino con Limón','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Cervezas
-        Comanda::create(['nombre'=>'Bebidas','descripcion'=>'Opciones de bebidas para tu evento']);
-        $this->crearProducto('Cervezas','(Surtido Claras, Ambar y Oscuras)',0,4,true);
-        $this->crearProducto('Montejo','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Modelo','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Indio','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Corona','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Cerveza de Barril','Cantidad en número de personas',1,4,false);
-
+        $this->crear('Cervezas','Surtido Claras, Ambar y Oscuras',[
+            ['Montejo','Cantidad en número de personas',Campos::Numero],
+            ['Modelo','Cantidad en número de personas',Campos::Numero],
+            ['Indio','Cantidad en número de personas',Campos::Numero],
+            ['Corona','Cantidad en número de personas',Campos::Numero],
+            ['Cerveza de Barril','Cantidad en número de personas',Campos::Numero],
+        ]);
+        
         // Botellas de Alcohol
-        $this->crearProducto('Botellas de Alcohol','',0,4,true);
-        $this->crearProducto('Mezcal','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Tequila','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Vodka','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Ron','Cantidad en número de personas',1,4,false);
-        $this->crearProducto('Whisky','Cantidad en número de personas',1,4,false);
+        $this->crear('Botellas de Alcohol','',[
+            ['Mezcal','Cantidad en número de personas',Campos::Numero],
+            ['Tequila','Cantidad en número de personas',Campos::Numero],
+            ['Vodka','Cantidad en número de personas',Campos::Numero],
+            ['Ron','Cantidad en número de personas',Campos::Numero],
+            ['Whisky','Cantidad en número de personas',Campos::Numero],
+        ]);
 
         // Barras Libres
-        $this->crearProducto('Barras Libres','(Incluye los licores anteriores, hielos, refrescos)',0,4,true);
-        $this->crearProducto('Barra Libre Nacional','Cantidad en número de horas',1,4,false);
-        $this->crearProducto('Barra Libre Internacional','Cantidad en número de horas',1,4,false);
+        $this->crear('Barras Libres','(Incluye los licores anteriores, hielos, refrescos)',[
+            ['Barra Libre Nacional','Cantidad en número de horas',Campos::Numero]
+            ['Barra Libre Internacional','Cantidad en número de horas',Campos::Numero]
+        ]);
 
         // Café, Té
-        $this->crearProducto('Café/Té','(Incluye azúcar, sustitutos de azúcar, crema, vasos, removedores y servilletas)',0,4,true);
-        $this->crearProducto('Café sencillo','Cantidad en número de horas',1,4,false);
-        $this->crearProducto('Cafetera industrial','Cantidad en número de horas',1,4,false);
-        $this->crearProducto('Café Nesspresso','Cantidad en número de horas',1,4,false);
-        $this->crearProducto('Café Dolce Gusto','Cantidad en número de horas',1,4,false);
+        $this->crear('Café/Té','(Incluye azúcar, sustitutos de azúcar, crema, vasos, removedores y servilletas)',[
+            ['Café sencillo','Cantidad en número de horas',Campos::Numero],
+            ['Cafetera industrial','Cantidad en número de horas',Campos::Numero],
+            ['Café Nesspresso','Cantidad en número de horas',Campos::Numero],
+            ['Café Dolce Gusto','Cantidad en número de horas',Campos::Numero],
+        ]);
 
-        // Extras Comida y Bebida
-        $this->crearProducto('Meseros (5 horas)','(Sugerido 1 por cada 15 personas)',1,5,false);
-        $this->crearProducto('Barmans (5 horas)','(Sugerido 1 por cada 30 personas)',1,5,false);
+        // Personal
+        $this->crear('Personal de Servicio de Alimentos','Opciones de personal para atender a tus comensales',[
+            ['Meseros (5 horas)','(Sugerido 1 por cada 15 personas)',Campos::Numero],
+            ['Barmans (5 horas)','(Sugerido 1 por cada 30 personas)',Campos::Numero],
+        ]);
 
-        $this->crearProducto('Vajillas','(Las opciones de material se enviarán a tu correo electrónico en 48 horas)',0,5,true);
-        $this->crearProducto('Platos planos para comida','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Platos chicos para pastel','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Platos hondos','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Vasos de fiesta','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Servilletas','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Tenedores','Cantidad en número de personas',1,5,false);
-        $this->crearProducto('Cucharas','Cantidad en número de personas',1,5,false);
-        Comanda::create(['nombre'=>'Extras Comida y Bebida','descripcion'=>'Opciones extras referentes a la comida/bebida como Meseros, Vajilla etc.']);
+        // Vajillas
+        $this->crear('Vajillas','(Las opciones de material se enviarán a tu correo electrónico en 48 horas)',[
+            ['Platos planos para comida','Cantidad en número de personas',Campos::Numero],
+            ['Platos chicos para pastel','Cantidad en número de personas',Campos::Numero],
+            ['Platos hondos','Cantidad en número de personas',Campos::Numero],
+            ['Vasos de fiesta','Cantidad en número de personas',Campos::Numero],
+            ['Servilletas','Cantidad en número de personas',Campos::Numero],
+            ['Tenedores','Cantidad en número de personas',Campos::Numero],
+            ['Cucharas','Cantidad en número de personas',Campos::Numero],
+        ]);
+
+        return;
 
         /**
         * Mobiliario

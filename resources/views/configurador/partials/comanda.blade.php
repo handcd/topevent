@@ -4,23 +4,26 @@
 
 {{-- Templete para imprimir una comanda en pantalla --}}
 
-<h5>{{$comanda->nombre}}</h5>
-<strong><i>{{$comanda->descripcion}}</i></strong>
-<table class="table table-responsive table-bordered table-striped">
-	<tbody>
-		@foreach ($comanda->products as $product)
-			<tr>
-				<td>{{$product->nombre}}</td>
-				<td>
-					@if ($product->seccion_comanda)
-						<input type="text" style="display: none;" name="producto[]">
-					@else
-						<input type="text" id="producto{{$product->id}}" name="producto[]"  placeholder="Valor...">
-					@endif
-					<small><i>{{ $product->descripcion}}</i></small>
-				</td>
-			</tr>
-		@endforeach
-	</tbody>
-</table>
-<hr>
+@if (!empty($comanda))
+<div id="card-comanda">
+	<div class="card">
+        <div class="card-header" data-background-color="green">
+            <h4 class="title">{{ $comanda->nombre }}</h4>
+            <p class="category">{{ $comanda->descripcion }}</p>
+        </div>
+        <div class="card-content table-responsive">
+            <table class="table table-hover">
+                <tbody>
+                	@foreach ($comanda->products as $product)
+                		<tr>
+                			<td>{{ $product->nombre }}</td>
+                			<td><input type="text"></td>
+                			<td>{{ $product->descripcion }}</td>
+                		</tr>
+                	@endforeach
+                </tbody>
+            </table>
+        </div>
+	</div>
+</div>
+@endif
