@@ -174,35 +174,35 @@
                     <div class="row">
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
-                                Si el cliente ya se encuentra registrado en el sistema, selecciónalo aquí debajo, en caso contrario haz click en <i>Registrar Cliente</i>.
+                                Si el client ya se encuentra registrado en el sistema, selecciónalo aquí debajo, en caso contrario haz click en <i>Registrar Client</i>.
                             </p>
                         </div>
                         <div class="col-lg-8">
                             <div class="form-group label-floating">
-                                <label class="control-label">Selecciona el cliente:</label>
-                                <select name="cliente" class="form-control">
+                                <label class="control-label">Selecciona el client:</label>
+                                <select name="client" class="form-control">
                                     <option disabled="" @hasSection('editUserId')
                                       {{-- No hacemos nada --}}
                                     @else
                                       selected=""
                                     @endif></option>
-                                    @foreach (WIT\Cliente::all() as $cliente)
-                                        <option value="{{ $cliente->id }}" 
+                                    @foreach (WIT\Client::all() as $client)
+                                        <option value="{{ $client->id }}" 
                                         @hasSection('editUserId')
-                                          @if ($__env->getSections()['editUserId'] == $cliente->id)
+                                          @if ($__env->getSections()['editUserId'] == $client->id)
                                             selected="" 
                                           @endif
                                         @else
                                           {{-- false expr --}}
                                         @endif>
                                             {{
-                                                $cliente->id
+                                                $client->id
                                                 .".- "
-                                                .$cliente->nombre
+                                                .$client->nombre
                                                 .' '
-                                                .$cliente->apellido
+                                                .$client->apellido
                                                 .' -> ('
-                                                .$cliente->email
+                                                .$client->email
                                                 .')'
                                             }}
                                         </option>
@@ -212,8 +212,8 @@
                             </div>
                         </div>
                         <div class="col-lg-2 col-lg-offset-1">
-                        <a href="{{ url('/clientes/create') }}" class="btn btn-success pull-right">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
+                        <a href="{{ url('/clients/create') }}" class="btn btn-success pull-right">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Client
                         </a>
                         </div>
                     </div>
@@ -591,9 +591,9 @@
                                                 @if ($product->seccion_comanda)
                                                   <input type="text" style="display: none;" name="producto[]">
                                                 @else
-                                                  <input type="text" id="producto{{$product->id}}" value="@yield('editProd'.$product->id)" name="producto[]" placeholder="Valor...">
+                                                  <input type="text" id="producto{{ $product->id }}" value="@yield('editProd'.$product->id)" name="producto[]" placeholder="Valor...">
                                                 @endif
-                                                <small><i>{{ $product->descripcion}}</i></small>
+                                                <small><i>{{ $product->descripcion }}</i></small>
                                             </td>
                                         </tr>
                                     @endforeach

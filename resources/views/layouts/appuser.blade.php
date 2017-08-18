@@ -76,8 +76,8 @@
 	                        <p>Dashboard</p>
 	                    </a>
 	                </li>
-	                <li {{ Request::path() == 'clientes' ? ' class=active' : '' }}>
-	                    <a href="{{ url('/clientes') }}">
+	                <li {{ Request::path() == 'clients' ? ' class=active' : '' }}>
+	                    <a href="{{ url('/clients') }}">
 	                        <i class="fa fa-user" aria-hidden="true"></i>
 	                        <p>Clientes</p>
 	                    </a>

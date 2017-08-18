@@ -5,16 +5,16 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" data-background-color="wit">
-                <h4 class="title">Clientes</h4>
-                <p class="category">Clientes que han ingresado una orden al sistema</p>
+                <h4 class="title">Clients</h4>
+                <p class="category">Clients que han ingresado una orden al sistema</p>
             </div>
             <div class="card-content table-responsive">
                 <div class="col-md-6">
                     <input id="filter" class="form-control" type="text" placeholder="Buscar...">
                 </div>
                 <div class="col-md-6">
-                    <a href="{{ url('/clientes/create') }}" class="btn btn-success pull-right">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
+                    <a href="{{ url('/clients/create') }}" class="btn btn-success pull-right">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Client
                     </a>
                 </div>
                 <table class="table table-hover">
@@ -29,24 +29,24 @@
                         </tr>
                     </thead>
                     <tbody class="searchable">
-                        @foreach ($clientes as $cliente)
+                        @foreach ($clients as $client)
                             <tr>
-                                <td>{{$cliente->id}}</td>
-                                <td>{{$cliente->nombre}}</td>
-                                <td>{{$cliente->apellido}}</td>
-                                <td>{{$cliente->email}}</td>
-                                <td>{{$cliente->created_at}}</td>
+                                <td>{{$client->id}}</td>
+                                <td>{{$client->nombre}}</td>
+                                <td>{{$client->apellido}}</td>
+                                <td>{{$client->email}}</td>
+                                <td>{{$client->created_at}}</td>
                                 <td class="td-actions text-right">
-                                    <a href="{{ url('/clientes/'.$cliente->id) }}" type="button" rel="tooltip" title="Ver Cliente" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/clients/'.$client->id) }}" type="button" rel="tooltip" title="Ver Client" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ url('/clientes/'.$cliente->id.'/edit') }}" type="button" rel="tooltip" title="Editar Cliente" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ url('/clients/'.$client->id.'/edit') }}" type="button" rel="tooltip" title="Editar Client" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
-                                    <form action="{{ url('/clientes/'.$cliente->id) }}" method="post">
+                                    <form action="{{ url('/clients/'.$client->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Cliente"><i class="material-icons">close</i></button>
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Client"><i class="material-icons">close</i></button>
                                     </form>
                                 </td>
                             </tr>

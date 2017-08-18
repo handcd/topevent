@@ -9,7 +9,7 @@ use WIT\Order;
 use WIT\DatosOrden;
 use WIT\Product;
 use WIT\Comanda;
-use WIT\Cliente;
+use WIT\Client;
 
 class OrderController extends Controller
 {
@@ -46,8 +46,7 @@ class OrderController extends Controller
     public function create()
     {
         $comandas = Comanda::all();
-        $productos = Product::all();
-        return view('order.create',compact('comandas','productos'));
+        return view('order.create',compact('comandas'));
     }
 
     /**
@@ -60,7 +59,7 @@ class OrderController extends Controller
     {
         $orden = new Order;
         $this->validate($request, [
-                'cliente' => 'required',
+                'client' => 'required',
                 'fechaevento' => 'required',
                 'duracionEvento' => 'required',
                 'tipoEvento' => 'required',
@@ -71,7 +70,7 @@ class OrderController extends Controller
                 'limpieza' => 'required',
             ]);
 
-        $orden->user_id = $request->cliente;
+        $orden->user_id = $request->client;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracionEvento;
         $orden->tipo_evento = $request->tipoEvento;
@@ -99,7 +98,7 @@ class OrderController extends Controller
             $i++;
         }
 
-        $email = Cliente::find($orden->user_id)->email;
+        $email = Client::find($orden->user_id)->email;
         Mail::to($email)->send(new OrderReceived($orden));
 
         return redirect('ordenes');
@@ -114,9 +113,7 @@ class OrderController extends Controller
     public function show($id)
     {
         $orden = Order::find($id);
-        $productos = Product::all();
-        $datosOrden = DatosOrden::all()->where('order_id',$id);
-        return view('order.show',compact('orden','datosOrden','productos'));
+        return view('order.show',compact('orden','productos'));
     }
 
     /**
@@ -127,11 +124,9 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        $comandas = Comanda::all();
-        $productos = Product::all();
         $item = Order::find($id);
-        $itemData = DatosOrden::all()->where('order_id',$id);
-        return view('order.edit',compact('item','itemData','comandas','productos'));
+        $comandas = Comanda::all();
+        return view('order.edit',compact('item','comandas'));
     }
 
     /**
@@ -146,7 +141,7 @@ class OrderController extends Controller
         $orden = Order::find($id);
 
         $this->validate($request, [
-                'cliente' => 'required',
+                'client' => 'required',
                 'fechaevento' => 'required',
                 'duracionEvento' => 'required',
                 'tipoEvento' => 'required',
@@ -157,7 +152,7 @@ class OrderController extends Controller
                 'limpieza' => 'required',
             ]);
 
-        $orden->user_id = $request->cliente;
+        $orden->user_id = $request->client;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracionEvento;
         $orden->tipo_evento = $request->tipoEvento;

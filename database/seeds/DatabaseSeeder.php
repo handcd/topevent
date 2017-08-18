@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'wit@witplanner.com.mx',
             'password' => bcrypt('WhateverItTakes2017'),
         ]);
+        $this->call(CamposTableSeeder::class);
         $this->call(ClientsTableSeeder::class);
         $this->call(ComandaTableSeeder::class);
         $this->call(ProductTableSeeder::class);

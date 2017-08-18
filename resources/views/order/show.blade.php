@@ -23,8 +23,8 @@
                             <td>{{ $orden->id }}</td>
                         </tr>
                         <tr>
-                            <td>Cliente</td>
-                            <td><a href="{{ url('/clientes/'.$orden->user_id) }}">{{ $orden->user_id }} (Click para ver)</a></td>
+                            <td>Client</td>
+                            <td><a href="{{ url('/clients/'.$orden->user_id) }}">{{ $orden->user_id }} (Click para ver)</a></td>
                         </tr>
                         <tr>
                             <td>Fecha del Evento</td>
@@ -125,9 +125,9 @@
                         <th>Cantidad/Valor</th>
                     </thead>
                     <tbody>
-                        @foreach ($datosOrden as $dato)
+                        @foreach ($orden->datosOrden as $dato)
                             <tr>
-                                <td>{{ $productos->where('id',$dato->product_id)->first()->nombre }}</td>
+                                <td>{{ $dato->product->nombre }}</td>
                                 <td>{{ $dato->valor }}</td>
                             </tr>
                         @endforeach

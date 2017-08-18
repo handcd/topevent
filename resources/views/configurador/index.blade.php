@@ -97,7 +97,7 @@
 												Lo que hacemos: Creación, diseño, desarrollo y operación de eventos en donde disfrutamos todos, tú porque es tu fiesta, y nosotros ¡porque nos encanta lo que hacemos!, desde la visualización, hasta el cierre.
 											</p>
 											<p>
-												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada cliente, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
+												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada client, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
 											</p>
 											<p>
 												<b>Gracias por elegirnos</b> y comencemos.

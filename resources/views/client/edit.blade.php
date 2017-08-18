@@ -1,10 +1,10 @@
 @extends('client.create')
 
 @section('editId',$item->id)
-@section('editNombreCliente',$item->nombre)
-@section('editApellidoCliente',$item->apellido)
-@section('editEmailCliente', $item->email)
-@section('editPhoneCliente', $item->phone)
+@section('editNombreClient',$item->nombre)
+@section('editApellidoClient',$item->apellido)
+@section('editEmailClient', $item->email)
+@section('editPhoneClient', $item->phone)
 
 @section('editMethod')
 	{{method_field('PUT')}}

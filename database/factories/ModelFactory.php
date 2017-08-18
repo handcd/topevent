@@ -23,7 +23,7 @@ $factory->define(WIT\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(WIT\Cliente::class, function (Faker\Generator $faker) {
+$factory->define(WIT\Client::class, function (Faker\Generator $faker) {
 
     return [
         'nombre' => $faker->firstName,

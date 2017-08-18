@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use WIT\Mail\OrderReceived;
 use WIT\Comanda;
 use WIT\Product;
-use WIT\Cliente;
+use WIT\Client;
 use WIT\DatosOrden;
 use WIT\Order;
 
@@ -44,11 +44,11 @@ class ConfiguradorController extends Controller
     public function store(Request $request)
     {
         $orden = new Order;
-        $cliente = new Cliente;
+        $client = new Client;
         $datosOrden = new DatosOrden;
 
         $this->validate($request, [
-                // Primero validarmos los datos del cliente.
+                // Primero validarmos los datos del client.
                 'nombre' => 'required',
                 'apellidos' => 'required',
                 'email' => 'required',
@@ -62,15 +62,15 @@ class ConfiguradorController extends Controller
                 'lugarEvento' => 'required'
             ]);
 
-        // Cliente
-        $cliente->nombre = $request->nombre;
-        $cliente->apellido = $request->apellidos;
-        $cliente->email = $request->email;
-        $cliente->phone = $request->celular;
-        $cliente->save();
+        // Client
+        $client->nombre = $request->nombre;
+        $client->apellido = $request->apellidos;
+        $client->email = $request->email;
+        $client->phone = $request->celular;
+        $client->save();
 
         // Orden General
-        $orden->user_id = $cliente->id;
+        $orden->client_id = $client->id;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracion;
         $orden->tipo_evento = $request->tipoEvento;
@@ -96,7 +96,7 @@ class ConfiguradorController extends Controller
         }
 
         // Enviamos Mail.
-        Mail::to($cliente->email)->send(new OrderReceived($orden));
+        Mail::to($client->email)->send(new OrderReceived($orden));
         
         return redirect('/');
     }

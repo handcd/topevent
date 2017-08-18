@@ -15,8 +15,8 @@
 @section('editNotas',$item->notas)
 @section('editCotizacion',$item->cotizacion)
 
-@foreach ($itemData as $data)
-	@section('editProd'.$data->product_id,$data->valor)
+@foreach ($item->datosOrden as $dato)
+	@section('editProd'.$dato->product_id,$dato->valor)
 @endforeach
 
 @section('editMethod')

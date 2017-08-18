@@ -12,6 +12,6 @@ class ClientsTableSeeder extends Seeder
     public function run()
     {
         // Function to create fake Clients.
-    	//factory(WIT\Cliente::class, 88)->create();
+    	factory(WIT\Client::class, 100)->create();
     }
 }

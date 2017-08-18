@@ -4,7 +4,7 @@ namespace WIT;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Campo extends Model
 {
-	protected $table = 'clients';
+    //
 }

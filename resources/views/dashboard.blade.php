@@ -56,8 +56,8 @@
                 <i class="material-icons">info_outline</i>
             </div>
             <div class="card-content">
-                <p class="category">Clientes</p>
-                <h3 class="title">{{ \WIT\Cliente::count() }}</h3>
+                <p class="category">Clients</p>
+                <h3 class="title">{{ \WIT\Client::count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -91,8 +91,8 @@
                 <div class="ct-chart" id="emailsSubscriptionChart"></div>
             </div>
             <div class="card-content">
-                <h4 class="title">Nuevos Clientes</h4>
-                <p class="category">Nuevos clientes por día</p>
+                <h4 class="title">Nuevos Clients</h4>
+                <p class="category">Nuevos clients por día</p>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -131,7 +131,7 @@
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Cliente</th>
+                        <th>Client</th>
                         <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>
@@ -171,7 +171,7 @@
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Cliente</th>
+                        <th>Client</th>
                         <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>

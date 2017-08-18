@@ -90,7 +90,7 @@
                         @foreach ($ordenes->where('aprobado',0) as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->user_id}}</td>
+                                <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre }}</a></td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
                                     <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
@@ -130,7 +130,7 @@
                         @foreach ($ordenes->where('aprobado',1) as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->user_id}}</td>
+                                <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre }}</a></td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
                                     <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
@@ -167,7 +167,7 @@
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>ID Cliente</th>
+                        <th>Cliente</th>
                         <th>Fecha (Evento)</th>
                         <th>Aprobado</th>
                         <th>Fecha de Registro</th>
@@ -177,7 +177,7 @@
                         @foreach ($ordenes as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->user_id }}</td>
+                                <td>{{ $orden->client->nombre.' '.$orden->client->apellido }}</td>
                                 <td>{{ $orden->fecha }}</td>
                                 @if ($orden->aprobado)
                                     <td>Sí</td>
