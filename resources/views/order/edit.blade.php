@@ -1,7 +1,7 @@
 @extends('order.create')
 
 @section('editId',$item->id)
-@section('editUserId',$item->user_id)
+@section('editClient',$item->client_id)
 @section('editFecha',$item->fecha)
 @section('editDuracion',$item->duracion)
 @section('editTipoEvento',$item->tipo_evento)

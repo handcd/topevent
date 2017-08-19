@@ -5,8 +5,8 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" data-background-color="wit">
-                <h4 class="title">Clients</h4>
-                <p class="category">Clients que han ingresado una orden al sistema</p>
+                <h4 class="title">Clientes</h4>
+                <p class="category">Clientes que han sido ingresados al sistema</p>
             </div>
             <div class="card-content table-responsive">
                 <div class="col-md-6">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-6">
                     <a href="{{ url('/clients/create') }}" class="btn btn-success pull-right">
-                        <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Client
+                        <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
                     </a>
                 </div>
                 <table class="table table-hover">
@@ -37,16 +37,16 @@
                                 <td>{{$client->email}}</td>
                                 <td>{{$client->created_at}}</td>
                                 <td class="td-actions text-right">
-                                    <a href="{{ url('/clients/'.$client->id) }}" type="button" rel="tooltip" title="Ver Client" class="btn btn-success btn-simple btn-xs">
+                                    <a href="{{ url('/clients/'.$client->id) }}" type="button" rel="tooltip" title="Ver Cliente" class="btn btn-success btn-simple btn-xs">
                                         <i class="material-icons">remove_red_eye</i>
                                     </a>
-                                    <a href="{{ url('/clients/'.$client->id.'/edit') }}" type="button" rel="tooltip" title="Editar Client" class="btn btn-primary btn-simple btn-xs">
+                                    <a href="{{ url('/clients/'.$client->id.'/edit') }}" type="button" rel="tooltip" title="Editar Cliente" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </a>
                                     <form action="{{ url('/clients/'.$client->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Client"><i class="material-icons">close</i></button>
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Cliente"><i class="material-icons">close</i></button>
                                     </form>
                                 </td>
                             </tr>

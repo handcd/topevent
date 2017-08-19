@@ -9,9 +9,9 @@ use WIT\Product;
 */
 abstract class Campos
 {
-    const SiNo = 0;
-    const Numero = 1;
-    const Texto = 2;
+    const SiNo = 1;
+    const Numero = 2;
+    const Texto = 3;
 }
 
 class ComandaTableSeeder extends Seeder
@@ -121,7 +121,7 @@ class ComandaTableSeeder extends Seeder
 
         // Pastel
         $this->crear('Pastel','Opciones de pasteles',[
-            ['Pastel temático','(Especificar temática)'Campos::Texto],
+            ['Pastel temático','(Especificar temática)',Campos::Texto],
             ['Pastel tradicional','Número de personas',Campos::Numero],
             ['Red Velvet','Cantidad en número de personas',Campos::Numero],
             ['Chocolate','Cantidad en número de personas',Campos::Numero],
@@ -129,8 +129,7 @@ class ComandaTableSeeder extends Seeder
             ['Almendras','Cantidad en número de personas',Campos::Numero],
             ['Queso Bola','Cantidad en número de personas',Campos::Numero],
         ]);
-        
-
+       
         // Cajita Infantil
         $this->crear('Cajita Infantil','Dulces para los más pequeños',[
             ['Cajita con: dulces para niños bien cool 1','Cantidad en número de niños',Campos::Numero],
@@ -185,8 +184,8 @@ class ComandaTableSeeder extends Seeder
 
         // Barras Libres
         $this->crear('Barras Libres','(Incluye los licores anteriores, hielos, refrescos)',[
-            ['Barra Libre Nacional','Cantidad en número de horas',Campos::Numero]
-            ['Barra Libre Internacional','Cantidad en número de horas',Campos::Numero]
+            ['Barra Libre Nacional','Cantidad en número de horas',Campos::Numero],
+            ['Barra Libre Internacional','Cantidad en número de horas',Campos::Numero],
         ]);
 
         // Café, Té

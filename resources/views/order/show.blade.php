@@ -23,8 +23,8 @@
                             <td>{{ $orden->id }}</td>
                         </tr>
                         <tr>
-                            <td>Client</td>
-                            <td><a href="{{ url('/clients/'.$orden->user_id) }}">{{ $orden->user_id }} (Click para ver)</a></td>
+                            <td>Cliente</td>
+                            <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre.' '.$orden->client->apellido }}</a></td>
                         </tr>
                         <tr>
                             <td>Fecha del Evento</td>

@@ -7,7 +7,7 @@
 @if (!empty($comanda))
 <div id="card-comanda">
 	<div class="card">
-        <div class="card-header" data-background-color="green">
+        <div class="card-header" data-background-color="wit">
             <h4 class="title">{{ $comanda->nombre }}</h4>
             <p class="category">{{ $comanda->descripcion }}</p>
         </div>
@@ -17,7 +17,23 @@
                 	@foreach ($comanda->products as $product)
                 		<tr>
                 			<td>{{ $product->nombre }}</td>
-                			<td><input type="text"></td>
+                			<td>
+                				@if ($product->campo->html == 'text')
+                					<div class="form-group">
+                						<input type="text" placeholder="Texto..." id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" class="form-control">
+                					</div>
+                				@elseif ($product->campo->html == "number")
+                					<div class="form-group">
+                						<input type="number" id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" placeholder="#" class="form-control">
+                					</div>
+                				@elseif ($product->campo->html == "checkbox")
+                					<div class="checkbox">
+                						<label>
+                							<input type="checkbox" name="producto[{{ $product->id }}]" id="producto{{ $product->id }}">
+                						</label>
+                					</div>
+                				@endif
+                			</td>
                 			<td>{{ $product->descripcion }}</td>
                 		</tr>
                 	@endforeach

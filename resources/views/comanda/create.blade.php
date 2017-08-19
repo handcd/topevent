@@ -14,34 +14,42 @@
                     @section('editMethod')
                         @show
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group label-floating">
                                 <label class="control-label">Nombre del Producto:</label>
                                 <input name="nombre" type="text" class="form-control"  required="true" value="@yield('editNombre')">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group label-floating">
                                 <label class="control-label">Descripción:</label>
                                 <input  name="descripcion" type="text" class="form-control" required="true" value="@yield('editDescripcion')">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-group label-floating">
                                 <label class="control-label">Precio:</label>
                                 <input name="precio" type="number" class="form-control" min="0.00"  value="@yield('editPrecio')">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-md-offset-1">
                             <div class="form-group label-floating is-empty">
-                                <label class="control-label">Selecciona el campo:</label>
-                                <select name="campo" class="form-control">
+                                <label class="control-label">Selecciona la comanda:</label>
+                                <select name="comanda" class="form-control">
                                     <option disabled="" selected=""></option>
                                     @foreach (WIT\Comanda::all() as $comanda)
                                         <option value="{{ $comanda->id }}">{{ $comanda->nombre }}</option>
+                                    @endforeach
+                                </select>
+                            <span class="material-input"></span></div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-1">
+                            <div class="form-group label-floating is-empty">
+                                <label class="control-label">Selecciona el tipo de campo:</label>
+                                <select name="campo" class="form-control">
+                                    <option disabled="" selected=""></option>
+                                    @foreach (WIT\Campo::all() as $campo)
+                                        <option value="{{ $campo->id }}">{{ $campo->nombre }}</option>
                                     @endforeach
                                 </select>
                             <span class="material-input"></span></div>

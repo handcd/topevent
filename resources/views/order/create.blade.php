@@ -174,22 +174,22 @@
                     <div class="row">
                         <div class="col-lg-10 col-lg-offset-1">
                             <p>
-                                Si el client ya se encuentra registrado en el sistema, selecciónalo aquí debajo, en caso contrario haz click en <i>Registrar Client</i>.
+                                Si el cliente ya se encuentra registrado en el sistema, selecciónalo aquí debajo, en caso contrario haz click en <i>Registrar Cliente</i>.
                             </p>
                         </div>
                         <div class="col-lg-8">
                             <div class="form-group label-floating">
-                                <label class="control-label">Selecciona el client:</label>
+                                <label class="control-label">Selecciona el cliente:</label>
                                 <select name="client" class="form-control">
-                                    <option disabled="" @hasSection('editUserId')
+                                    <option disabled="" @hasSection('editClient')
                                       {{-- No hacemos nada --}}
                                     @else
                                       selected=""
                                     @endif></option>
                                     @foreach (WIT\Client::all() as $client)
                                         <option value="{{ $client->id }}" 
-                                        @hasSection('editUserId')
-                                          @if ($__env->getSections()['editUserId'] == $client->id)
+                                        @hasSection('editClient')
+                                          @if ($__env->getSections()['editClient'] == $client->id)
                                             selected="" 
                                           @endif
                                         @else
@@ -213,7 +213,7 @@
                         </div>
                         <div class="col-lg-2 col-lg-offset-1">
                         <a href="{{ url('/clients/create') }}" class="btn btn-success pull-right">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Client
+                            <i class="fa fa-user-plus" aria-hidden="true"></i> Añadir Cliente
                         </a>
                         </div>
                     </div>
@@ -253,78 +253,78 @@
                                 <select name="tipoEvento" class="form-control">
                                     <option disabled="" 
                                     @hasSection('editTipoEvento')
-                                      {{-- true expr --}}
+                                    {{-- No hay tipo de evento --}}
                                     @else
                                       selected="" 
                                     @endif></option>
                                     <optgroup label="General">
-                                    <option value="0" 
-                                    @hasSection('editTipoEvento')
-                                      @if ($__env->getSections()['editTipoEvento'] == 0)
-                                        selected="" 
-                                      @endif
-                                    @endif>Adolescentes</option>
                                     <option value="1" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 1)
                                         selected="" 
                                       @endif
-                                    @endif>Familiar</option>
-                                    </optgroup>
-                                    <optgroup label="Adultos">
-                                        <option value="2" 
+                                    @endif>Adolescentes</option>
+                                    <option value="2" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 2)
                                         selected="" 
                                       @endif
-                                    @endif>18 y Veinteañeros</option>
+                                    @endif>Familiar</option>
+                                    </optgroup>
+                                    <optgroup label="Adultos">
                                         <option value="3" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 3)
                                         selected="" 
                                       @endif
-                                    @endif>Treintañeros</option>
+                                    @endif>18 y Veinteañeros</option>
                                         <option value="4" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 4)
                                         selected="" 
                                       @endif
-                                    @endif>Cuarentones</option>
+                                    @endif>Treintañeros</option>
                                         <option value="5" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 5)
                                         selected="" 
                                       @endif
-                                    @endif>Cincuentones</option>
+                                    @endif>Cuarentones</option>
                                         <option value="6" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 6)
                                         selected="" 
                                       @endif
-                                    @endif>Más de 50</option>
+                                    @endif>Cincuentones</option>
                                         <option value="7" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 7)
                                         selected="" 
                                       @endif
-                                    @endif>Combinadito</option>
-                                    </optgroup>
-                                    <optgroup label="Diversidad (Pink Parties)">
+                                    @endif>Más de 50</option>
                                         <option value="8" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 8)
                                         selected="" 
                                       @endif
-                                    @endif>Fiesta Ellas</option>
+                                    @endif>Combinadito</option>
+                                    </optgroup>
+                                    <optgroup label="Diversidad (Pink Parties)">
                                         <option value="9" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 9)
                                         selected="" 
                                       @endif
-                                    @endif>Fiesta Ellos</option>
+                                    @endif>Fiesta Ellas</option>
                                         <option value="10" 
                                     @hasSection('editTipoEvento')
                                       @if ($__env->getSections()['editTipoEvento'] == 10)
+                                        selected="" 
+                                      @endif
+                                    @endif>Fiesta Ellos</option>
+                                        <option value="11" 
+                                    @hasSection('editTipoEvento')
+                                      @if ($__env->getSections()['editTipoEvento'] == 11)
                                         selected="" 
                                       @endif
                                     @endif>Fiesta Ellas y Ellos</option>
@@ -346,83 +346,83 @@
                                       selected="" 
                                     @endif></option>
                                     <optgroup label="Interior">
-                                        <option value="0" 
-                                        @hasSection('editLugarEvento')
-                                          @if ($__env->getSections()['editLugarEvento'] == 0)
-                                            selected="" 
-                                          @endif
-                                        @endif>Salón</option>
                                         <option value="1" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 1)
                                             selected="" 
                                           @endif
-                                        @endif>Salón + Jardín + Terraza</option>
+                                        @endif>Salón</option>
                                         <option value="2" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 2)
                                             selected="" 
                                           @endif
-                                        @endif>Salón en Hotel</option>
+                                        @endif>Salón + Jardín + Terraza</option>
                                         <option value="3" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 3)
                                             selected="" 
                                           @endif
-                                        @endif>Salón en Hacienda</option>
+                                        @endif>Salón en Hotel</option>
                                         <option value="4" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 4)
                                             selected="" 
                                           @endif
-                                        @endif>Restaurante</option>
+                                        @endif>Salón en Hacienda</option>
                                         <option value="5" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 5)
                                             selected="" 
                                           @endif
-                                        @endif>Restaurante + Bar</option>
+                                        @endif>Restaurante</option>
                                         <option value="6" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 6)
                                             selected="" 
                                           @endif
-                                        @endif>Antro</option>
+                                        @endif>Restaurante + Bar</option>
                                         <option value="7" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 7)
                                             selected="" 
                                           @endif
-                                        @endif>Casa</option>
-                                    </optgroup>
-                                    <optgroup label="Exterior">
+                                        @endif>Antro</option>
                                         <option value="8" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 8)
                                             selected="" 
                                           @endif
-                                        @endif>Jardín</option>
+                                        @endif>Casa</option>
+                                    </optgroup>
+                                    <optgroup label="Exterior">
                                         <option value="9" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 9)
                                             selected="" 
                                           @endif
-                                        @endif>Jardín + Alberca</option>
+                                        @endif>Jardín</option>
                                         <option value="10" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 10)
                                             selected="" 
                                           @endif
-                                        @endif>Terraza</option>
+                                        @endif>Jardín + Alberca</option>
                                         <option value="11" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 11)
                                             selected="" 
                                           @endif
-                                        @endif>Hacienda</option>
+                                        @endif>Terraza</option>
                                         <option value="12" 
                                         @hasSection('editLugarEvento')
                                           @if ($__env->getSections()['editLugarEvento'] == 12)
+                                            selected="" 
+                                          @endif
+                                        @endif>Hacienda</option>
+                                        <option value="13" 
+                                        @hasSection('editLugarEvento')
+                                          @if ($__env->getSections()['editLugarEvento'] == 13)
                                             selected="" 
                                           @endif
                                         @endif>Casa en Playa</option>
@@ -493,27 +493,27 @@
                                     @else
                                       selected="" 
                                     @endif></option>
-                                    <option value="0" 
-                                    @hasSection('editLimpieza')
-                                      @if ($__env->getSections()['editLimpieza'] == 0)
-                                        selected="" 
-                                      @endif
-                                    @endif>No requiere limpieza</option>
                                     <option value="1" 
                                     @hasSection('editLimpieza')
                                       @if ($__env->getSections()['editLimpieza'] == 1)
                                         selected="" 
                                       @endif
-                                    @endif>Requiere limpieza antes del evento</option>
+                                    @endif>No requiere limpieza</option>
                                     <option value="2" 
                                     @hasSection('editLimpieza')
                                       @if ($__env->getSections()['editLimpieza'] == 2)
                                         selected="" 
                                       @endif
-                                    @endif>Requiere limpieza después del evento</option>
+                                    @endif>Requiere limpieza antes del evento</option>
                                     <option value="3" 
                                     @hasSection('editLimpieza')
                                       @if ($__env->getSections()['editLimpieza'] == 3)
+                                        selected="" 
+                                      @endif
+                                    @endif>Requiere limpieza después del evento</option>
+                                    <option value="4" 
+                                    @hasSection('editLimpieza')
+                                      @if ($__env->getSections()['editLimpieza'] == 4)
                                         selected="" 
                                       @endif
                                     @endif>Requiere limpieza antes y después del evento</option>
@@ -579,31 +579,50 @@
                     <div class="row">
                         @foreach ($comandas as $comanda)
                         <div class="col-lg-8 col-lg-offset-2">
-                            <h5>{{$comanda->nombre}}</h5>
-                            <small><i>{{$comanda->descripcion}}</i></small>
-                            <table class="table table-responsive table-bordered table-striped">
-                                <tbody>
-                                    @foreach ($comanda->products as $product)
-                                        <tr>
-                                            <td>{{$product->nombre}}</td>
-                                            <td>
-                                                
-                                                @if ($product->seccion_comanda)
-                                                  <input type="text" style="display: none;" name="producto[]">
-                                                @else
-                                                  <input type="text" id="producto{{ $product->id }}" value="@yield('editProd'.$product->id)" name="producto[]" placeholder="Valor...">
-                                                @endif
-                                                <small><i>{{ $product->descripcion }}</i></small>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            <hr>
+                            <div id="card-comanda">
+                              <div class="card">
+                                  <div class="card-header" data-background-color="wit">
+                                      <h4 class="title">{{ $comanda->nombre }}</h4>
+                                      <p class="category">{{ $comanda->descripcion }}</p>
+                                  </div>
+                                  <div class="card-content table-responsive">
+                                      <table class="table table-hover">
+                                          <tbody>
+                                            @foreach ($comanda->products as $product)
+                                              <tr>
+                                                <td>{{ $product->nombre }}</td>
+                                                <td>
+                                                  @if ($product->campo->html == 'text')
+                                                    <div class="form-group">
+                                                      <input type="text" placeholder="Texto..." id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" value="@yield('editProd'.$product->id)" class="form-control">
+                                                    </div>
+                                                  @elseif ($product->campo->html == "number")
+                                                    <div class="form-group">
+                                                      <input type="number" id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" placeholder="#" value="@yield('editProd'.$product->id)" class="form-control">
+                                                    </div>
+                                                  @elseif ($product->campo->html == "checkbox")
+                                                    <div class="checkbox">
+                                                      <label>
+                                                        <input type="checkbox" name="producto[{{ $product->id }}]" id="producto{{ $product->id }}" 
+                                                        @hasSection('editProd'.$product->id)
+                                                          checked 
+                                                        @endif
+                                                        >
+                                                      </label>
+                                                    </div>
+                                                  @endif
+                                                </td>
+                                                <td>{{ $product->descripcion }}</td>
+                                              </tr>
+                                            @endforeach
+                                          </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                            </div>
                         </div>
                         @endforeach
                     </div>
-
 
                     <button type="submit" class="btn btn-primary pull-right">Subir</button>
                     <a href="{{ url('/ordenes') }}" class="btn btn-default">Cancelar</a>

@@ -102,7 +102,7 @@
                                     <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Orden"><i class="material-icons">close</i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -142,7 +142,7 @@
                                     <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Orden"><i class="material-icons">close</i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -195,7 +195,7 @@
                                     <form action="{{ url('/ordenes/'.$orden->id) }}" method="post">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Producto"><i class="material-icons">close</i></button>
+                                        <button type="submit" class="btn btn-danger btn-simple btn-xs" type="button" rel="tooltip" title="Eliminar Orden"><i class="material-icons">close</i></button>
                                     </form>
                                 </td>
                             </tr>

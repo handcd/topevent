@@ -49,18 +49,20 @@ class ComandaController extends Controller
     public function store(Request $request)
     {
         $producto = new Product;
+
         $this->validate($request, [
-                'nombre' => 'required',
-                'descripcion' => 'required',
-                'precio' => 'required',
-                'campo' => 'required',
-            ]);
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'precio' => 'required',
+            'campo' => 'required',
+            'comanda' => 'required',
+        ]);
 
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
-        $producto->comanda_id = $request->campo;
-        $producto->seccion_comanda = 0;
+        $producto->comanda_id = $request->comanda;
+        $producto->campo_id = $request->campo;
         $producto->save();
 
         return redirect('comandas');

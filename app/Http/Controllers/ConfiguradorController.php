@@ -10,6 +10,7 @@ use WIT\Product;
 use WIT\Client;
 use WIT\DatosOrden;
 use WIT\Order;
+use WIT\Campo;
 
 class ConfiguradorController extends Controller
 {
@@ -48,19 +49,19 @@ class ConfiguradorController extends Controller
         $datosOrden = new DatosOrden;
 
         $this->validate($request, [
-                // Primero validarmos los datos del client.
-                'nombre' => 'required',
-                'apellidos' => 'required',
-                'email' => 'required',
+            // Primero validarmos los datos del client.
+            'nombre' => 'required',
+            'apellidos' => 'required',
+            'email' => 'required',
 
-                // Validamos los datos básicos de la orden
-                'fechaevento' => 'required',
-                'duracion' => 'required',
-                'tipoEvento' => 'required',
-                'introduccion' => 'required',
-                'noInvitados' => 'required',
-                'lugarEvento' => 'required'
-            ]);
+            // Validamos los datos básicos de la orden
+            'fechaevento' => 'required',
+            'duracion' => 'required',
+            'tipoEvento' => 'required',
+            'introduccion' => 'required',
+            'noInvitados' => 'required',
+            'lugarEvento' => 'required'
+        ]);
 
         // Client
         $client->nombre = $request->nombre;
@@ -82,17 +83,14 @@ class ConfiguradorController extends Controller
         $orden->id_limpieza = $request->idLimpieza;
         $orden->save();
 
-        // Productos
-        $i = 0;
-        foreach (Product::all() as $producto) {
-            if (!empty($request->producto[$i])) {
+        foreach ($request->producto as $id => $pr) {
+            if (!empty($pr)) {
                 $datos = new DatosOrden;
                 $datos->order_id = $orden->id;
-                $datos->product_id = $producto->id;
-                $datos->valor = $request->producto[$i];
+                $datos->product_id = $id;
+                $datos->valor = $pr;
                 $datos->save();
             }
-            $i++;
         }
 
         // Enviamos Mail.

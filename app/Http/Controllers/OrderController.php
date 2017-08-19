@@ -113,7 +113,7 @@ class OrderController extends Controller
     public function show($id)
     {
         $orden = Order::find($id);
-        return view('order.show',compact('orden','productos'));
+        return view('order.show',compact('orden'));
     }
 
     /**

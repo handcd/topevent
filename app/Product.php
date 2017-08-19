@@ -22,4 +22,12 @@ class Product extends Model
     {
     	return $this->hasMany(datosOrden::class);
     }
+
+    /**
+    * Get the campo for this product
+    */
+    public function campo()
+    {
+        return $this->belongsTo(Campo::class);
+    }
 }

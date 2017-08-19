@@ -5,8 +5,8 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" data-background-color="wit">
-                <h4 class="title">Información del Client</h4>
-                <p class="category">Todos los datos disponibles del client</p>
+                <h4 class="title">Información del Cliente</h4>
+                <p class="category">Todos los datos disponibles del cliente</p>
             </div>
             <div class="card-content">
                 <div class="table-responsive">

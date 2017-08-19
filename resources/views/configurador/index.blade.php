@@ -230,39 +230,39 @@
 										<div class="form-group">
 											<label for="tipoEvento">Selecciona una opción:</label>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="0">Adolescentes</label>
+												<label><input type="radio" name="tipoEvento" value="1">Adolescentes</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="1">Familiar</label>
+												<label><input type="radio" name="tipoEvento" value="2">Familiar</label>
 											</div>
 											<i>Adultos:</i>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="2">18 y Veinteañeros</label>
+												<label><input type="radio" name="tipoEvento" value="3">18 y Veinteañeros</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="3">Treintañeros</label>
+												<label><input type="radio" name="tipoEvento" value="4">Treintañeros</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="4">Cuarentones</label>
+												<label><input type="radio" name="tipoEvento" value="5">Cuarentones</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="5">Cincuentones</label>
+												<label><input type="radio" name="tipoEvento" value="6">Cincuentones</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="6">Más de 50</label>
+												<label><input type="radio" name="tipoEvento" value="7">Más de 50</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="7">Combinadito</label>
+												<label><input type="radio" name="tipoEvento" value="8">Combinadito</label>
 											</div>
 											<i>Diversidad (Pink Parties):</i>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="8">Fiesta Ellas</label>
+												<label><input type="radio" name="tipoEvento" value="9">Fiesta Ellas</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="9">Fiesta Ellos</label>
+												<label><input type="radio" name="tipoEvento" value="10">Fiesta Ellos</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="10">Fiesta Ellas y Ellos</label>
+												<label><input type="radio" name="tipoEvento" value="11">Fiesta Ellas y Ellos</label>
 											</div>
 										</div>
 						    		</div>
@@ -306,45 +306,45 @@
 											<br>
 											<i>Interior</i>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="0">Salón</label>
+												<label><input type="radio" name="lugarEvento" value="1">Salón</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="1">Salón + Jardín + Terraza</label>
+												<label><input type="radio" name="lugarEvento" value="2">Salón + Jardín + Terraza</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="2">Salón en Hotel</label>
+												<label><input type="radio" name="lugarEvento" value="3">Salón en Hotel</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="3">Salón en Hacienda</label>
+												<label><input type="radio" name="lugarEvento" value="4">Salón en Hacienda</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="4">Restaurante</label>
+												<label><input type="radio" name="lugarEvento" value="5">Restaurante</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="5">Restaurante + Bar</label>
+												<label><input type="radio" name="lugarEvento" value="6">Restaurante + Bar</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="6">Antro</label>
+												<label><input type="radio" name="lugarEvento" value="7">Antro</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="7">Casa</label>
+												<label><input type="radio" name="lugarEvento" value="8">Casa</label>
 											</div>
 											
 											<i>Exterior</i>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="8">Jardín</label>
+												<label><input type="radio" name="lugarEvento" value="9">Jardín</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="9">Jardín + Alberca</label>
+												<label><input type="radio" name="lugarEvento" value="10">Jardín + Alberca</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="10">Terraza</label>
+												<label><input type="radio" name="lugarEvento" value="11">Terraza</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="11">Hacienda</label>
+												<label><input type="radio" name="lugarEvento" value="12">Hacienda</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="12">Casa en Playa</label>
+												<label><input type="radio" name="lugarEvento" value="13">Casa en Playa</label>
 											</div>
 										</div>
 										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
@@ -509,16 +509,16 @@
 						    			</div>
 						    			<div class="form-group">
 						    				<div class="radio">
-												<label><input type="radio" name="idLimpieza" value="0">No requiero limpieza</label>
+												<label><input type="radio" name="idLimpieza" value="1">No requiero limpieza</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="idLimpieza" value="1">Requiero limpieza antes de mi evento</label>
+												<label><input type="radio" name="idLimpieza" value="2">Requiero limpieza antes de mi evento</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="idLimpieza" value="2">Requiero limpieza después de mi evento</label>
+												<label><input type="radio" name="idLimpieza" value="3">Requiero limpieza después de mi evento</label>
 											</div>
 											<div class="radio">
-												<label><input type="radio" name="idLimpieza" value="3">Requiero limpieza antes y después de mi evento</label>
+												<label><input type="radio" name="idLimpieza" value="4">Requiero limpieza antes y después de mi evento</label>
 											</div>
 						    			</div>
 						    		</div>
