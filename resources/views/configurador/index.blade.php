@@ -75,7 +75,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-8 col-sm-offset-1">
-							<form action="{{ url('/configurador') }}" method="POST">
+							<form action="{{ url('/configurador') }}" method="POST" id="formGeneral">
 							{{ csrf_field() }}
 								<div class="tab-content">
 
@@ -625,6 +625,9 @@
 	<!-- Wizard Functionality -->
 	<script src="{{ URL::asset('assets_configurador/bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js') }}"></script>
 	<script src="{{ URL::asset('assets_configurador/assets/js/wizard-wit.js')}} "></script>
+	<script src="{{ URL::asset('assets_configurador/assets/js/jquery.validate.min.js') }}"></script>
 	<script src="{{ URL::asset('assets_configurador/assets/js/skycons.js')}}" type="text/javascript"></script>
+	
+
 
 </html>

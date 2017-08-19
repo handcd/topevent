@@ -29,6 +29,28 @@ $(document).ready(function(){
     //  Activate the Tooltips
     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 
+    // Code for the Validator
+    var $validator = $('#formGeneral').validate({
+          rules: {
+            nombre: {
+              required: true,
+              minlength: 3
+            },
+            apellidos: {
+              required: true,
+              minlength: 3
+            },
+            email: {
+              required: true,
+              minlength: 3,
+            }
+        },
+
+        errorPlacement: function(error, element) {
+            $(element).parent('div').addClass('has-error');
+         }
+    });
+
     // Activate Datepicker
     if($('.datepicker').length != 0){
         $('.datepicker').datepicker({
