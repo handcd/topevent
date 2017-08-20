@@ -2,20 +2,6 @@
 
 @section('content')
 <style>
-    /*!
- * Datepicker for Bootstrap
- *
- * Copyright 2012 Stefan Petre
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- */
-/*
- *
- *   SCSS by Creative Tim
- *   http://www.creative-tim.com
- *
- */
 .datepicker {
   top: 0;
   left: 0;
@@ -649,6 +635,7 @@
         jQuery(document).ready(function($) {
             setTimeout(function() {
               $('input').trigger('change');
+              $('select').trigger('change');
             },1000);
         });
     </script>

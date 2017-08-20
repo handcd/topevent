@@ -36,9 +36,18 @@
                             <div class="form-group label-floating is-empty">
                                 <label class="control-label">Selecciona la comanda:</label>
                                 <select name="comanda" class="form-control">
-                                    <option disabled="" selected=""></option>
+                                    <option disabled="" @hasSection('editComanda')
+                                      {{-- No hacemos nada --}}
+                                    @else
+                                      selected=""
+                                    @endif></option>
                                     @foreach (WIT\Comanda::all() as $comanda)
-                                        <option value="{{ $comanda->id }}">{{ $comanda->nombre }}</option>
+                                        <option value="{{ $comanda->id }}"
+                                        @hasSection('editComanda')
+                                          @if ($__env->getSections()['editComanda'] == $comanda->id)
+                                            selected="" 
+                                          @endif
+                                        @endif>{{ $comanda->nombre }}</option>
                                     @endforeach
                                 </select>
                             <span class="material-input"></span></div>
@@ -46,10 +55,19 @@
                         <div class="col-md-4 col-md-offset-1">
                             <div class="form-group label-floating is-empty">
                                 <label class="control-label">Selecciona el tipo de campo:</label>
-                                <select name="campo" class="form-control">
-                                    <option disabled="" selected=""></option>
+                                <select name="campo" class="form-control" id="campo">
+                                    <option disabled="" @hasSection('editCampo')
+                                      {{-- No hacemos nada --}}
+                                    @else
+                                      selected=""
+                                    @endif></option>
                                     @foreach (WIT\Campo::all() as $campo)
-                                        <option value="{{ $campo->id }}">{{ $campo->nombre }}</option>
+                                        <option value="{{ $campo->id }}"
+                                        @hasSection('editCampo')
+                                          @if ($__env->getSections()['editCampo'] == $campo->id)
+                                            selected="" 
+                                          @endif
+                                        @endif>{{ $campo->nombre }}</option>
                                     @endforeach
                                 </select>
                             <span class="material-input"></span></div>
@@ -64,4 +82,14 @@
         </div>
     </div>
 </div>
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="{{ URL::asset('assets_configurador/assets/js/material-kit.js')}}" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        setTimeout(function() {
+          $('input').trigger('change');
+          $('select').trigger('change');
+        },1000);
+    });
+</script>
 @endsection
