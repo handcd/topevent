@@ -4,7 +4,7 @@ namespace WIT\Http\Controllers;
 
 use Illuminate\Http\Request;
 use WIT\Order;
-use WIT\Cliente;
+use WIT\Client;
 
 class HomeController extends Controller
 {
@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $ordenes = Order::all();
-        $clientes = Cliente::all();
+        $clients = Client::all();
         return view('dashboard',compact('ordenes'));
     }
 }

@@ -1,7 +1,7 @@
 @extends('order.create')
 
 @section('editId',$item->id)
-@section('editUserId',$item->user_id)
+@section('editClient',$item->client_id)
 @section('editFecha',$item->fecha)
 @section('editDuracion',$item->duracion)
 @section('editTipoEvento',$item->tipo_evento)
@@ -15,8 +15,8 @@
 @section('editNotas',$item->notas)
 @section('editCotizacion',$item->cotizacion)
 
-@foreach ($itemData as $data)
-	@section('editProd'.$data->product_id,$data->valor)
+@foreach ($item->datosOrden as $dato)
+	@section('editProd'.$dato->product_id,$dato->valor)
 @endforeach
 
 @section('editMethod')

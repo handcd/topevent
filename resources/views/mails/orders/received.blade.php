@@ -311,9 +311,9 @@ img {
                         <td>
                           <div class='contentEditableContainer contentTextEditable'>
                             <div class='contentEditable' style='text-align: center;'>
-                              <h2 style="font-size: 20px;">Tu orden ha sido recibida, {{$cliente->nombre}}.</h2>
+                              <h2 style="font-size: 20px;">Tu orden ha sido recibida, {{$order->client->nombre}}.</h2>
                               <br>
-                              <p>Hemos recibido tu orden <strong>(ID: {{ $orden->id }})</strong> y hemos comenzado a trabajar en todos los detalles para la misma. En 48 horas recibirás la cotización así como las opciones de nuestros proveedores para tu evento.</p>
+                              <p>Hemos recibido tu orden <strong>(ID: {{ $order->id }})</strong> y hemos comenzado a trabajar en todos los detalles para la misma. En 48 horas recibirás la cotización así como las opciones de nuestros proveedores para tu evento.</p>
                             </div>
                           </div>
                         </td>
@@ -442,7 +442,7 @@ img {
                             <div class='contentEditable' style='text-align: left;'>
                               <h2 style='font-size:16px;'>Fecha de tu evento</h2>
                               <br>
-                              <p>Tu evento está planeado para el {{ $orden->fecha }}, estaremos listos para ello.</p>
+                              <p>Tu evento está planeado para el {{ $order->fecha }}, estaremos listos para ello.</p>
                               <br>
                             </div>
                           </div>
@@ -460,7 +460,7 @@ img {
       
       
       </div>
-@if (is_null($orden->nombre_lugar))
+@if (is_null($order->nombre_lugar))
 	{{-- Pues no mandamos nada --}}
 @else
       <div class="movableContent" style="border: 0px; padding-top: 0px; position: relative;">
@@ -481,7 +481,7 @@ img {
                             <div class='contentEditable' style='text-align: left;'>
                               <h2 style='font-size:16px;'>Ubicación</h2>
                               <br>
-                              <p>Estamos arreglando todo para tu evento en la "{{ $orden->nombre_lugar }}", en Mérida, Yucatán.</p>
+                              <p>Estamos arreglando todo para tu evento en "{{ $order->nombre_lugar }}", en Mérida, Yucatán.</p>
                               <br>
                             </div>
                           </div>

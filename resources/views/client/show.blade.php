@@ -14,29 +14,29 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4"><strong>Nombre:</strong></td>
-                                <td class="col-md-8">{{$cliente->nombre}} {{$cliente->apellido}}</td>
+                                <td class="col-md-8">{{$client->nombre}} {{$client->apellido}}</td>
                             </tr>
                             <tr>
                                 <td class="col-md-4"><strong>Correo Electrónico:</strong></td>
-                                <td class="col-md-8"><a href="mailto:{{$cliente->email}}">{{$cliente->email}}</a></td>
+                                <td class="col-md-8"><a href="mailto:{{$client->email}}">{{$client->email}}</a></td>
                             </tr>
                             <tr>
                                 <td class="col-md-4"><strong>Teléfono:</strong></td>
-                                <td class="col-md-8">{{$cliente->phone}}</td>
+                                <td class="col-md-8">{{$client->phone}}</td>
                             </tr>
                             <tr>
                                 <td class="col-md-4"><strong>Fecha de Registro:</strong></td>
-                                <td class="col-md-8">{{$cliente->created_at}}</td>
+                                <td class="col-md-8">{{$client->created_at}}</td>
                             </tr>
                             <tr>
                                 <td class="col-md-4"><strong>Última Actualización de Información:</strong></td>
-                                <td class="col-md-8">{{$cliente->updated_at}}</td>
+                                <td class="col-md-8">{{$client->updated_at}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             	<hr>
-            	<a href="{{ url('/clientes') }}" class="btn btn-default">Regresar</a>
+            	<a href="{{ url('/clients') }}" class="btn btn-default">Regresar</a>
             </div>
         </div>
     </div>

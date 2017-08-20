@@ -13,4 +13,12 @@ class Order extends Model
     {
         return $this->hasMany(DatosOrden::class);
     }
+
+    /**
+    * Get the client to which the order belongs to
+    */
+    public function client()
+    {
+    	return $this->belongsTo(Client::class);
+    }
 }

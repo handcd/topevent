@@ -28,7 +28,7 @@ Route::get('/social', function() {
 })->middleware('auth');
 
 // Resource Controllers
-Route::resource('clientes','ClientController');
+Route::resource('clients','ClientController');
 Route::resource('ordenes','OrderController');
 Route::resource('comandas','ComandaController');
 Route::resource('configurador','ConfiguradorController');

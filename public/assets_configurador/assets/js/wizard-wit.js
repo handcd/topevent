@@ -1,20 +1,69 @@
 $(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-		var $total = navigation.find('li').length;
-		var $current = index+1;
-		var $percent = ($current/$total) * 100;
-		$('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
-	}});
-	/*$('#rootwizard .finish').click(function() {
-		alert('¡Gracias! Tu orden ha sido recibida. En breve recibirás un correo electrónico con la confirmación de tu orden. ');
-		//$('#rootwizard').find("a[href*='tab1']").trigger('click');
-		window.location.replace("http://witeventos.com");
-	});*/
 
-	//$(".col-nav").css({'height':($(".tab-content").height()+'px')});
-	$(".col-nav-wizard").css({'height':($(".tab-content").height()+'px')});
+	// Code for the Validator
+    var $validator = $('form').validate({
+          rules: {
+            nombre: {
+              required: true,
+              minlength: 3
+            },
+            apellidos: {
+              required: true,
+              minlength: 3
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+            fechaevento: {
+            	required: true,
+            },
+            duracion: {
+            	required: true,
+            },
+            noInvitados: {
+            	required: true,
+            	number: true,
+            },
+            introduccion: {
+            	required: true,
+            	maxlength: 255,
+            },
+            tipoEvento: {
+            	required: true,
+            },
+            lugarEvento: {
+            	required: true,
+            },
+            direccionLugar: {
+            	minlength: 10,
+            },
+            nombreLugar: {
+            	minlength: 10,
+            },
+        },
 
-	$('.wizard-option-list').css("overflow-y", "scroll");
+        errorPlacement: function(error, element) {
+            $(element).parent('div').addClass('has-error');
+         }
+    });
+
+  	$('#rootwizard').bootstrapWizard({
+  		onTabShow: function(tab, navigation, index) {
+			var $total = navigation.find('li').length;
+			var $current = index+1;
+			var $percent = ($current/$total) * 100;
+			$('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
+		},
+
+		onNext: function(tab, navigation, index) {
+        	var $valid = $('#formGeneral').valid();
+        	if(!$valid) {
+        		$validator.focusInvalid();
+        		return false;
+        	}
+        },
+	});
 
 	$('#fecha .datepicker').datepicker({
 		weekStart: 1,

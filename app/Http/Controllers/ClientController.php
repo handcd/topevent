@@ -5,7 +5,7 @@ namespace WIT\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use WIT\Mail\OrderReceived;
-use WIT\Cliente;
+use WIT\Client;
 use WIT\Order;
 
 class ClientController extends Controller
@@ -27,8 +27,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::all();
-        return view('client.home',compact('clientes'));
+        $clients = Client::all();
+        return view('client.home',compact('clients'));
     }
 
     /**
@@ -49,19 +49,19 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = new Cliente;
+        $client = new Client;
         $this->validate($request, [
                 'nombre' => 'required',
                 'apellido' => 'required',
                 'email' => 'required | unique:clients',
             ]);
-        $cliente->nombre = $request->nombre;
-        $cliente->apellido = $request->apellido;
-        $cliente->email = $request->email;
-        $cliente->phone = $request->phone;
-        $cliente->save();
+        $client->nombre = $request->nombre;
+        $client->apellido = $request->apellido;
+        $client->email = $request->email;
+        $client->phone = $request->phone;
+        $client->save();
 
-        return redirect('clientes');
+        return redirect('clients');
     }
 
     /**
@@ -72,8 +72,8 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        $cliente = Cliente::find($id);
-        return view('client.show',compact('cliente'));
+        $client = Client::find($id);
+        return view('client.show',compact('client'));
     }
 
     /**
@@ -84,7 +84,7 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        $item = Cliente::find($id);
+        $item = Client::find($id);
         return view('client.edit',compact('item'));
     }
 
@@ -97,18 +97,18 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $cliente = Cliente::find($id);
+        $client = Client::find($id);
         $this->validate($request, [
                 'nombre' => 'required',
                 'apellido' => 'required',
                 'email' => 'required'
             ]);
-        $cliente->nombre = $request->nombre;
-        $cliente->apellido = $request->apellido;
-        $cliente->email = $request->email;
-        $cliente->phone = $request->phone;
-        $cliente->save();
-        return redirect('clientes');
+        $client->nombre = $request->nombre;
+        $client->apellido = $request->apellido;
+        $client->email = $request->email;
+        $client->phone = $request->phone;
+        $client->save();
+        return redirect('clients');
     }
 
     /**
@@ -119,9 +119,9 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        $item = Cliente::find($id);
+        $item = Client::find($id);
         $item->delete();
         session()->flash('message','Successfully deleted!');
-        return redirect('/clientes');
+        return redirect('/clients');
     }
 }
