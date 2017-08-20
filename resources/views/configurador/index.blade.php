@@ -65,7 +65,7 @@
 								<li><a href="#tab8" data-toggle="tab">Iluminación</a></li>
 					  			<li><a href="#tab9" data-toggle="tab">Entretenimiento</a></li>
 								<li><a href="#tab10" data-toggle="tab">Ambientación</a></li>
-								<li><a href="#tab11" data-toggle="tab">Foto, Video y Recuerdos</a></li>
+								<li><a href="#tab11" data-toggle="tab">Foto y Video</a></li>
 								<li><a href="#tab12" data-toggle="tab">Invitaciones</a></li>
 								<li><a href="#tab13" data-toggle="tab">Recuerdos</a></li>
 								<li><a href="#tab14" data-toggle="tab">Limpieza</a></li>
@@ -381,11 +381,40 @@
 												Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 											</p>
 										</div>
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Botanas'])
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Canapés'])
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Postres'])
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Bebidas'])
-										@include('configurador.partials.comanda', ['nombre_comanda'=>'Extras Comida y Bebida'])
+										@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Alimentos',
+											'listacomandas' => [
+												'Botanas',
+												'Canapés',
+												'Tacos de Guisado',
+												'Tacos de Guisado Tradicionales',
+												'Hamburguesas y Hot-Dogs',
+												'Parrillada',
+												'By WIT&trade;',
+												'Chilaquiles',
+												'Pastel',
+												'Cajita Infantil',
+												'Helados Artesanales',
+												'Nieves con espíritu',
+											],
+										])
+										@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Bebidas',
+											'listacomandas' => [
+												'Refrescos y Aguas',
+												'Cervezas',
+												'Botellas de Alcohol',
+												'Barras Libres',
+												'Café/Té',
+											],
+										])
+										@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Extras',
+											'listacomandas' => [
+												'Personal de Servicio de Alimentos',
+												'Vajillas',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab6">
@@ -398,7 +427,15 @@
 						    					Selecciona las opciones de Mobiliario que te gustarían para tu evento
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Mobiliario'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Mobiliario',
+											'listacomandas' => [
+												'Mesas y Sillas (Altura estándar)',
+												'Mesas y Sillas (Altas)',
+												'Mayor Comodidad',
+												'Para Pool Party',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab7">
@@ -411,8 +448,18 @@
 						    					¿Qué opciones de música o de materiales audiovisuales te gustarían para tu evento?
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Música'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Paquetes Visuales'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Música',
+											'listacomandas' => [
+												'Música',
+											],
+										])
+										@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Paquetes Visuales',
+											'listacomandas' => [
+												'Paquetes Visuales'
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab8">
@@ -425,7 +472,12 @@
 						    					Seleciona las opciones de iluminación que te gustarían para tu evento
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Iluminación'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Iluminación',
+											'listacomandas' => [
+												'Iluminación'
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab9">
@@ -438,7 +490,16 @@
 						    					¿Qué opciones de entretenimiento te gustarían?
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Entretenimiento'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Entretenimiento',
+											'listacomandas' => [
+												'Niños',
+												'Adolescentes',
+												'Genéricos',
+												'Adultos',
+												'Sólo Adultos',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab10">
@@ -451,9 +512,14 @@
 						    					¿Qué tipo de ambientación te gustaría para tu evento?
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fiesta Temática'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fiesta Convencional'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Albercada'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Ambientación',
+											'listacomandas' => [
+												'Fiesta Temática',
+												'Fiesta Convencional',
+												'Albercada',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab11">
@@ -466,8 +532,13 @@
 						    					Selecciona entre las opciones que tenemos de Fotos y Video para tu evento
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Fotografía'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Video'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Fotografía y Video',
+											'listacomandas' => [
+												'Fotografía',
+												'Video',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab12">
@@ -480,8 +551,18 @@
 						    					Selecciona entre las opciones de invitaciones que tenemos 
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Invitaciones'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Confirmación'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Invitaciones',
+											'listacomandas' => [
+												'Invitaciones',
+											],
+										])
+										@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Confirmación',
+											'listacomandas' => [
+												'Confirmación',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab13">
@@ -494,7 +575,12 @@
 						    					Selecciona entre las opciones de recuerdos para tu evento
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Recuerdos del Evento'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Recuerdos',
+											'listacomandas' => [
+												'Recuerdos',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab14">
@@ -534,9 +620,14 @@
 						    					Tenemos opciones adicionales para darle un toque específico a tu evento
 						    				</p>
 						    			</div>
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Extras'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Personal'])
-						    			@include('configurador.partials.comanda', ['nombre_comanda' => 'Transporte'])
+						    			@include('configurador.partials.comanda-group', [
+											'descripcion' => 'Extras',
+											'listacomandas' => [
+												'Extras',
+												'Personal',
+												'Transporte',
+											],
+										])
 						    		</div>
 
 						    		<div class="tab-pane" id="tab16">
@@ -628,6 +719,12 @@
 	<script src="{{ URL::asset('assets_configurador/assets/js/jquery.validate.min.js') }}"></script>
 	<script src="{{ URL::asset('assets_configurador/assets/js/skycons.js')}}" type="text/javascript"></script>
 	
-
+	<script>
+		$(document).ready(function(){
+	        $('.hideshow').on('click', function(event) {
+	        	$(this).closest('.comanda-group').find('.comanda-group-content').toggle('show');
+	        });
+	    });
+	</script>
 
 </html>

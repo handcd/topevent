@@ -213,183 +213,202 @@ class ComandaTableSeeder extends Seeder
             ['Cucharas','Cantidad en número de personas',Campos::Numero],
         ]);
 
-        return;
-
         /**
         * Mobiliario
         */
-        Comanda::create(['nombre'=>'Mobiliario','descripcion'=>'Opciones de Mobiliario para tu evento']);
         // Mesas y Sillas altura estándar
-        $this->crearProducto('Mesas y Sillas altura estándar','',0,6,true);
-        $this->crearProducto('Mesa redonda para 10 personas','Cantidad en número de mesas (incluye mantel blanco)',1,6,false);
-        $this->crearProducto('Mesa cuadrada para 12 personas','Cantidad en número de mesas (incluye mantel blanco)',1,6,false);
-        $this->crearProducto('Tablón de servicio','Cantidad en número de tablones (incluye mantel blanco)',1,6,false);
-        $this->crearProducto('Silla banquete estándar acojinada','Cantidad en número de sillas (no incluye fundas)',1,6,false);
-        $this->crearProducto('Silla tiffany blanca','Cantidad en número de sillas',1,6,false);
-        $this->crearProducto('Silla tiffany chocolate','Cantidad en número de sillas',1,6,false);
+        $this->crear('Mesas y Sillas (Altura estándar)','',[
+            ['Mesa redonda para 10 personas','Cantidad en número de mesas (incluye mantel blanco)',Campos::Numero],
+            ['Mesa cuadrada para 12 personas','Cantidad en número de mesas (incluye mantel blanco)',Campos::Numero],
+            ['Tablón de servicio','Cantidad en número de tablones (incluye mantel blanco)',Campos::Numero],
+            ['Silla banquete estándar acojinada','Cantidad en número de sillas (no incluye fundas)',Campos::Numero],
+            ['Silla tiffany blanca','Cantidad en número de sillas',Campos::Numero],
+            ['Silla tiffany chocolate','Cantidad en número de sillas',Campos::Numero],
+        ]);
 
         // Mesas y sillas altas
-        $this->crearProducto('Mesas y Sillas altas','',0,6,true);
-        $this->crearProducto('Mesa periquera para 4 personas blanca','Cantidad en número de mesas',1,6,false);
-        $this->crearProducto('Mesa periquera para 4 personas chocolate','Cantidad en número de mesas',1,6,false);
-        $this->crearProducto('Mesa alta 6 personas vintage','Cantidad en número de mesas',1,6,false);
-        $this->crearProducto('Banco periquera chocolate','Cantidad en número de bancos',1,6,false);
-        $this->crearProducto('Banco periquera blanco','Cantidad en número de bancos',1,6,false);
-        $this->crearProducto('Banco periquera vintage','Cantidad en número de bancos',1,6,false);
+        $this->crear('Mesas y Sillas (Altas)','',[
+            ['Mesa periquera para 4 personas blanca','Cantidad en número de mesas',Campos::Numero],
+            ['Mesa periquera para 4 personas chocolate','Cantidad en número de mesas',Campos::Numero],
+            ['Mesa alta 6 personas vintage','Cantidad en número de mesas',Campos::Numero],
+            ['Banco periquera chocolate','Cantidad en número de bancos',Campos::Numero],
+            ['Banco periquera blanco','Cantidad en número de bancos',Campos::Numero],
+            ['Banco periquera vintage','Cantidad en número de bancos',Campos::Numero],
+        ]);
 
         // Mayor comodidad
-        $this->crearProducto('Mayor Comodidad','',0,6,true);
-        $this->crearProducto('Sala lounge blanca para 10 personas','Cantidad en número de salas',1,6,false);
-        $this->crearProducto('Sala vintage para 10 personas','Cantidad en número de salas',1,6,false);
+        $this->crear('Mayor Comodidad','Opciones más confortables para tus invitads',[
+            ['Sala lounge blanca para 10 personas','Cantidad en número de salas',Campos::Numero],
+            ['Sala vintage para 10 personas','Cantidad en número de salas',Campos::Numero],
+        ]);
 
         // Para pool party
-        $this->crearProducto('Para Pool Party','',0,6,true);
-        $this->crearProducto('Camastros para alberca','Cantidad en número de camastros',1,6,false);
-        $this->crearProducto('Sombrillas para jardín o alberca','Cantidad en número de sombrillas',1,6,false);
-        $this->crearProducto('Bancos para alberca','Cantidad en número de bancos',1,6,false);
-        
+        $this->crear('Para Pool Party','Opciones para su evento con alberca',[
+            ['Camastros para alberca','Cantidad en número de camastros',Campos::Numero],
+            ['Sombrillas para jardín o alberca','Cantidad en número de sombrillas',Campos::Numero],
+            ['Bancos para alberca','Cantidad en número de bancos',Campos::Numero],
+        ]);
 
         /**
         * Música - Visual
         */
 
         // Música
-        Comanda::create(['nombre'=>'Música','descripcion'=>'Opciones musicales para amenizar tu evento']);
-        $this->crearProducto('DJ Hasta 50 Personas','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('DJ Hasta 100 Personas','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('Karaoke','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('Grupo versátil','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('Cantante con pista / piano','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('Trío','Cantidad en horas deseadas (Incluye equipo básico de audio  e iluminación)',1,7,false);
-        $this->crearProducto('Mariachis','Cantidad en horas deseadas (Incluye equipo básico de audio  e iluminación)',1,7,false);
+        $this->crear('Música','Opciones musicales para amenizar tu evento',[
+            ['DJ Hasta 50 Personas','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['DJ Hasta 100 Personas','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['Karaoke','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['Grupo versátil','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['Cantante con pista / piano','Incluye 5 horas, cantidad en horas incluyendo las primeras cinco (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['Trío','Cantidad en horas deseadas (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+            ['Mariachis','Cantidad en horas deseadas (Incluye equipo básico de audio  e iluminación)',Campos::Numero],
+        ]);
 
         // Paquetes Visuales
-        Comanda::create(['nombre'=>'Paquetes Visuales','descripcion'=>'Paquetes de Pantallas o Proyectores para darle imagen a tu evento']);
-        $this->crearProducto('Pantallas 50 pulgadas con videos musicales','Especificar número (Se pueden proyectar videos on-demand)',1,8,false);
-        $this->crearProducto('Proyector con videos musicales','Especificar número (Se pueden proyectar videos on-demand)',1,8,false);
-
+        $this->crear('Paquetes Visuales','Paquetes de Pantallas o Proyectores para darle imagen a tu evento',[
+            ['Pantallas 50 pulgadas con videos musicales','Especificar número (Se pueden proyectar videos on-demand)',Campos::Numero],
+            ['Proyector con videos musicales','Especificar número (Se pueden proyectar videos on-demand)',Campos::Numero],
+        ]);
 
         /**
         * Iluminación
         */
-        Comanda::create(['nombre'=>'Iluminación','descripcion'=>'Opciones de Iluminación para tu evento']);
-        $this->crearProducto('Luz LED color definible','Número en horas de uso',1,9,false);
-        $this->crearProducto('Romántica (paquete de 15 velas y 6 antorchas)','Número de paquetes (Hasta que se consuman)',1,9,false);
+       $this->crear('Iluminación','Opciones de Iluminación para tu evento',[
+            ['Luz LED color definible','Número en horas de uso',Campos::Numero],
+            ['Romántica (paquete de 15 velas y 6 antorchas)','Número de paquetes (Hasta que se consuman)',Campos::Numero],
+        ]);
 
         /**
         * Entretenimiento
         */
-        Comanda::create(['nombre'=>'Entretenimiento','descripcion'=>'Opciones de Entretenimiento para tu evento']);
         
         // Niños
-        $this->crearProducto('Niños','',1,10,true);
-        $this->crearProducto('Inflables','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
-        $this->crearProducto('Trampolin','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
-        $this->crearProducto('Piñatas','(Especificar temática de la piñata)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',1,10,false);
-        $this->crearProducto('Payaso','(Especificar temática del payaso)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',1,10,false);
-        $this->crearProducto('Show Infantil (Botarga, Princesas, Hombres de acción)','(Especificar temática)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',1,10,false);
+        $this->crear('Niños','',[
+            ['Inflables','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
+            ['Trampolin','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
+            ['Piñatas','(Especificar temática de la piñata)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',Campos::Numero],
+            ['Payaso','(Especificar temática del payaso)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',Campos::Numero],
+            ['Show Infantil (Botarga, Princesas, Hombres de acción)','(Especificar temática)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
+        ]);
 
         // Adolescentes
-        $this->crearProducto('Adolescentes','',1,10,true);
-        $this->crearProducto('Consola Play Station (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
-        $this->crearProducto('Consola X-Box (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
-        $this->crearProducto('Consola Nintendo (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',1,10,false);
+        $this->crear('Adolescentes','',[
+            ['Consola Play Station (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',Campos::Numero],
+            ['Consola X-Box (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',Campos::Numero],
+            ['Consola Nintendo (1 pantalla, 1 consola, 3 Juegos)','Cantidad de paquetes',Campos::Numero],
+        ]);
 
         // Genéricos
-        $this->crearProducto('Genéricos','',1,10,true);
-        $this->crearProducto('Juegos de mesa, (Jenga, Scrabble y X)','Cantidad de juegos de mesa',1,10,false);
-        $this->crearProducto('Casinos, incluye mesa y Animador (Juegos: X, X y X)','Cantidad de juegos',1,10,false);
-        $this->crearProducto('Animador de Fiesta','Cantidad de animadores (recomendado 1 por cada 30 personas)',1,10,false);
-        $this->crearProducto('Gios','Cantidad de Gios (Se recomienda 1 Gío por cada 30 personas)',1,10,false);
+        $this->crear('Genéricos','',[
+            ['Juegos de mesa, (Jenga, Scrabble y X)','Cantidad de juegos de mesa',Campos::Numero],
+            ['Casinos, incluye mesa y Animador (Juegos: X, X y X)','Cantidad de juegos',Campos::Numero],
+            ['Animador de Fiesta','Cantidad de animadores (recomendado 1 por cada 30 personas)',Campos::Numero],
+            ['Gios','Cantidad de Gios (Se recomienda 1 Gío por cada 30 personas)',Campos::Numero],
+        ]);
 
         // Adultos
-        $this->crearProducto('Adultos','',1,10,true);
-        $this->crearProducto('Standup Comedy','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
-        $this->crearProducto('Cantante','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crear('Adultos','',[
+            ['Standup Comedy','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::SiNo],
+            ['Cantante','Número de horas (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::SiNo],
+        ]);
 
         // Sólo adultos
-        $this->crearProducto('Sólo Adultos','',1,10,true);
-        $this->crearProducto('Stripper Despedida Solteras','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
-        $this->crearProducto('Stripper Despedida Solteros','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
-        $this->crearProducto('Stripper ellos para ellos','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
-        $this->crearProducto('Stripper ellas para ellas','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',1,10,false);
+        $this->crear('Sólo Adultos','',[
+            ['Stripper Despedida Solteras','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::Numero],
+            ['Stripper Despedida Solteros','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::Numero],
+            ['Stripper ellos para ellos','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::Numero],
+            ['Stripper ellas para ellas','Número de strippers (En un máximo de 48hrs recibirás opciones y el presupuesto correspondiente")',Campos::Numero],
+        ]);
 
         /**
         * Ambientación
         */
 
         // Fiesta temática
-        Comanda::create(['nombre'=>'Fiesta Temática','descripcion'=>'Preparamos tu fiesta acorde a la temática que nos indiques']);
-        $this->crearProducto('Fiesta temática','(Especificar temática)',1,11,false);
-        $this->crearProducto('Adornos de acuerdo a la temática','(Simple, Cargado o Recargado)',1,11,false);
-        $this->crearProducto('Globos y demás','(Simple, Cargado o Recargado)',1,11,false);
+        $this->crear('Fiesta Temática','Preparamos tu fiesta acorde a la temática que nos indiques',[
+            ['Fiesta temática','(Especificar temática)',Campos::Texto],
+            ['Adornos de acuerdo a la temática','(Simple, Cargado o Recargado)',Campos::Texto],
+            ['Globos y demás','(Simple, Cargado o Recargado)',Campos::Texto],
+        ]);
         
         // Fiesta Convencional
-        Comanda::create(['nombre'=>'Fiesta Convencional','descripcion'=>'Adornos y demás para una fiesta convencional']);
-        $this->crearProducto('Fiesta convencional','',1,12,true);
-        $this->crearProducto('Globos (incluye globos de aire y globos de gas)','(Simple, Cargado o Recargado)',1,12,false);
-        $this->crearProducto('Flores (incluye arreglo floral por mesa)','(Simple, Cargado o Recargado)',1,12,false);
-        $this->crearProducto('Disfraces de fiesta (Gorros, Antifaces y artilugios chistosos)','(Simple, Cargado o Recargado)',1,12,false);
+        $this->crear('Fiesta Convencional','Adornos y demás para una fiesta convencional',[
+            ['Globos (incluye globos de aire y globos de gas)','(Simple, Cargado o Recargado)',Campos::Texto],
+            ['Flores (incluye arreglo floral por mesa)','(Simple, Cargado o Recargado)',Campos::Texto],
+            ['Disfraces de fiesta (Gorros, Antifaces y artilugios chistosos)','(Simple, Cargado o Recargado)',Campos::Texto],
+        ]);
 
         // Albercada
-        Comanda::create(['nombre'=>'Albercada','descripcion'=>'Opciones para la albercada en tu fiesta']);
-        $this->crearProducto('Máquina para fiesta de espuma','Número de horas',1,13,false);
+        $this->crear('Albercada','Opciones para la albercada en tu fiesta',[
+            ['Máquina para fiesta de espuma','Número de horas',Campos::Numero],
+        ]);
 
         /**
-        * Foto, Video y Recuerdos
+        * Foto y Video
         */
 
         // Fotografía
-        Comanda::create(['nombre'=>'Fotografía','descripcion'=>'Opciones de fotografía para tu evento']);
-        $this->crearProducto('Cobertura del evento','Número de horas (Entrega de material en USB)',1,14,false);
-        
-        // Video
-        Comanda::create(['nombre'=>'Video','descripcion'=>'Opciones de video para tu evento']);
-        $this->crearProducto('Cobertura del evento','Número de horas (Entrega de material en USB)',1,15,false);
-        $this->crearProducto('Cobertura del evento (Con edición)','Número de horas (Entrega de material en USB)',1,15,false);
+        $this->crear('Fotografía','Opciones de fotografía para tu evento',[
+            ['Cobertura del evento','Número de horas (Entrega de material en USB)',Campos::SiNo],
+        ]);
 
-        // Recuerdos
-        Comanda::create(['nombre'=>'Recuerdos del Evento','descripcion'=>'Opciones para que recuerden tu evento']);
-        $this->crearProducto('Fotografías en marcos de cartón','Número de recuerdos',1,16,false);
-        $this->crearProducto('Fotobooth (Tiras de 4 fotos divertidas)','Número de recuerdos',1,16,false);
-        $this->crearProducto('Fotografías en marcos de madera','Número de recuerdos',1,16,false);
+        // Video
+        $this->crear('Video','Opciones de video para tu evento',[
+            ['Cobertura del evento','Número de horas (Entrega de material en USB)',Campos::SiNo],
+            ['Cobertura del evento (Con edición)','Número de horas (Entrega de material en USB)',Campos::SiNo],
+        ]);
+
+        /**
+        * Recuerdos
+        */
+        $this->crear('Recuerdos','Opciones para que recuerden tu evento',[
+            ['Fotografías en marcos de cartón','Número de recuerdos',Campos::Numero],
+            ['Fotobooth (Tiras de 4 fotos divertidas)','Número de recuerdos',Campos::Numero],
+            ['Fotografías en marcos de madera','Número de recuerdos',Campos::Numero],
+        ]);
 
         /**
         * Invitaciones
         */
 
         // Invitaciones
-        Comanda::create(['nombre'=>'Invitaciones','descripcion'=>'Opciones para invitar a tus asistentes']);
-        $this->crearProducto('Diseño de invitación para envío a través de correo electrónico (elige 1 de 3 propuestas)','Sí/No',1,17,false);
-        $this->crearProducto('Invitaciones impresas según el tipo de evento (elige 1 de 3 propuestas)','Sí/No',1,17,false);
+        $this->crear('Invitaciones','Opciones para invitar a tus asistentes',[
+            ['Diseño de invitación para envío a través de correo electrónico (elige 1 de 3 propuestas)','Sí/No',Campos::SiNo],
+            ['Invitaciones impresas según el tipo de evento (elige 1 de 3 propuestas)','Sí/No',Campos::SiNo],
+        ]);
 
         // Confirmación
-        Comanda::create(['nombre'=>'Confirmación','descripcion'=>'Opciones para la confirmación de los asistentes a tu evento']);
-        $this->crearProducto('Confirmación telefónica de invitados (Incluye listado electrónico)','Sí/No',1,18,false);
-        $this->crearProducto('Confirmación electrónica de invitados (Incluye listado electrónico)','Sí/No',1,18,false);
+        $this->crear('Confirmación','Opciones para la confirmación de los asistentes a tu evento',[
+            ['Confirmación telefónica de invitados (Incluye listado electrónico)','Sí/No',Campos::SiNo],
+            ['Confirmación electrónica de invitados (Incluye listado electrónico)','Sí/No',Campos::SiNo],
+        ]);
 
         /**
         * Extras
         */
 
         // WIT
-        Comanda::create(['nombre'=>'Extras','descripcion'=>'Experiencias con Ingenio para tu Evento']);
-        $this->crearProducto('Flash mov antes o durante tu fiesta','Sí/No',1,19,false);
-        $this->crearProducto('Prepara un video con tus amigos para sorprender a tu festejado','Sí/No',1,19,false);
+        $this->crear('Extras','Experiencias con Ingenio para tu Evento',[
+            ['Flash mov antes o durante tu fiesta','Sí/No',Campos::SiNo],
+            ['Prepara un video con tus amigos para sorprender a tu festejado','Sí/No',Campos::SiNo],
+        ]);
 
         // Personal
-        Comanda::create(['nombre'=>'Personal','descripcion'=>'Opciones de personal para tu evento']);
-        $this->crearProducto('Requiero Edecanes Mujeres para sorprender','Sí/No',1,20,false);
-        $this->crearProducto('Requiero Edecanes Hombres para sorprender','Sí/No',1,20,false);
-        $this->crearProducto('Requiero Edecanes Hombres y Mujeres para sorprender','Sí/No',1,20,false);
-        $this->crearProducto('Requiero un Host Mujer  para mi evento','Sí/No',1,20,false);
-        $this->crearProducto('Requiero un Host Hombre  para mi evento','Sí/No',1,20,false);
-        
+        $this->crear('Personal','Opciones de personal para tu evento',[
+            ['Requiero Edecanes Mujeres para sorprender','Sí/No',Campos::SiNo],
+            ['Requiero Edecanes Hombres para sorprender','Sí/No',Campos::SiNo],
+            ['Requiero Edecanes Hombres y Mujeres para sorprender','Sí/No',Campos::SiNo],
+            ['Requiero un Host Mujer  para mi evento','Sí/No',Campos::SiNo],
+            ['Requiero un Host Hombre  para mi evento','Sí/No',Campos::SiNo],
+        ]);
+
         // Transporte
-        Comanda::create(['nombre'=>'Transporte','descripcion'=>'Opciones de transporte para tus invitados']);
-        $this->crearProducto('Transporte para llegar al evento desde un punto determinado','Sí/No',1,21,false);
-        $this->crearProducto('Transporte para salir del evento a un punto determinado','Sí/No',1,21,false);
-        $this->crearProducto('Servicio de UBER (tus invitados llegan seguros a sus hogares). Costo corre a cargo del client','Sí/No',1,21,false);
-        $this->crearProducto('Requiero transportación durante el evento','Sí/No',1,21,false);
+        $this->crear('Transporte','Opciones de transporte para tus invitados',[
+            ['Transporte para llegar al evento desde un punto determinado','Sí/No',Campos::SiNo],
+            ['Transporte para salir del evento a un punto determinado','Sí/No',Campos::SiNo],
+            ['Servicio de UBER (tus invitados llegan seguros a sus hogares). Costo corre a cargo del client','Sí/No',Campos::SiNo],
+            ['Requiero transportación durante el evento','Sí/No',Campos::SiNo],
+        ]);
+
     }
 }

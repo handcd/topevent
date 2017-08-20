@@ -42,4 +42,6 @@
         </div>
 	</div>
 </div>
+@else
+<h3>Comanda {{ $nombre_comanda }} vacía!</h3>
 @endif

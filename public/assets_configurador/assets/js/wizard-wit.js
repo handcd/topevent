@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// Code for the Validator
-    var $validator = $('#formGeneral').validate({
+    var $validator = $('form').validate({
           rules: {
             nombre: {
               required: true,
