@@ -108,7 +108,7 @@
 									<!-- Datos -->
 									<div class="tab-pane" id="tab0">
 										<div class="step-title">
-											<h3>Cuéntanos de ti</h3>
+											<h3>Regístrarte</h3>
 										</div>
 										<hr>
 										<div class="step-intro">
