@@ -33,7 +33,7 @@
 	<div class="logo-container">
 		<a href="{{ url('/configurador') }}">
             <div class="logo">
-                <img src="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
+                <img src="{{ URL::asset('assets_configurador/assets/img/logo_wit.png') }}">
             </div>
             <div class="brand">
                 Whatever It Takes
@@ -97,7 +97,7 @@
 												Lo que hacemos: Creación, diseño, desarrollo y operación de eventos en donde disfrutamos todos, tú porque es tu fiesta, y nosotros ¡porque nos encanta lo que hacemos!, desde la visualización, hasta el cierre.
 											</p>
 											<p>
-												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada client, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
+												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada cliente, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
 											</p>
 											<p>
 												<b>Gracias por elegirnos</b> y comencemos.
@@ -296,13 +296,35 @@
 											<h3>El lugar</h3>
 										</div>
 										<hr>
+										<p>
+											Elige entre las opciones de lugar para que tu evento sea todo un éxito
+										</p>
 										<div class="step-intro">
-											<p>
-												Elige entre las opciones de lugar para que tu evento sea todo un éxito
-											</p>
+										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-location-arrow" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Nombre del Lugar</label>
+	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Dirección del Lugar</label>
+	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+											
 										</div>
 										<div class="form-group">
-											<label for="lugarEvento">Selecciona el lugar dónde quieres que sea tu evento</label>
+											<label for="lugarEvento">Sino, selecciona el lugar dónde quieres que sea tu evento</label>
 											<br>
 											<i>Interior</i>
 											<div class="radio">
@@ -347,27 +369,7 @@
 												<label><input type="radio" name="lugarEvento" value="13">Casa en Playa</label>
 											</div>
 										</div>
-										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-location-arrow" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Nombre del Lugar</label>
-	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-map-marker" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Dirección del Lugar</label>
-	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
+										
 						    		</div>
 
 						    		<!-- Comida / Bebida -->
