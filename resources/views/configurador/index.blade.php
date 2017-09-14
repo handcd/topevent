@@ -171,14 +171,7 @@
 												Platícanos sobre la fecha del evento, te mostramos el pronóstico del clima por si quieres armar una fiesta en exteriores.
 											</p>
 										</div>
-										<ul class="pager wizard">
-											<li class="next">
-												<a href="javascript:;" class="btn btn-primary">
-													Ya lo tengo
-													<span aria-hidden="true">&raquo;</span>
-												</a>
-											</li>
-										</ul>
+										
 										<div class="input-group">
 											<span class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
@@ -401,6 +394,14 @@
 												Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 											</p>
 										</div>
+										<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 										@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Alimentos',
 											'listacomandas' => [
@@ -441,12 +442,22 @@
 						    			<div class="step-title">
 						    				<h3>Mobiliario</h3>
 						    			</div>
+
+						    			
 						    			<hr>
 						    			<div class="step-intro">
 						    				<p>
 						    					Selecciona las opciones de Mobiliario que te gustarían para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Mobiliario',
 											'listacomandas' => [
@@ -468,6 +479,14 @@
 						    					¿Qué opciones de música o de materiales audiovisuales te gustarían para tu evento?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Música',
 											'listacomandas' => [
@@ -492,6 +511,14 @@
 						    					Seleciona las opciones de iluminación que te gustarían para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Iluminación',
 											'listacomandas' => [
@@ -510,6 +537,14 @@
 						    					¿Qué opciones de entretenimiento te gustarían?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Entretenimiento',
 											'listacomandas' => [
@@ -532,6 +567,14 @@
 						    					¿Qué tipo de ambientación te gustaría para tu evento?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Ambientación',
 											'listacomandas' => [
@@ -552,6 +595,14 @@
 						    					Selecciona entre las opciones que tenemos de Fotos y Video para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Fotografía y Video',
 											'listacomandas' => [
@@ -571,6 +622,14 @@
 						    					Selecciona entre las opciones de invitaciones que tenemos 
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Invitaciones',
 											'listacomandas' => [
@@ -595,6 +654,14 @@
 						    					Selecciona entre las opciones de recuerdos para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Recuerdos',
 											'listacomandas' => [
@@ -613,6 +680,14 @@
 						    					Contamos con opciones de limpieza para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			<div class="form-group">
 						    				<div class="radio">
 												<label><input type="radio" name="idLimpieza" value="1">No requiero limpieza</label>
@@ -640,6 +715,14 @@
 						    					Tenemos opciones adicionales para darle un toque específico a tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary" >
+													No lo quiero
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Extras',
 											'listacomandas' => [
