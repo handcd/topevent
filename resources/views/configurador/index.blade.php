@@ -107,6 +107,7 @@
 									
 									<!-- Datos -->
 									<div class="tab-pane" id="tab0">
+										
 										<div class="step-title">
 											<h3>Regístrarte</h3>
 										</div>
@@ -160,6 +161,7 @@
 									
 									<!-- Fecha -->
 						    		<div class="tab-pane" id="tab1">
+
 						    			<div class="step-title">
 											<h3>¿Cuándo será el evento?</h3>
 										</div>
@@ -169,6 +171,14 @@
 												Platícanos sobre la fecha del evento, te mostramos el pronóstico del clima por si quieres armar una fiesta en exteriores.
 											</p>
 										</div>
+										<ul class="pager wizard">
+											<li class="next">
+												<a href="javascript:;" class="btn btn-primary">
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+											</li>
+										</ul>
 										<div class="input-group">
 											<span class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
@@ -229,11 +239,19 @@
 										</div>
 										<div class="form-group">
 											<label for="tipoEvento">Selecciona una opción:</label>
+											
 											<div class="radio">
 												<label><input type="radio" name="tipoEvento" value="1">Adolescentes</label>
 											</div>
 											<div class="radio">
 												<label><input type="radio" name="tipoEvento" value="2">Familiar</label>
+											</div>
+											<i>Fiesta Infantil:</i>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="12">Sólo los niños se divierten</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="13">Niños y adultos se divierten</label>
 											</div>
 											<i>Adultos:</i>
 											<div class="radio">
