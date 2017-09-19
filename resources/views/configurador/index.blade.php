@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	
 
 	<!-- CSS Files -->
     <link href="{{ URL::asset('assets_configurador/assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -394,14 +395,19 @@
 												Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 											</p>
 										</div>
+										
 										<ul class="pager wizard">
 											<li class="next">
+												<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
+										
+										
 										@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Alimentos',
 											'listacomandas' => [
@@ -452,10 +458,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+												<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -481,10 +489,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -513,10 +523,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -539,10 +551,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -569,10 +583,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -597,10 +613,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -624,10 +642,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -656,10 +676,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
@@ -682,10 +704,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													Ya lo tengo
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			<div class="form-group">
@@ -717,10 +741,12 @@
 						    			</div>
 						    			<ul class="pager wizard">
 											<li class="next">
+											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
 													No lo quiero
 													<span aria-hidden="true">&raquo;</span>
 												</a>
+												</p>
 											</li>
 										</ul>
 						    			@include('configurador.partials.comanda-group', [
