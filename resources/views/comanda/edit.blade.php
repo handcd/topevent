@@ -8,5 +8,5 @@
 @section('editCampo',$item->campo)
 
 @section('editMethod')
-	{{method_field('PUT')}}
+	{{ method_field('PUT') }}
 @endsection
