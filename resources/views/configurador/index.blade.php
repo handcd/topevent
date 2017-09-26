@@ -29,17 +29,19 @@
 
 <body>
 
-	<div class="bg-image"></div>
+	<div class="bg-image">
 
 	<div class="logo-container">
 		<a href="{{ url('/configurador') }}">
             <div class="logo">
                 <img src="{{ URL::asset('assets_configurador/assets/img/logo_wit.png') }}">
+
             </div>
             <div class="brand">
                 Whatever It Takes
             </div>
     	</a>
+    </div>
     </div>
 
 
