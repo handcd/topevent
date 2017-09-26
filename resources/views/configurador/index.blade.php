@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+	
 
 	<!-- CSS Files -->
     <link href="{{ URL::asset('assets_configurador/assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -28,17 +29,19 @@
 
 <body>
 
-	<div class="bg-image"></div>
+	<div class="bg-image">
 
 	<div class="logo-container">
 		<a href="{{ url('/configurador') }}">
             <div class="logo">
-                <img src="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
+                <img src="{{ URL::asset('assets_configurador/assets/img/logo_wit.png') }}">
+
             </div>
             <div class="brand">
                 Whatever It Takes
             </div>
     	</a>
+    </div>
     </div>
 
 
@@ -97,7 +100,7 @@
 												Lo que hacemos: Creación, diseño, desarrollo y operación de eventos en donde disfrutamos todos, tú porque es tu fiesta, y nosotros ¡porque nos encanta lo que hacemos!, desde la visualización, hasta el cierre.
 											</p>
 											<p>
-												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada client, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
+												Partimos de las tendencias, estándares internacionales y los objetivos buscados por cada cliente, pero aterrizando todo a manera de un sastre, hacemos un producto taylor made.
 											</p>
 											<p>
 												<b>Gracias por elegirnos</b> y comencemos.
@@ -107,8 +110,9 @@
 									
 									<!-- Datos -->
 									<div class="tab-pane" id="tab0">
+										
 										<div class="step-title">
-											<h3>Cuéntanos de ti</h3>
+											<h3>Regístrarte</h3>
 										</div>
 										<hr>
 										<div class="step-intro">
@@ -160,6 +164,7 @@
 									
 									<!-- Fecha -->
 						    		<div class="tab-pane" id="tab1">
+
 						    			<div class="step-title">
 											<h3>¿Cuándo será el evento?</h3>
 										</div>
@@ -169,6 +174,7 @@
 												Platícanos sobre la fecha del evento, te mostramos el pronóstico del clima por si quieres armar una fiesta en exteriores.
 											</p>
 										</div>
+										
 										<div class="input-group">
 											<span class="input-group-addon">
 												<i class="fa fa-calendar" aria-hidden="true"></i>
@@ -229,11 +235,19 @@
 										</div>
 										<div class="form-group">
 											<label for="tipoEvento">Selecciona una opción:</label>
+											
 											<div class="radio">
 												<label><input type="radio" name="tipoEvento" value="1">Adolescentes</label>
 											</div>
 											<div class="radio">
 												<label><input type="radio" name="tipoEvento" value="2">Familiar</label>
+											</div>
+											<i>Fiesta Infantil:</i>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="12">Sólo los niños se divierten</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="tipoEvento" value="13">Niños y adultos se divierten</label>
 											</div>
 											<i>Adultos:</i>
 											<div class="radio">
@@ -296,13 +310,35 @@
 											<h3>El lugar</h3>
 										</div>
 										<hr>
+										<p>
+											Elige entre las opciones de lugar para que tu evento sea todo un éxito
+										</p>
 										<div class="step-intro">
-											<p>
-												Elige entre las opciones de lugar para que tu evento sea todo un éxito
-											</p>
+										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-location-arrow" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Nombre del Lugar</label>
+	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Dirección del Lugar</label>
+	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+											
 										</div>
 										<div class="form-group">
-											<label for="lugarEvento">Selecciona el lugar dónde quieres que sea tu evento</label>
+											<label for="lugarEvento">Sino, selecciona el lugar dónde quieres que sea tu evento</label>
 											<br>
 											<i>Interior</i>
 											<div class="radio">
@@ -347,27 +383,7 @@
 												<label><input type="radio" name="lugarEvento" value="13">Casa en Playa</label>
 											</div>
 										</div>
-										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-location-arrow" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Nombre del Lugar</label>
-	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-map-marker" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Dirección del Lugar</label>
-	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
+										
 						    		</div>
 
 						    		<!-- Comida / Bebida -->
@@ -381,6 +397,19 @@
 												Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 											</p>
 										</div>
+										
+										<ul class="pager wizard">
+											<li class="next">
+												<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
+										
+										
 										@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Alimentos',
 											'listacomandas' => [
@@ -421,12 +450,24 @@
 						    			<div class="step-title">
 						    				<h3>Mobiliario</h3>
 						    			</div>
+
+						    			
 						    			<hr>
 						    			<div class="step-intro">
 						    				<p>
 						    					Selecciona las opciones de Mobiliario que te gustarían para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+												<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Mobiliario',
 											'listacomandas' => [
@@ -448,6 +489,16 @@
 						    					¿Qué opciones de música o de materiales audiovisuales te gustarían para tu evento?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Música',
 											'listacomandas' => [
@@ -472,6 +523,16 @@
 						    					Seleciona las opciones de iluminación que te gustarían para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Iluminación',
 											'listacomandas' => [
@@ -490,6 +551,16 @@
 						    					¿Qué opciones de entretenimiento te gustarían?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Entretenimiento',
 											'listacomandas' => [
@@ -512,6 +583,16 @@
 						    					¿Qué tipo de ambientación te gustaría para tu evento?
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Ambientación',
 											'listacomandas' => [
@@ -532,6 +613,16 @@
 						    					Selecciona entre las opciones que tenemos de Fotos y Video para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Fotografía y Video',
 											'listacomandas' => [
@@ -551,6 +642,16 @@
 						    					Selecciona entre las opciones de invitaciones que tenemos 
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Invitaciones',
 											'listacomandas' => [
@@ -575,6 +676,16 @@
 						    					Selecciona entre las opciones de recuerdos para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Recuerdos',
 											'listacomandas' => [
@@ -593,6 +704,16 @@
 						    					Contamos con opciones de limpieza para tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													Ya lo tengo
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			<div class="form-group">
 						    				<div class="radio">
 												<label><input type="radio" name="idLimpieza" value="1">No requiero limpieza</label>
@@ -620,6 +741,16 @@
 						    					Tenemos opciones adicionales para darle un toque específico a tu evento
 						    				</p>
 						    			</div>
+						    			<ul class="pager wizard">
+											<li class="next">
+											<p class="Center">
+												<a href="javascript:;" class="btn btn-primary" >
+													No lo quiero
+													<span aria-hidden="true">&raquo;</span>
+												</a>
+												</p>
+											</li>
+										</ul>
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Extras',
 											'listacomandas' => [
@@ -724,6 +855,17 @@
 	        $('.hideshow').on('click', function(event) {
 	        	$(this).closest('.comanda-group').find('.comanda-group-content').toggle('show');
 	        });
+	    });
+
+	    $(document).ready(function() {
+	    	const entradas = document.querySelectorAll('input[type=number]');
+
+	    	$('#noInvitados').on('change', function(event) {
+	    		const entradas = document.querySelectorAll('input[type=number]');
+	    		entradas.forEach(entrada => {
+	    			entrada.placeholder = document.getElementById('noInvitados').value+' invitados.';
+	    		});
+	    	});
 	    });
 	</script>
 

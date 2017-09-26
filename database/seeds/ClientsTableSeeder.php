@@ -15,7 +15,7 @@ class ClientsTableSeeder extends Seeder
 
         // Function to create fake Clients.
         (new Illuminate\Support\Debug\Dumper)->dump('Creando los '.$numClientes.' Clientes...');
-    	factory(WIT\Client::class, 20)->create();
+    	factory(WIT\Client::class, $numClientes)->create();
         (new Illuminate\Support\Debug\Dumper)->dump('Finalizada la creación de los clientes');
     }
 }

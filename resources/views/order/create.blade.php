@@ -257,6 +257,23 @@
                                       @endif
                                     @endif>Familiar</option>
                                     </optgroup>
+                                    
+
+                                    <optgroup label="Fiesta Infantil">
+                                      <option value="12"
+                                        @hasSection('editTipoEvento')
+                                          @if ($__env->getSections()['editTipoEvento'] == 12)
+                                          selected="" 
+                                          @endif
+                                        @endif>Solo los niños se divierten</option>
+                                          <option value="12"
+                                          @hasSection('editTipoEvento')
+                                          @if ($__env->getSections()['editTipoEvento'] == 13)
+                                          selected="" 
+                                          @endif
+                                        @endif>Adultos y niños se divierten</option>
+                                        </optgroup>
+                    
                                     <optgroup label="Adultos">
                                         <option value="3" 
                                     @hasSection('editTipoEvento')

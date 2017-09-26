@@ -35,6 +35,22 @@
                         </tbody>
                     </table>
                 </div>
+                <hr>
+                <h4>Órdenes del Cliente:</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <tbody>
+                            @foreach ($client->orders as $order)
+                            <tr>
+                                <td><a href="{{ url('/ordenes/'.$order->id) }}">{{ $order->id }} (Ver Orden)</a></td>
+                                <td>{{ $order->fecha }}</td>
+                                <td>{{ $order->cotizacion ? '$'.$order->cotizacion.'.00' : 'Sin cotizar'}}</td>
+                                <td>{{ $order->aprobado ? 'Aprobada' : 'No aprobada' }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             	<hr>
             	<a href="{{ url('/clients') }}" class="btn btn-default">Regresar</a>
             </div>
