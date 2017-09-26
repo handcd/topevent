@@ -9,7 +9,7 @@
                 <p class="category">Registrar un nuevo cliente en el sistema.</p>
             </div>
             <div class="card-content">
-                <form action="{{ url('/clients/') }}@yield('editId')" method="post">
+                <form action="{{ url('/clients/') }}/@yield('editId')" method="post">
                     {{ csrf_field() }}
                     @section('editMethod')
                         @show
