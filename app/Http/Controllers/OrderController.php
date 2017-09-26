@@ -70,7 +70,7 @@ class OrderController extends Controller
                 'limpieza' => 'required',
             ]);
 
-        $orden->user_id = $request->client;
+        $orden->client_id = $request->client;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracionEvento;
         $orden->tipo_evento = $request->tipoEvento;
@@ -98,7 +98,7 @@ class OrderController extends Controller
             $i++;
         }
 
-        $email = Client::find($orden->user_id)->email;
+        $email = Client::find($orden->client_id)->email;
         Mail::to($email)->send(new OrderReceived($orden));
 
         return redirect('ordenes');
@@ -152,7 +152,7 @@ class OrderController extends Controller
                 'limpieza' => 'required',
             ]);
 
-        $orden->user_id = $request->client;
+        $orden->client_id = $request->client;
         $orden->fecha = $request->fechaevento;
         $orden->duracion = $request->duracionEvento;
         $orden->tipo_evento = $request->tipoEvento;

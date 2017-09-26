@@ -5,11 +5,11 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" data-background-color="wit">
-                <h4 class="title">Registrar nuevo client</h4>
-                <p class="category">Registrar un nuevo client en el sistema.</p>
+                <h4 class="title">Registrar nuevo cliente</h4>
+                <p class="category">Registrar un nuevo cliente en el sistema.</p>
             </div>
             <div class="card-content">
-                <form action="{{ url('/clients/') }}@yield('editId')" method="post">
+                <form action="{{ url('/clients/') }}/@yield('editId')" method="post">
                     {{ csrf_field() }}
                     @section('editMethod')
                         @show

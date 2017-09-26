@@ -101,6 +101,7 @@ class ComandaController extends Controller
     public function update(Request $request, $id)
     {
         $producto = Product::find($id);
+
         $this->validate($request, [
                 'nombre' => 'required',
                 'descripcion' => 'required',
@@ -112,7 +113,6 @@ class ComandaController extends Controller
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
         $producto->comanda_id = $request->campo;
-        $producto->seccion_comanda = 0;
         $producto->save();
 
         return redirect('comandas');
