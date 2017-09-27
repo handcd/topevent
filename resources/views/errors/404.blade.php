@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ url('configurador') }}">Regresar</a>
+                    <a href="{{ url()->previous() }}">Ir a Inicio</a>
                 </div>
             </div>
         </div>
