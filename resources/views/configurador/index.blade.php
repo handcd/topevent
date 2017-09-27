@@ -50,6 +50,15 @@
     		<div class="col-sm-10 col-sm-offset-1">
 				<div id="rootwizard">
 					<div class="card">
+						<div class="col-sm-offset-1 col-lg-10">
+						@foreach ($errors->all() as $error)
+			    			<div class="alert alert-danger alert-dismissable">
+							  
+							  {{ $error }}
+							  <a href="#" class="pull-right" data-dismiss="alert" aria-label="close">&times;</a>
+							</div>
+			    		@endforeach
+			    		</div>
 						<div class="col-sm-2" style="padding-bottom: 2vh;">
 							<div class="wizard-nav-header">
 								<h4>Configurador de Eventos</h4>
