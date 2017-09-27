@@ -52,7 +52,7 @@
 					<div class="card">
 						<div class="col-sm-offset-1 col-lg-10">
 						@foreach ($errors->all() as $error)
-			    			<div class="alert alert-danger alert-dismissable">
+			    			<div class="alert alert-danger alert-dismissable fade in">
 							  
 							  {{ $error }}
 							  <a href="#" class="pull-right" data-dismiss="alert" aria-label="close">&times;</a>
