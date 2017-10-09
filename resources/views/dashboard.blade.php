@@ -91,8 +91,8 @@
                 <div class="ct-chart" id="emailsSubscriptionChart"></div>
             </div>
             <div class="card-content">
-                <h4 class="title">Nuevos Clients</h4>
-                <p class="category">Nuevos clients por día</p>
+                <h4 class="title">Nuevos Clientes</h4>
+                <p class="category">Nuevos clientes por día</p>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -131,7 +131,7 @@
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Client</th>
+                        <th>Cliente</th>
                         <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>
@@ -171,7 +171,7 @@
                 <table class="table table-hover">
                     <thead>
                         <th>ID</th>
-                        <th>Client</th>
+                        <th>Cliente</th>
                         <th>Fecha de Evento</th>
                         <th>Acciones</th>
                     </thead>
