@@ -45,7 +45,6 @@ class ConfiguradorController extends Controller
     public function store(Request $request)
     {
         $orden = new Order;
-        $client = new Client;
         $datosOrden = new DatosOrden;
 
         $this->validate($request, [
@@ -64,11 +63,15 @@ class ConfiguradorController extends Controller
         ]);
 
         // Client
-        $client->nombre = $request->nombre;
-        $client->apellido = $request->apellidos;
-        $client->email = $request->email;
-        $client->phone = $request->celular;
-        $client->save();
+        $client = Client::firstOrCreate(
+            ['email' => $request->email],
+            [
+                'nombre' => $request->nombre,
+                'apellido' => $request->apellidos,
+                'email' => $request->email,
+                'phone' => $request->celular
+            ]
+        );
 
         // Orden General
         $orden->client_id = $client->id;
