@@ -139,7 +139,7 @@
                         @foreach ($ordenes->where('aprobado',0) as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->user_id}}</td>
+                                <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre.' '.$orden->client->apellido }}</a></td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
                                     <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
@@ -179,7 +179,7 @@
                         @foreach ($ordenes->where('aprobado',1) as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->user_id}}</td>
+                                <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre.' '.$orden->client->apellido }}</a></td>
                                 <td>{{ $orden->fecha }}</td>
                                 <td class="td-actions text-right">
                                     <a href="{{ url('/ordenes/'.$orden->id) }}" type="button" rel="tooltip" title="Ver Orden" class="btn btn-success btn-simple btn-xs">
