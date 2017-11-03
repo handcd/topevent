@@ -40,38 +40,44 @@
                                 @php
                                     switch ($orden->tipo_evento)
                                     {
-                                        case 0:
+                                        case 1:
                                             echo "Adolescentes";
                                             break;
-                                        case 1:
+                                        case 2:
                                             echo "Familiar";
                                             break;
-                                        case 2:
+                                        case 3:
                                             echo "18 y Veinteañeros";
                                             break;
-                                        case 3:
+                                        case 4:
                                             echo "Treintañeros";
                                             break;
-                                        case 4:
+                                        case 5:
                                             echo "Cuarentones";
                                             break;
-                                        case 5:
+                                        case 6:
                                             echo "Cincuentones";
                                             break;
-                                        case 6:
+                                        case 7:
                                             echo "Más de 50";
                                             break;
-                                        case 7:
+                                        case 8:
                                             echo "Combinadito";
                                             break;
-                                        case 8:
+                                        case 9:
                                             echo "Fiesta Ellas";
                                             break;
-                                        case 9:
+                                        case 10:
                                             echo "Fiesta Ellos";
                                             break;
-                                        case 10:
+                                        case 11:
                                             echo "Fiesta Ellas y Ellos";
+                                            break;
+                                        case 12:
+                                            echo "Sólo los niños se divierten";
+                                            break;
+                                        case 13:
+                                            echo "Niños y Adultos se divierten";
                                             break;
                                         default:
                                             echo "Desconocido";
