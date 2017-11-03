@@ -87,6 +87,66 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>Tipo de Lugar de Evento</td>
+                            <td>
+                                @php
+                                    switch ($orden->id_lugar_evento)
+                                    {
+                                        case 1:
+                                            echo "Salón";
+                                            break;
+                                        case 2:
+                                            echo "Salón + Jardín + Terraza";
+                                            break;
+                                        case 3:
+                                            echo "Salón en Hotel";
+                                            break;
+                                        case 4:
+                                            echo "Salón en Hacienda";
+                                            break;
+                                        case 5:
+                                            echo "Restaurante";
+                                            break;
+                                        case 6:
+                                            echo "Restaurante + Bar";
+                                            break;
+                                        case 7:
+                                            echo "Antro";
+                                            break;
+                                        case 8:
+                                            echo "Casa";
+                                            break;
+                                        case 9:
+                                            echo "Jardín";
+                                            break;
+                                        case 10:
+                                            echo "Jardín + Alberca";
+                                            break;
+                                        case 11:
+                                            echo "Terraza";
+                                            break;
+                                        case 12:
+                                            echo "Hacienda";
+                                            break;
+                                        case 13:
+                                            echo "Casa en Playa";
+                                            break;
+                                        default:
+                                            echo "Desconocido";
+                                            break;
+                                    }
+                                @endphp
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del lugar</td>
+                            <td>{{ $orden->nombre_lugar }}</td>
+                        </tr>
+                        <tr>
+                            <td>Dirección del lugar</td>
+                            <td>{{ $orden->direccion_lugar }}</td>
+                        </tr>
+                        <tr>
                             <td>Fecha de la última modificación</td>
                             <td>{{ $orden->updated_at }}</td>
                         </tr>
