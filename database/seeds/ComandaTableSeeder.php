@@ -284,11 +284,11 @@ class ComandaTableSeeder extends Seeder
         
         // Niños
         $this->crear('Niños','',[
-            ['Inflables','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
-            ['Trampolin','(Especificar cantidad)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
-            ['Piñatas','(Especificar temática de la piñata)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',Campos::Numero],
-            ['Payaso','(Especificar temática del payaso)<strong><small> En 48 horas recibirás la cotización correspondiente</small></strong>',Campos::Numero],
-            ['Show Infantil (Botarga, Princesas, Hombres de acción)','(Especificar temática)<strong><small> En 48 horas recibirás opciones y la cotización correspondiente</small></strong>',Campos::Numero],
+            ['Inflables','(Especificar cantidad). En 48 horas recibirás opciones y la cotización correspondiente',Campos::Numero],
+            ['Trampolin','(Especificar cantidad). En 48 horas recibirás opciones y la cotización correspondiente',Campos::Numero],
+            ['Piñatas','(Especificar temática de la piñata). En 48 horas recibirás la cotización correspondiente',Campos::Numero],
+            ['Payaso','(Especificar temática del payaso). En 48 horas recibirás la cotización correspondiente',Campos::Numero],
+            ['Show Infantil (Botarga, Princesas, Hombres de acción)','(Especificar temática). En 48 horas recibirás opciones y la cotización correspondiente',Campos::Numero],
         ]);
 
         // Adolescentes
