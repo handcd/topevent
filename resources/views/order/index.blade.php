@@ -1,7 +1,7 @@
 @extends('layouts.appuser')
 
 @section('content')
-<div class="row text-center">
+<div class="row">
     <a href="{{ url('/ordenes/create') }}" class="btn btn-success"><i class="fa fa-plus-square" aria-hidden="true"></i> Añadir Orden</a>
 </div>
 <div class="row">
@@ -27,12 +27,12 @@
                 <i class="material-icons">info_outline</i>
             </div>
             <div class="card-content">
-                <p class="category">Ordenes</p>
+                <p class="category">Órdenes</p>
                 <h3 class="title">{{ $ordenes->count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">warning</i> Completadas en la semana 
+                    <i class="material-icons">local_offer</i> Número total de órdenes registradas 
                 </div>
             </div>
         </div>
@@ -44,12 +44,12 @@
                 <i class="material-icons">info_outline</i>
             </div>
             <div class="card-content">
-                <p class="category">Ordenes sin Aprobar</p>
+                <p class="category">Sin aprobar</p>
                 <h3 class="title">{{ $ordenes->where('aprobado',0)->count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">local_offer</i> Con la etiqueta "Perdido"
+                    <i class="material-icons">warning</i> Órdenes que aún no se han aprobado en el mes
                 </div>
             </div>
         </div>
