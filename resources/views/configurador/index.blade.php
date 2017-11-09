@@ -246,7 +246,7 @@
 											<label for="tipoEvento">Selecciona una opción:</label>
 											
 											<div class="radio">
-												<label><input type="radio" name="tipoEvento" value="1">Adolescentes</label>
+												<label><input type="radio" checked="checked" name="tipoEvento" value="1">Adolescentes</label>
 											</div>
 											<div class="radio">
 												<label><input type="radio" name="tipoEvento" value="2">Familiar</label>
@@ -351,7 +351,7 @@
 											<br>
 											<i>Interior</i>
 											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="1">Salón</label>
+												<label><input type="radio" checked="checked" name="lugarEvento" value="1">Salón</label>
 											</div>
 											<div class="radio">
 												<label><input type="radio" name="lugarEvento" value="2">Salón + Jardín + Terraza</label>
@@ -702,7 +702,7 @@
 											],
 										])
 						    		</div>
-
+									<!--Limpieza-->
 						    		<div class="tab-pane" id="tab14">
 						    			<div class="step-title">
 						    				<h3>Limpieza</h3>
@@ -725,7 +725,7 @@
 										</ul>-->
 						    			<div class="form-group">
 						    				<div class="radio">
-												<label><input type="radio" name="idLimpieza" value="1">No requiero limpieza</label>
+												<label><input type="radio" checked="checked" name="idLimpieza" value="1">No requiero limpieza</label>
 											</div>
 											<div class="radio">
 												<label><input type="radio" name="idLimpieza" value="2">Requiero limpieza antes de mi evento</label>
