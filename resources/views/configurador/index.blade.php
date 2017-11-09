@@ -713,7 +713,7 @@
 						    					Contamos con opciones de limpieza para tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -722,7 +722,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			<div class="form-group">
 						    				<div class="radio">
 												<label><input type="radio" name="idLimpieza" value="1">No requiero limpieza</label>
