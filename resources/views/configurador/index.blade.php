@@ -87,7 +87,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-8 col-sm-offset-1">
-							<form action="{{ url('/configurador') }}" method="POST" id="formGeneral">
+							<form action="{{ url('/configurador') }}" method="POST" id="formGeneral" novalidate="novalidate">
 							{{ csrf_field() }}
 								<div class="tab-content">
 
@@ -347,7 +347,7 @@
 											
 										</div>
 										<div class="form-group">
-											<label for="lugarEvento">Sino, selecciona el lugar dónde quieres que sea tu evento</label>
+											<label for="lugarEvento">Selecciona la opción que mejor describa el lugar de tu evento (aunque no lo tengas aún):</label>
 											<br>
 											<i>Interior</i>
 											<div class="radio">

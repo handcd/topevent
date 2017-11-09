@@ -177,7 +177,7 @@
                         @foreach ($ordenes as $orden)
                             <tr>
                                 <td>{{ $orden->id }}</td>
-                                <td>{{ $orden->client->nombre.' '.$orden->client->apellido }}</td>
+                                <td><a href="{{ url('/clients/'.$orden->client->id) }}">{{ $orden->client->nombre.' '.$orden->client->apellido }}</td>
                                 <td>{{ $orden->fecha }}</td>
                                 @if ($orden->aprobado)
                                     <td>Sí</td>

@@ -94,12 +94,6 @@
 	                        <p>Comandas</p>
 	                    </a>
 	                </li>
-	                <li {{ Request::path() == 'social' ? ' class=active' : '' }}>
-	                    <a href="{{ url('/social') }}">
-	                        <i class="material-icons">share</i>
-	                        <p>Redes Sociales</p>
-	                    </a>
-	                </li>
 	            </ul>
 	    	</div>
 		</div>

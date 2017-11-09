@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 	// Code for the Validator
     var $validator = $('form').validate({
-          rules: {
+        rules: {
             nombre: {
               required: true,
-              minlength: 3
+              minlength: 5
             },
             apellidos: {
               required: true,
-              minlength: 3
+              minlength: 5
             },
             email: {
               required: true,
@@ -34,6 +34,7 @@ $(document).ready(function() {
             },
             lugarEvento: {
             	required: true,
+                minlength: 10
             },
             direccionLugar: {
             	minlength: 10,
@@ -42,10 +43,9 @@ $(document).ready(function() {
             	minlength: 10,
             },
         },
-
         errorPlacement: function(error, element) {
             $(element).parent('div').addClass('has-error');
-         }
+        }
     });
 
   	$('#rootwizard').bootstrapWizard({
