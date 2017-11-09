@@ -8,8 +8,8 @@
                 <i class="material-icons">new_releases</i>
             </div>
             <div class="card-content">
-                <p class="category">Nuevos</p>
-                <h3 class="title">0</h3>
+                <p class="category">Sin Aprobar</p>
+                <h3 class="title">{{ $ordenes->where('aprobado',0)->count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
@@ -21,15 +21,15 @@
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
             <div class="card-header" data-background-color="orange">
-                <i class="material-icons">people</i>
+                <i class="material-icons">info_outline</i>
             </div>
             <div class="card-content">
-                <p class="category">Asignados</p>
-                <h3 class="title">0</h3>
+                <p class="category">Órdenes Totales</p>
+                <h3 class="title">{{ $ordenes->count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">date_range</i> En la última semana
+                    <i class="material-icons">date_range</i> Desde hace un mes
                 </div>
             </div>
         </div>
@@ -40,12 +40,12 @@
                 <i class="material-icons">check</i>
             </div>
             <div class="card-content">
-                <p class="category">Cerrados</p>
-                <h3 class="title">0</h3>
+                <p class="category">Aprobados</p>
+                <h3 class="title">{{ $ordenes->where('aprobado',1)->count() }}</h3>
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">local_offer</i> Desde Julio 2017
+                    <i class="material-icons">local_offer</i> Desde el principio...
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
             <div class="card-header" data-background-color="blue">
-                <i class="material-icons">info_outline</i>
+                <i class="material-icons">people</i>
             </div>
             <div class="card-content">
                 <p class="category">Clients</p>
