@@ -10,6 +10,8 @@ use WIT\DatosOrden;
 use WIT\Product;
 use WIT\Comanda;
 use WIT\Client;
+use Carbon\Carbon;
+
 
 class OrderController extends Controller
 {
@@ -34,7 +36,7 @@ class OrderController extends Controller
         $ordenes = Order::all();
         $revenue = $ordenes
                         // Suma de las ventas en el último mes
-                        ->where('fecha', '>', \Carbon\Carbon::now()->subMonth())
+                        ->where('fecha', '>', Carbon::now()->subMonth())
                         ->where('aprobado',1)
                         ->sum('cotizacion');
         return view('order.index', compact('ordenes','revenue'));
