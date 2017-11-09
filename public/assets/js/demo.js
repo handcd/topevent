@@ -61,7 +61,7 @@ demo = {
         /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
         dataDailySalesChart = {
-            labels: ['L', 'M', 'M', 'J', 'V', 'S', 'D'],
+            labels: ['L', 'M', 'M', 'J', 'V', 'S', 'F'],
             series: [
                 [12, 17, 7, 17, 23, 18, 38]
             ]
