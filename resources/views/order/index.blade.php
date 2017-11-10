@@ -61,7 +61,7 @@
             </div>
             <div class="card-content">
                 <p class="category">Evento más cercano</p>
-                <h3 class="title">Sábado</h3>
+                <h4 class="title">{{ $eventoCercano->fecha }}</h4>
             </div>
             <div class="card-footer">
                 <div class="stats">

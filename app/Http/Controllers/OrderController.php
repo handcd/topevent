@@ -40,7 +40,8 @@ class OrderController extends Controller
                         ->where('fecha', '>', Carbon::now()->subMonth())
                         ->where('aprobado',1)
                         ->sum('cotizacion');
-        return view('order.index', compact('ordenes','revenue'));
+        $eventoCercano = Order::whereRaw('fecha > NOW() ORDER BY fecha')->first();
+        return view('order.index', compact('ordenes','revenue','eventoCercano'));
     }
 
     /**
