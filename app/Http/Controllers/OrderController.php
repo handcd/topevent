@@ -5,6 +5,7 @@ namespace WIT\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use WIT\Mail\OrderReceived;
+use WIT\Mail\ReceivedOrderAdmin;
 use WIT\Order;
 use WIT\DatosOrden;
 use WIT\Product;
@@ -103,7 +104,10 @@ class OrderController extends Controller
         }
 
         $email = Client::find($orden->client_id)->email;
+        $client = Client::find($orden->client_id);
+
         Mail::to($email)->send(new OrderReceived($orden));
+        Mail::to('humbertowoody@gmail.com')->send(new ReceivedOrderAdmin($client));
 
         return redirect('ordenes');
     }
