@@ -14,8 +14,8 @@ class DatabaseSeeder extends Seeder
         // Administrador 
         DB::table('users')->insert([
             'name' => 'Admin Account',
-            'email' => 'wit@witplanner.com.mx',
-            'password' => bcrypt('WhateverItTakes2017'),
+            'email' => 'topevent@topevent.com.mx',
+            'password' => bcrypt('tumama8514'),
         ]);
 
         // Seeders
