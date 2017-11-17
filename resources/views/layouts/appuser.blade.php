@@ -108,7 +108,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="{{ url('/social') }}">Whatever It Takes - CMR</a>
+						<a class="navbar-brand" href="{{ url('/social') }}">TopEvent - CMR</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-right">
