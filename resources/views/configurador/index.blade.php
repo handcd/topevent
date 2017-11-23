@@ -98,7 +98,7 @@
 										</div>
 										<hr>
 										<div class="step-intro">
-											<h4>¡Bienvenido al Configurador de Eventos de WIT!</h4>
+											<h4>¡Bienvenido al Configurador de Eventos de TopEvent!</h4>
 											<p>
 												Nuestra razón de existir como agencia y como creadores de eventos…
 											</p>
@@ -809,10 +809,10 @@
 											</a>
 										</li>
 										<li class="next">
-											<a href="javascript:;">
+											<a href="#" href="javascript:;" >
 												Siguiente
 												<span aria-hidden="true">&raquo;</span>
-											</a>
+											</a><
 										</li>
 										<li class="finish"><button type="submit" class="btn btn-primary pull-right">Finalizar</button></li>
 									</ul>
