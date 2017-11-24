@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo_wit.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo.png" />
 
-    <link rel="icon" type="image/png" href="assets/img/logo_wit.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
-    <link rel="shortcut icon" type="image/png" href="assets/img/logo_wit.png"/>
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
 
 
     <!-- CSRF Token -->

@@ -2,8 +2,8 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
 	<meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo_wit.png" />
-	<link rel="icon" type="image/png" href="assets/img/logo_wit.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo.png" />
+	<link rel="icon" type="image/png" href="assets/img/logo.png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>{{ config('app.name', 'WIT') }}</title>
@@ -14,7 +14,7 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 	
-	<link rel="shortcut icon" type="image/png" href="{{ URL::asset('assets/img/logo_wit.png') }}"/>
+	<link rel="shortcut icon" type="image/png" href="{{ URL::asset('assets/img/logo.png') }}"/>
 
     <!-- Bootstrap core CSS     -->
     <link href="{{ URL::asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -64,7 +64,7 @@
 
 			<div class="logo">
 				<a href="{{ url('/') }}" class="simple-text">					
-					<img src="{{ URL::asset('assets/img/logo_wit.png') }}" style="width: 160px;" alt="{{ config('app.name', 'WIT') }}">
+					<img src="{{ URL::asset('assets/img/logo.png') }}" style="width: 160px;" alt="{{ config('app.name', 'WIT') }}">
 				</a>
 			</div>
 

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="{{ URL::asset('assets_configurador/assets/img/logo.png') }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>TopEvent</title>
@@ -87,6 +88,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            <!-- Botón de inicio-->
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -96,7 +98,7 @@
                     @endif
                 </div>
             @endif
-
+            <!-- Botón de inicio-->
             <div class="content">
                 <div class="title m-b-md">
                     TopEvent

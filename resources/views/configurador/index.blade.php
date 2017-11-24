@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="{{ URL::asset('assets_configurador/assets/img/favicon.png') }}">
+	<link rel="icon" type="image/png" href="{{ URL::asset('assets_configurador/assets/img/logo.png') }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>{{ config('app.name', 'WIT') }} | Configurador de Eventos</title>
@@ -34,11 +34,11 @@
 	<div class="logo-container">
 		<a href="{{ url('/configurador') }}">
             <div class="logo">
-                <img src="{{ URL::asset('assets_configurador/assets/img/logo_wit.png') }}">
+                <img src="{{ URL::asset('assets_configurador/assets/img/logo.png') }}">
 
             </div>
             <div class="brand">
-                Whatever It Takes
+                <br> <b>TopEvent</b>
             </div>
     	</a>
     </div>
@@ -786,7 +786,7 @@
 						    				</p>
 						    				<div class="row">
 							    				<div class="col-xs-3">
-							    					<img class="img img-thumbnail" src="{{ asset('assets_configurador/assets/img/favicon.png') }}" alt="WIT Eventos con Ingenio">
+							    					<img class="img img-thumbnail" src="{{ asset('assets_configurador/assets/img/logo.png') }}" alt="WIT Eventos con Ingenio">
 							    				</div>
 							    				<div class="col-xs-9">
 								    				<p>
