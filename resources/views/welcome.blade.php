@@ -88,17 +88,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <!-- Botón de inicio-->
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/dashboard') }}">Inicio</a>
-                    @else
-                        <a href="{{ url('/login') }}">Iniciar Sesión</a>
-                    @endif
-                </div>
-            @endif
-            <!-- Botón de inicio-->
+           
             <div class="content">
                 <div class="title m-b-md">
                     TopEvent
