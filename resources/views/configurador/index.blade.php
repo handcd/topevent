@@ -812,7 +812,7 @@
 											<a href="#" href="javascript:;" >
 												Siguiente
 												<span aria-hidden="true">&raquo;</span>
-											</a><
+											</a>
 										</li>
 										<li class="finish"><button type="submit" class="btn btn-primary pull-right">Finalizar</button></li>
 									</ul>
