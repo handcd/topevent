@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[
-#TopEvent
+# TopEvent
 ***********
 TopEvent - Laravel CMR/CMS and ERP
 
 This project is a complete Events Form generator with Client Relationship Management included and some CMS options for creating new products.
 ***********
-#Installation
+# Installation
 ***********
 1. Git clone
 2. Composer install
@@ -19,5 +19,4 @@ This project is a complete Events Form generator with Client Relationship Manage
 HAND Creative Design 2017
 ***********
 ]]></content>
-  <tabTrigger>readme</tabTrigger>
 </snippet>
