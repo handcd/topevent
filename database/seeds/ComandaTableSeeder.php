@@ -108,11 +108,6 @@ class ComandaTableSeeder extends Seeder
             ['Salchichas','Cantidad en número de personas',Campos::Numero],
         ]);
 
-        // By Wit
-        $this->crear('By WIT&trade;','Platos Originales diseñados por nosotros.',[
-            ['Plato de fiestas tradicional','Cantidad en número de personas (Incluye Vaporcito, Ensalada de fiesta, Sandwichón, Pavo deshebrado, Pastel)',Campos::Numero],
-        ]);
-
         // Chilaquiles
         $this->crear('Chilaquiles','Tornafiesta',[
             ['Rojos','Cantidad en número de personas',Campos::Numero],

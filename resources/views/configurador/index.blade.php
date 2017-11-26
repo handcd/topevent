@@ -428,7 +428,6 @@
 												'Tacos de Guisado Tradicionales',
 												'Hamburguesas y Hot-Dogs',
 												'Parrillada',
-												'By WIT&trade;',
 												'Chilaquiles',
 												'Pastel',
 												'Cajita Infantil',
