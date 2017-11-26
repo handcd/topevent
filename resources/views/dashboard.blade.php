@@ -56,7 +56,7 @@
                 <i class="material-icons">people</i>
             </div>
             <div class="card-content">
-                <p class="category">Clients</p>
+                <p class="category">Clientes</p>
                 <h3 class="title">{{ \WIT\Client::count() }}</h3>
             </div>
             <div class="card-footer">
