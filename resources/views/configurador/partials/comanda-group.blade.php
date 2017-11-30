@@ -4,7 +4,7 @@
 --}}
 
 <div class="comanda-group">
-	<input class="btn btn-primary btn-block hideshow" type="button" value="Mostrar/Ocultar {{ $descripcion }}">
+	<input class="btn btn-primary btn-block hideshow" type="button" value="{{ $descripcion }} ⬇">
 	<div class="comanda-group-content">
 		@foreach ($listacomandas as $comanda)
 			@include('configurador.partials.comanda', ['nombre_comanda' => $comanda])
