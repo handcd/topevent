@@ -406,17 +406,16 @@
 												Selecciona en las comandas la comida que gustes para tu evento, así como la bebida.
 											</p>
 										</div>
-										
-										<ul class="pager wizard">
+										<!--<ul class="pager wizard">
 											<li class="next">
 												<p class="Center">
-												<a href="javascript:;" class="btn btn-primary" >
-													Ya lo tengo
+												<a href="javascript:;" >
+													Saltar sección
 													<span aria-hidden="true">&raquo;</span>
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 										
 										
 										@include('configurador.partials.comanda-group', [
@@ -466,16 +465,16 @@
 						    					Selecciona las opciones de Mobiliario que te gustarían para tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 												<p class="Center">
-												<a href="javascript:;" class="btn btn-primary" >
-													Ya lo tengo
+												<a href="javascript:;" >
+													Saltar sección
 													<span aria-hidden="true">&raquo;</span>
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Mobiliario',
 											'listacomandas' => [
@@ -497,7 +496,7 @@
 						    					¿Qué opciones de música o de materiales audiovisuales te gustarían para tu evento?
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -506,7 +505,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Música',
 											'listacomandas' => [
@@ -531,7 +530,7 @@
 						    					Seleciona las opciones de iluminación que te gustarían para tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -540,7 +539,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Iluminación',
 											'listacomandas' => [
@@ -559,7 +558,7 @@
 						    					¿Qué opciones de entretenimiento te gustarían?
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -568,7 +567,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Entretenimiento',
 											'listacomandas' => [
@@ -591,7 +590,7 @@
 						    					¿Qué tipo de ambientación te gustaría para tu evento?
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -600,7 +599,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Ambientación',
 											'listacomandas' => [
@@ -621,7 +620,7 @@
 						    					Selecciona entre las opciones que tenemos de Fotos y Video para tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -630,7 +629,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Fotografía y Video',
 											'listacomandas' => [
@@ -650,7 +649,7 @@
 						    					Selecciona entre las opciones de invitaciones que tenemos 
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -659,7 +658,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Invitaciones',
 											'listacomandas' => [
@@ -684,7 +683,7 @@
 						    					Selecciona entre las opciones de recuerdos para tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -693,7 +692,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Recuerdos',
 											'listacomandas' => [
@@ -749,7 +748,7 @@
 						    					Tenemos opciones adicionales para darle un toque específico a tu evento
 						    				</p>
 						    			</div>
-						    			<ul class="pager wizard">
+						    			<!--<ul class="pager wizard">
 											<li class="next">
 											<p class="Center">
 												<a href="javascript:;" class="btn btn-primary" >
@@ -758,7 +757,7 @@
 												</a>
 												</p>
 											</li>
-										</ul>
+										</ul>-->
 						    			@include('configurador.partials.comanda-group', [
 											'descripcion' => 'Extras',
 											'listacomandas' => [
