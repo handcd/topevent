@@ -67,10 +67,10 @@
 							<ul>
 								<li><a href="#tabIntro" data-toggle="tab">Inicio</a></li>
 								<li><a href="#tab0" data-toggle="tab">Datos</a></li>
+								<li><a href="#tab4" data-toggle="tab">Lugar</a></li>
 					  			<li><a href="#tab1" data-toggle="tab">Fecha</a></li>
 								<li><a href="#tab2" data-toggle="tab">Tipo de Evento</a></li>
-								<li><a href="#tab3" data-toggle="tab">Invitados</a></li>
-								<li><a href="#tab4" data-toggle="tab">Lugar</a></li>
+								<li><a href="#tab3" data-toggle="tab">Invitados</a></li>				
 								<li><a href="#tab5" data-toggle="tab">Comida y Bebida</a></li>
 								<li><a href="#tab6" data-toggle="tab">Mobiliario</a></li>
 								<li><a href="#tab7" data-toggle="tab">Música - Visual</a></li>
@@ -170,7 +170,89 @@
 	                                        </div>
 										</div>
 									</div>
-									
+									<!--Lugar-->
+									<!-- Lugar -->
+						    		<div class="tab-pane" id="tab4">
+						    			<div class="step-title">
+											<h3>El lugar</h3>
+										</div>
+										<hr>
+										<p>
+											Elige entre las opciones de lugar para que tu evento sea todo un éxito
+										</p>
+										<div class="step-intro">
+										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-location-arrow" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Nombre del Lugar</label>
+	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+										<div class="input-group">
+											<span class="input-group-addon">
+												<i class="fa fa-map-marker" aria-hidden="true"></i>
+											</span>
+											<div class="form-group label-floating is-empty">
+												<label class="control-label">Dirección del Lugar</label>
+	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
+	                                        	<span class="material-input"></span>
+	                                        </div>
+										</div>
+											
+										</div>
+										<div class="form-group">
+											<label for="lugarEvento">Selecciona la opción que mejor describa el lugar de tu evento (aunque no lo tengas aún):</label>
+											<br>
+											<i>Interior</i>
+											<div class="radio">
+												<label><input type="radio" checked="checked" name="lugarEvento" value="1">Salón</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="2">Salón + Jardín + Terraza</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="3">Salón en Hotel</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="4">Salón en Hacienda</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="5">Restaurante</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="6">Restaurante + Bar</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="7">Antro</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="8">Casa</label>
+											</div>
+											
+											<i>Exterior</i>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="9">Jardín</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="10">Jardín + Alberca</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="11">Terraza</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="12">Hacienda</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="lugarEvento" value="13">Casa en Playa</label>
+											</div>
+										</div>
+										
+						    		</div>
+
 									<!-- Fecha -->
 						    		<div class="tab-pane" id="tab1">
 
@@ -313,87 +395,7 @@
 										</div>
 						    		</div>
 
-						    		<!-- Lugar -->
-						    		<div class="tab-pane" id="tab4">
-						    			<div class="step-title">
-											<h3>El lugar</h3>
-										</div>
-										<hr>
-										<p>
-											Elige entre las opciones de lugar para que tu evento sea todo un éxito
-										</p>
-										<div class="step-intro">
-										<label>Si ya tienes el lugar de tu evento, déjanos la dirección aquí abajo:</label>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-location-arrow" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Nombre del Lugar</label>
-	                                            <input class="form-control" id="nombreLugar" name="nombreLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-map-marker" aria-hidden="true"></i>
-											</span>
-											<div class="form-group label-floating is-empty">
-												<label class="control-label">Dirección del Lugar</label>
-	                                            <input class="form-control" id="direccionLugar" name="direccionLugar" type="text" />
-	                                        	<span class="material-input"></span>
-	                                        </div>
-										</div>
-											
-										</div>
-										<div class="form-group">
-											<label for="lugarEvento">Selecciona la opción que mejor describa el lugar de tu evento (aunque no lo tengas aún):</label>
-											<br>
-											<i>Interior</i>
-											<div class="radio">
-												<label><input type="radio" checked="checked" name="lugarEvento" value="1">Salón</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="2">Salón + Jardín + Terraza</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="3">Salón en Hotel</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="4">Salón en Hacienda</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="5">Restaurante</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="6">Restaurante + Bar</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="7">Antro</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="8">Casa</label>
-											</div>
-											
-											<i>Exterior</i>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="9">Jardín</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="10">Jardín + Alberca</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="11">Terraza</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="12">Hacienda</label>
-											</div>
-											<div class="radio">
-												<label><input type="radio" name="lugarEvento" value="13">Casa en Playa</label>
-											</div>
-										</div>
-										
-						    		</div>
+						    		
 
 						    		<!-- Comida / Bebida -->
 						    		<div class="tab-pane" id="tab5">
