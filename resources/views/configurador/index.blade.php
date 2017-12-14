@@ -164,8 +164,8 @@
 												<i class="material-icons">phone</i>
 											</span>
 											<div class="form-group label-floating is-empty">
-	                                            <label class="control-label">Número Celular</label>
-	                                            <input name="celular" type="number" class="form-control valid">
+	                                            <label class="control-label">Número Celular <small>(10 dígitos)</small></label>
+	                                            <input name="celular" type="tel" maxlength="10" class="form-control valid">
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>
