@@ -866,16 +866,7 @@
 	        });
 	    });
 
-	    $(document).ready(function() {
-	    	const entradas = document.querySelectorAll('input[type=number]');
-
-	    	$('#noInvitados').on('change', function(event) {
-	    		const entradas = document.querySelectorAll('input[type=number]');
-	    		entradas.forEach(entrada => {
-	    			entrada.placeholder = '('+document.getElementById('noInvitados').value+' invitados)';
-	    		});
-	    	});
-	    });
+	    
 	</script>
 
 </html>
