@@ -281,7 +281,7 @@
 											</span>
 											<div class="form-group label-floating is-empty">
 												<label class="control-label">Duración del evento (en horas)</label>
-	                                            <input class="form-control" id="duracion" name="duracion" type="number" />
+	                                            <input class="form-control" id="duracion" name="duracion" type="number" min="1" />
 	                                        	<span class="material-input"></span>
 	                                        </div>
 										</div>

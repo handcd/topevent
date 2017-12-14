@@ -24,7 +24,7 @@
                 					</div>
                 				@elseif ($product->campo->html == "number")
                 					<div class="form-group">
-                						<input type="number" id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" placeholder="#" class="form-control">
+                						<input type="number" id="producto{{ $product->id }}" name="producto[{{ $product->id }}]" placeholder="#" min="0" class="form-control">
                 					</div>
                 				@elseif ($product->campo->html == "checkbox")
                 					<div class="checkbox">
