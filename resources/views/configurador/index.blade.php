@@ -70,24 +70,24 @@
 							</div>
 							<hr>
 							<ul>
-								<li><a href="#tabIntro" data-toggle="tab">Inicio</a></li>
-								<li><a href="#tab0" data-toggle="tab">Datos</a></li>
-								<li><a href="#tab4" data-toggle="tab">Lugar</a></li>
-					  			<li><a href="#tab1" data-toggle="tab">Fecha</a></li>
-								<li><a href="#tab2" data-toggle="tab">Tipo de Evento</a></li>
-								<li><a href="#tab3" data-toggle="tab">Invitados</a></li>				
-								<li><a href="#tab5" data-toggle="tab">Comida y Bebida</a></li>
-								<li><a href="#tab6" data-toggle="tab">Mobiliario</a></li>
-								<li><a href="#tab7" data-toggle="tab">Música - Visual</a></li>
-								<li><a href="#tab8" data-toggle="tab">Iluminación</a></li>
-					  			<li><a href="#tab9" data-toggle="tab">Entretenimiento</a></li>
-								<li><a href="#tab10" data-toggle="tab">Ambientación</a></li>
-								<li><a href="#tab11" data-toggle="tab">Foto y Video</a></li>
-								<li><a href="#tab12" data-toggle="tab">Invitaciones</a></li>
-								<li><a href="#tab13" data-toggle="tab">Recuerdos</a></li>
-								<li><a href="#tab14" data-toggle="tab">Limpieza</a></li>
-								<li><a href="#tab15" data-toggle="tab">Extras</a></li>
-								<li><a href="#tab16" data-toggle="tab">Resúmen</a></li>
+								<li><a href="#tabIntro" class="ir-arriba" data-toggle="tab">Inicio</a></li>
+								<li><a href="#tab0" class="ir-arriba" data-toggle="tab">Datos</a></li>
+								<li><a href="#tab4" class="ir-arriba" data-toggle="tab">Lugar</a></li>
+					  			<li><a href="#tab1" class="ir-arriba" data-toggle="tab">Fecha</a></li>
+								<li><a href="#tab2" class="ir-arriba" data-toggle="tab">Tipo de Evento</a></li>
+								<li><a href="#tab3" class="ir-arriba" data-toggle="tab">Invitados</a></li>				
+								<li><a href="#tab5" class="ir-arriba" data-toggle="tab">Comida y Bebida</a></li>
+								<li><a href="#tab6" class="ir-arriba" data-toggle="tab">Mobiliario</a></li>
+								<li><a href="#tab7" class="ir-arriba" data-toggle="tab">Música - Visual</a></li>
+								<li><a href="#tab8" class="ir-arriba" data-toggle="tab">Iluminación</a></li>
+					  			<li><a href="#tab9" class="ir-arriba" data-toggle="tab">Entretenimiento</a></li>
+								<li><a href="#tab10" class="ir-arriba" data-toggle="tab">Ambientación</a></li>
+								<li><a href="#tab11" class="ir-arriba" data-toggle="tab">Foto y Video</a></li>
+								<li><a href="#tab12" class="ir-arriba" data-toggle="tab">Invitaciones</a></li>
+								<li><a href="#tab13" class="ir-arriba" data-toggle="tab">Recuerdos</a></li>
+								<li><a href="#tab14" class="ir-arriba" data-toggle="tab">Limpieza</a></li>
+								<li><a href="#tab15" class="ir-arriba" data-toggle="tab">Extras</a></li>
+								<li><a href="#tab16" class="ir-arriba" data-toggle="tab">Resúmen</a></li>
 
 							</ul>
 						</div>
@@ -795,13 +795,7 @@
 			scrollTop: '0px'
 		}, 1000);
 	});
-	$(window).scroll(function(){
-		if ($(this).scrollTop()>0) {
-			$('.ir-arriba').slideDown(300);
-		}else{
-			$('.ir-arriba').slideUp(300);	
-		}
-	});
+	
 });
 	    
 	</script>
