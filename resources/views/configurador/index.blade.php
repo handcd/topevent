@@ -48,8 +48,7 @@
     	</a>
     </div>
     </div>
-	<!--scroll button-->
-	<span class="ir-arriba fa fa-arrow-up"></span>
+	
     <div class="container">
     	<div class="row">
     		<div class="col-sm-10 col-sm-offset-1">
