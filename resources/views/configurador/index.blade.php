@@ -24,6 +24,11 @@
     <link href="{{ URL::asset('assets_configurador/assets/css/material-kit.css')}}" rel="stylesheet"/>
     <link href="{{ URL::asset('assets_configurador/assets/css/wizard.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('assets_configurador/assets/css/demo.css') }}" rel="stylesheet" />
+    <!--Fuentes botón scroll-->
+    
+    <link href="{{ URL::asset('assets_configurador/assets/css/estilos.css')}}" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 
 </head>
 
@@ -43,8 +48,8 @@
     	</a>
     </div>
     </div>
-
-
+	<!--scroll button-->
+	<span class="ir-arriba fa fa-arrow-up"></span>
     <div class="container">
     	<div class="row">
     		<div class="col-sm-10 col-sm-offset-1">
@@ -784,7 +789,20 @@
 	        	$(this).closest('.comanda-group').find('.comanda-group-content').toggle('show');
 	        });
 	    });
-
+		$(document).ready(function(){
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 1000);
+	});
+	$(window).scroll(function(){
+		if ($(this).scrollTop()>0) {
+			$('.ir-arriba').slideDown(300);
+		}else{
+			$('.ir-arriba').slideUp(300);	
+		}
+	});
+});
 	    
 	</script>
 
