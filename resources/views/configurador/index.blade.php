@@ -24,10 +24,6 @@
     <link href="{{ URL::asset('assets_configurador/assets/css/material-kit.css')}}" rel="stylesheet"/>
     <link href="{{ URL::asset('assets_configurador/assets/css/wizard.css') }}" rel="stylesheet" />
     <link href="{{ URL::asset('assets_configurador/assets/css/demo.css') }}" rel="stylesheet" />
-    <!--Fuentes botón scroll-->
-    
-    <link href="{{ URL::asset('assets_configurador/assets/css/estilos.css')}}" rel="stylesheet" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 
 </head>
@@ -788,15 +784,13 @@
 	        	$(this).closest('.comanda-group').find('.comanda-group-content').toggle('show');
 	        });
 	    });
-		$(document).ready(function(){
-	$('.ir-arriba').click(function(){
-		$('body, html').animate({
-			scrollTop: '0px'
-		}, 1000);
-	});
-	
-});
-	    
-	</script>
 
+		$(document).ready(function(){
+			$('.ir-arriba').click(function(){
+				$('body, html').animate({
+					scrollTop: '0px'
+				}, 1000);
+			});	
+		});	    
+	</script>
 </html>

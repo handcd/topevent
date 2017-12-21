@@ -5,11 +5,10 @@
 
 <div class="comanda-group">	
 	<input class="btn btn-primary btn-block hideshow" type="button" value="{{ $descripcion }}">	
-	<div class="comanda-group-content" style="display: none;">
+	<div class="comanda-group-content" style="display: none;" >
 		@foreach ($listacomandas as $comanda)
 			@include('configurador.partials.comanda', ['nombre_comanda' => $comanda])
 		@endforeach
 	</div>
-	
 </div>
 <hr>
